@@ -68,7 +68,19 @@ public class CharacterController : MonoBehaviour
 			crypto.Scramble(crypto.message);
 			GameObject.Destroy(book.gameObject);
 		} else if (collider.CompareTag("Chest")) {
+			Chest chest = collider.gameObject.GetComponent<Chest>();
+			char chestChar = chest.storedChar;
+			Debug.Log("opened chest with char: " + chestChar);
 			
+			Cryptogram crypto = GameObject.Find("Cryptogram").GetComponent<Cryptogram>();
+			
+			// open in correct order
+			if (crypto.message[crypto.openChests].Equals(chestChar)) {
+				chest.gameObject.GetComponent<Animator>().SetBool("open", true);
+				crypto.openChests++;
+			} else {
+				crypto.CloseAllChests();
+			}
 		}
 	}
 }
