@@ -50,8 +50,8 @@ public class CharacterController : MonoBehaviour
 		speed *= .8f;
 		animator.SetFloat ("Direction", direction);
 		animator.SetFloat ("Speed", speed.magnitude);
-		pants.SetFloat ("Direction", direction);
-		pants.SetFloat ("Speed", speed.magnitude);
+		//pants.SetFloat ("Direction", direction);
+		//pants.SetFloat ("Speed", speed.magnitude);
 		//Debug.Log(speed.magnitude);
 	}
 	

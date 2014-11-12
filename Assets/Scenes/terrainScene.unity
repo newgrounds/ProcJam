@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423509a03528f304588314ce906feb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 596458520}
 --- !u!4 &746665502
 Transform:
   m_ObjectHideFlags: 0
@@ -237,6 +238,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 3e8286ee3426547b8a7f1b41e8eda018, type: 2}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 596458520}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e8286ee3426547b8a7f1b41e8eda018, type: 2}
   m_RootGameObject: {fileID: 746665500}
