@@ -6,6 +6,7 @@ public class Cryptogram : MonoBehaviour {
 	public GameObject chest;
 	public int numChests = 5;
 	public string message;
+	public int openChests = 0;
 	
 	Dictionary<char, char> dict = new Dictionary<char, char>() {
 		{'a',' '},{'b',' '},{'c',' '},{'d',' '},{'e',' '},{'f',' '},{'g',' '},{'h',' '},{'i',' '},
@@ -84,6 +85,14 @@ public class Cryptogram : MonoBehaviour {
 			keys.Remove(c.storedChar);
 		}
 		Scramble(message);
+	}
+	
+	public void CloseAllChests() {
+		GameObject[] chests = GameObject.FindGameObjectsWithTag("Chest");
+		foreach (GameObject chest in chests) {
+			chest.GetComponent<Animator>().SetBool("open", false);
+		}
+		openChests = 0;
 	}
 	
 	void OnGUI() {
