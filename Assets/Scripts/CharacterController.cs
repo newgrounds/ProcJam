@@ -65,8 +65,10 @@ public class CharacterController : MonoBehaviour
 			Debug.Log("collided with book with char: " + bookChar);
 			Cryptogram crypto = GameObject.Find("Cryptogram").GetComponent<Cryptogram>();
 			crypto.UnscrambleValue(bookChar);
-			crypto.Scramble("This is scrambled");
+			crypto.Scramble(crypto.message);
 			GameObject.Destroy(book.gameObject);
+		} else if (collider.CompareTag("Chest")) {
+			
 		}
 	}
 }
