@@ -117,11 +117,8 @@ Camera:
     m_Bits: 4294967241
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
   m_HDR: 0
   m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: .0219999999
 --- !u!4 &21177479
 Transform:
   m_ObjectHideFlags: 0
@@ -133,7 +130,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
 --- !u!1 &89846749
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +170,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &179128777
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +192,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &179128778
 Animator:
-  serializedVersion: 3
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -206,10 +201,9 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 196dae234fbeb9d479dfa0f63d1803db, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
   m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &179128779
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -228,8 +222,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1000
+  m_SortingLayerID: 0
   m_Sprite: {fileID: 21300156, guid: c1eebae5b14e4984fbaf5e8e017b838f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &179128780
@@ -245,7 +240,6 @@ Transform:
   - {fileID: 1106770383}
   - {fileID: 1405039272}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!114 &179128781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,11 +390,8 @@ Camera:
     m_Bits: 4294967039
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
   m_HDR: 0
   m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: .0219999999
 --- !u!4 &932953270
 Transform:
   m_ObjectHideFlags: 0
@@ -412,7 +403,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
 --- !u!114 &932953271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,7 +492,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 179128780}
-  m_RootOrder: 0
 --- !u!212 &1106770384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -521,13 +510,14 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1
+  m_SortingLayerID: 0
   m_Sprite: {fileID: 21300120, guid: 582ec2ebb8ea2004fa8ff36afaa682e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1106770385
 Animator:
-  serializedVersion: 3
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -536,10 +526,9 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: edeb293d0553c6743b8b1df680472c8e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
   m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1405039269
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,8 +565,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &1405039271
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -597,7 +587,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 179128780}
-  m_RootOrder: 1
 --- !u!1 &1694068278
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +630,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!1 &1917792675
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,8 +666,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 999
+  m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: f438e0be39b5e443aa2fdc0d71ff96f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1917792677
@@ -693,7 +682,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
 --- !u!61 &1917792678
 BoxCollider2D:
   m_ObjectHideFlags: 0
