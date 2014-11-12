@@ -5,13 +5,18 @@ public class CharacterController : MonoBehaviour
 {
 	
 	private Animator animator;
+	private SpriteRenderer renderer;
 	public Animator pants;
 	private float direction = 0;
 	private Vector2 speed;
+	private Tile currentTile;
+	private float lastHeight = 0;
 	// Use this for initialization
 	void Start ()
 	{
 		animator = this.GetComponent<Animator> ();
+		renderer = this.GetComponent<SpriteRenderer> ();
+		
 	}
 	
 	// Update is called once per frame
@@ -50,15 +55,40 @@ public class CharacterController : MonoBehaviour
 		speed *= .8f;
 		animator.SetFloat ("Direction", direction);
 		animator.SetFloat ("Speed", speed.magnitude);
+		
 		//pants.SetFloat ("Direction", direction);
 		//pants.SetFloat ("Speed", speed.magnitude);
 		//Debug.Log(speed.magnitude);
+	}
+	
+	void OnTriggerStay2D(Collider2D collider) {
+
 	}
 	
 	/*
 	 * Collect books
 	 */
 	void OnTriggerEnter2D(Collider2D collider) {
+				if (collider.CompareTag("Tile")) {
+			
+			//Debug.Log("tile");
+			Tile t = collider.gameObject.GetComponent<Tile>();
+			//Debug.Log(t.height);
+			if(t.height < lastHeight){
+				iTween.MoveBy(gameObject, iTween.Hash("time", .3f,"y", t.height - lastHeight, "easeType", "easeOutBounce"));
+			}
+			else if(t.height > lastHeight){
+				iTween.MoveBy(gameObject, iTween.Hash("time", .3f,"y", t.height - lastHeight, "easeType", "easeInOutCubic"));
+			}
+				lastHeight = t.height;
+				//iTween.MoveTo(this.gameObject, t.transform.position, .1f);
+			
+			renderer.sortingOrder = t.sortingOrder + 1;
+		}
+		CheckBooks(collider);
+	}
+	
+	void CheckBooks(Collider2D collider){
 		if (collider.CompareTag("Book")) {
 			Book book = collider.gameObject.GetComponent<Book>();
 			char bookChar = book.bookChar;
@@ -85,6 +115,6 @@ public class CharacterController : MonoBehaviour
 			GameObject.Find("Minimap").GetComponent<Camera>().enabled = true;
 			GameObject.Destroy(collider.gameObject);
 			Debug.Log("entered map");
-		}
+		}	
 	}
 }

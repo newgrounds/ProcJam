@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
+  sprites: []
 --- !u!4 &89846751
 Transform:
   m_ObjectHideFlags: 0
@@ -183,6 +184,7 @@ GameObject:
   - 114: {fileID: 179128781}
   - 50: {fileID: 179128783}
   - 58: {fileID: 179128782}
+  - 68: {fileID: 179128784}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -258,11 +260,11 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179128777}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .129999995
-  m_Center: {x: 0, y: -.100000001}
+  m_Radius: .0500000007
+  m_Center: {x: 0, y: -.230000004}
 --- !u!50 &179128783
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -275,9 +277,23 @@ Rigidbody2D:
   m_GravityScale: 0
   m_FixedAngle: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!68 &179128784
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179128777}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: .0024224259, y: -.346265197}
+  - {x: -.0275865179, y: -.37631011}
+  - {x: .0296461955, y: -.366673321}
+  - {x: .00131984241, y: -.400220931}
 --- !u!1001 &286879373
 Prefab:
   m_ObjectHideFlags: 0
@@ -553,7 +569,7 @@ Renderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1405039269}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
