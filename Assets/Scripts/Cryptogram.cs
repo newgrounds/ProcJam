@@ -67,8 +67,8 @@ public class Cryptogram : MonoBehaviour {
 	
 	public void PlaceBooks() {
 		foreach (char letter in dict.Keys) {
-			Vector3 pos = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0);
-			GameObject bObj = (GameObject)Instantiate(book, pos, Quaternion.identity);
+			Tile tile = TerrainGenerator.tiles[Random.Range(0, TerrainGenerator.tiles.Count)];
+			GameObject bObj = (GameObject)Instantiate(book, tile.transform.position, Quaternion.identity);
 			Book b = bObj.GetComponent<Book>();
 			b.bookChar = letter;
 		}
@@ -77,8 +77,8 @@ public class Cryptogram : MonoBehaviour {
 	public void PlaceChests() {
 		List<char> keys = new List<char>(dict.Keys);
 		for (int i = 0; i < numChests; i++) {
-			Vector3 pos = new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), 0);
-			GameObject cObj = (GameObject)Instantiate(chest, pos, Quaternion.identity);
+			Tile tile = TerrainGenerator.tiles[Random.Range(0, TerrainGenerator.tiles.Count)];
+			GameObject cObj = (GameObject)Instantiate(chest, tile.transform.position, Quaternion.identity);
 			Chest c = cObj.GetComponent<Chest>();
 			c.storedChar = keys[Random.Range(0, keys.Count)];
 			message += c.storedChar;

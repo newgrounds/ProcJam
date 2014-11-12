@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class TerrainGenerator : MonoBehaviour {
+	
+	public static List<Tile> tiles = new List<Tile>();
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +22,8 @@ public class TerrainGenerator : MonoBehaviour {
 				tile.GetComponent<Tile>().sortingOrder = y;
 				tile.GetComponent<Tile>().height = height;
 				tile.GetComponent<SpriteRenderer>().color = new Color(1f + height,1f + height,1f + height, 1);
+				
+				tiles.Add(tile.GetComponent<Tile>());
 				
 				/*
 				if(height3 > .01f){
