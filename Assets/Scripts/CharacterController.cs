@@ -15,7 +15,7 @@ public class CharacterController : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
 	{
 		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
 			if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
@@ -81,6 +81,10 @@ public class CharacterController : MonoBehaviour
 			} else {
 				crypto.CloseAllChests();
 			}
+		} else if (collider.CompareTag("Map")) {
+			GameObject.Find("Minimap").GetComponent<Camera>().enabled = true;
+			GameObject.Destroy(collider.gameObject);
+			Debug.Log("entered map");
 		}
 	}
 }

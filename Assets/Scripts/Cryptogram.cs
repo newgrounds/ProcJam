@@ -54,7 +54,7 @@ public class Cryptogram : MonoBehaviour {
 				scrambled += letter;
 			}
 		}
-		Debug.Log(scrambled);
+		//Debug.Log(scrambled);
 		return scrambled;
 	}
 	
