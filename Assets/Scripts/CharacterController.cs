@@ -61,13 +61,13 @@ public class CharacterController : MonoBehaviour
 			//Debug.Log(Vector3.Distance(t.transform.position, transform.position));
 			if(Vector3.Distance(t.transform.position, transform.position) > 4f){
 				t.gameObject.SetActive(false);
-				if(t.decal)
-				t.decal.gameObject.SetActive(false);
+				if(t.GetDecal())
+					t.GetDecal().gameObject.SetActive(false);
 			}
 			else{
 				t.gameObject.SetActive(true);
-				if(t.decal)
-				t.decal.gameObject.SetActive(true);	
+				if(t.GetDecal())
+					t.GetDecal().gameObject.SetActive(true);	
 			}
 		}
 		*/

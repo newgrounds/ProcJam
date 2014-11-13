@@ -5,8 +5,11 @@ public class TerrainGenerator : MonoBehaviour
 {
 	public GameObject camera;
 	public static List<Tile> tiles = new List<Tile> ();
+	public static List<Tile> tilesWithoutDecals = new List<Tile>();
+	public static List<Ruins> ruins = new List<Ruins>();
 	public List<Sprite> sprites;
 	private int mapWidth = 0;
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -37,37 +40,45 @@ public class TerrainGenerator : MonoBehaviour
 				tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
 				tile.GetComponent<SpriteRenderer> ().color = new Color (1f + height, 1f + height, 1f + height, 1);
 				tile.GetComponent<SpriteRenderer> ().sortingOrder = y;
-				tile.GetComponent<Tile> ().sortingOrder = y;
-				tile.GetComponent<Tile> ().height = height;
-				tile.GetComponent<Tile> ().height2 = height2;
-				tile.GetComponent<Tile> ().height3 = height3;
-				tile.GetComponent<Tile> ().origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 				
 				Tile tileObject = tile.GetComponent<Tile> ();
-				tiles.Add (tileObject);
+				tileObject.sortingOrder = y;
+				tileObject.height = height;
+				tileObject.height2 = height2;
+				tileObject.height3 = height3;
+				tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
+				tiles.Add(tileObject);
 				
 		//}
 			}
 		}
 		
+		// generate ruins
 		for (int i = 0; i < 8; i++) {
-			new Ruins (mapWidth, Random.Range(0, tiles.Count));
+			ruins.Add(new Ruins (mapWidth, Random.Range(0, tiles.Count)));
+		}
+		
+		// remove any empty ruins
+		for (int i = 0; i < ruins.Count; i++) {
+			if (ruins[i].floors.Count == 0) {
+				ruins.Remove(ruins[i]);
+			}
 		}
 
 		foreach (Tile t in tiles) {
 			float height = t.height;
 			float height2 = t.height2;
 			float height3 = t.height3;
-			if (t.decal == null) {
+			if (t.GetDecal() == null) {
 				if (height2 > .3f) {
 					float randomSize = Random.Range (-.5f, .5f);
 					float xOffset = 0;//Random.Range(-.5f, .5f) ;
 					GameObject tree = Instantiate (Resources.Load ("pine")) as GameObject;
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;	
-					t.decal = tree;
+					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
+					t.SetDecal(tree.GetComponent<Decal>());
 				
 				} else if (height > .25f) {
 					GameObject tree;
@@ -82,8 +93,8 @@ public class TerrainGenerator : MonoBehaviour
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
 					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + + 1;	
-					t.decal = tree;
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
+					t.SetDecal(tree.GetComponent<Decal>());
 				
 				} else if (height > .2f) {
 					GameObject grass = Instantiate (Resources.Load ("grass")) as GameObject;
@@ -91,6 +102,13 @@ public class TerrainGenerator : MonoBehaviour
 					grass.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + + 1;	
 				}	
+			}
+		}
+		
+		// get a list of tiles without decals
+		foreach (Tile t in tiles) {
+			if (t.GetDecal() == null) {
+				tilesWithoutDecals.Add(t);
 			}
 		}
 	}

@@ -7,15 +7,19 @@ public class Tile : MonoBehaviour {
 	public float height;
 	public float height2;
 	public float height3;
-	public GameObject decal;
+	private Decal decal;
 	public Vector3 origin;
-	// Use this for initialization
-	void Start () {
 	
+	public Decal GetDecal() {
+		return decal;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void SetDecal(Decal d) {
+		if (d == null) {
+			decal = null;
+		} else {
+			d.tile = this;
+			decal = d;
+		}
 	}
 }

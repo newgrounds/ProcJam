@@ -65,9 +65,16 @@ public class Cryptogram : MonoBehaviour {
 		}
 	}
 	
+	/*
+	 * This requires the terrain to have already been generated
+	 * so I changed the script execution order so that happens first
+	 */
 	public void PlaceBooks() {
 		foreach (char letter in dict.Keys) {
-			Tile tile = TerrainGenerator.tiles[Random.Range(0, TerrainGenerator.tiles.Count)];
+			Ruins chosenRuins = TerrainGenerator.ruins[Random.Range(0, TerrainGenerator.ruins.Count)];
+			Decal chosenFloor = chosenRuins.floors[Random.Range(0, chosenRuins.floors.Count)];
+			Tile tile = chosenFloor.tile;
+			//Tile tile = TerrainGenerator.tiles[Random.Range(0, TerrainGenerator.tiles.Count)];
 			GameObject bObj = (GameObject)Instantiate(book, tile.transform.position, Quaternion.identity);
 			Book b = bObj.GetComponent<Book>();
 			b.bookChar = letter;
@@ -77,7 +84,7 @@ public class Cryptogram : MonoBehaviour {
 	public void PlaceChests() {
 		List<char> keys = new List<char>(dict.Keys);
 		for (int i = 0; i < numChests; i++) {
-			Tile tile = TerrainGenerator.tiles[Random.Range(0, TerrainGenerator.tiles.Count)];
+			Tile tile = TerrainGenerator.tilesWithoutDecals[Random.Range(0, TerrainGenerator.tilesWithoutDecals.Count)];
 			GameObject cObj = (GameObject)Instantiate(chest, tile.transform.position, Quaternion.identity);
 			Chest c = cObj.GetComponent<Chest>();
 			c.storedChar = keys[Random.Range(0, keys.Count)];
