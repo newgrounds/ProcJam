@@ -19,7 +19,7 @@ public class TerrainGenerator : MonoBehaviour
 				float height3 = SimplexNoise.Noise.Generate (x / 15f, y / 15f) / 2f;
 				GameObject tile;
 				/*
-				if (height3 < 0f) {
+				if (height3 < -.4f) {
 					
 					tile = Instantiate (Resources.Load ("water")) as GameObject;
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
@@ -31,38 +31,35 @@ public class TerrainGenerator : MonoBehaviour
 					tile.GetComponent<SpriteRenderer> ().color = new Color (1f + height, 1f + height, 1f + height, 1f + height/2f);
 					
 					tiles.Add (tile.GetComponent<Tile> ());
-				} else if (height3 > 0f) {
-				*/
-					tile = Instantiate (Resources.Load ("tile")) as GameObject;
-					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
-					tile.GetComponent<SpriteRenderer> ().color = new Color (1f + height, 1f + height, 1f + height, 1);
-					tile.GetComponent<SpriteRenderer> ().sortingOrder = y;
-					tile.GetComponent<Tile> ().sortingOrder = y;
-					tile.GetComponent<Tile> ().height = height;
-					tile.GetComponent<Tile> ().height2 = height2;
-					tile.GetComponent<Tile> ().height3 = height3;
-					tile.GetComponent<Tile> ().origin = new Vector3(transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
+				} else if (height3 > -.4f) {
+			*/
+				tile = Instantiate (Resources.Load ("tile")) as GameObject;
+				tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
+				tile.GetComponent<SpriteRenderer> ().color = new Color (1f + height, 1f + height, 1f + height, 1);
+				tile.GetComponent<SpriteRenderer> ().sortingOrder = y;
+				tile.GetComponent<Tile> ().sortingOrder = y;
+				tile.GetComponent<Tile> ().height = height;
+				tile.GetComponent<Tile> ().height2 = height2;
+				tile.GetComponent<Tile> ().height3 = height3;
+				tile.GetComponent<Tile> ().origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 				
-					Tile tileObject = tile.GetComponent<Tile> ();
-					tiles.Add (tileObject);
+				Tile tileObject = tile.GetComponent<Tile> ();
+				tiles.Add (tileObject);
 				
-				/*
-					
-					*/
-					
-				//}
+		//}
 			}
 		}
 		
-		for(int i = 0; i < 8; i++){
-			new Ruins(mapWidth);
+		for (int i = 0; i < 8; i++) {
+			new Ruins (mapWidth, Random.Range(0, tiles.Count));
 		}
 
-		foreach(Tile t in tiles){
+		foreach (Tile t in tiles) {
 			float height = t.height;
 			float height2 = t.height2;
 			float height3 = t.height3;
-			if (height2 > .3f && !t.decal) {
+			if (t.decal == null) {
+				if (height2 > .3f) {
 					float randomSize = Random.Range (-.5f, .5f);
 					float xOffset = 0;//Random.Range(-.5f, .5f) ;
 					GameObject tree = Instantiate (Resources.Load ("pine")) as GameObject;
@@ -72,8 +69,7 @@ public class TerrainGenerator : MonoBehaviour
 					t.decal = tree;
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 				
-				}
-				else if (height > .25f) {
+				} else if (height > .25f) {
 					GameObject tree;
 					if (Random.Range (0, 10) > 8) {
 						tree = Instantiate (Resources.Load ("deadTree")) as GameObject;
@@ -85,7 +81,7 @@ public class TerrainGenerator : MonoBehaviour
 					float randomSize = Random.Range (-.5f, .5f);
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder +  + 1;	
+					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + + 1;	
 					t.decal = tree;
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 				
@@ -93,8 +89,9 @@ public class TerrainGenerator : MonoBehaviour
 					GameObject grass = Instantiate (Resources.Load ("grass")) as GameObject;
 					grass.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
 					grass.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
-					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder +  + 1;	
-				}
+					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + + 1;	
+				}	
+			}
 		}
 	}
 	

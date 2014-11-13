@@ -56,6 +56,21 @@ public class CharacterController : MonoBehaviour
 		animator.SetFloat ("Direction", direction);
 		animator.SetFloat ("Speed", speed.magnitude);
 		
+		/*
+		foreach(Tile t in TerrainGenerator.tiles){
+			//Debug.Log(Vector3.Distance(t.transform.position, transform.position));
+			if(Vector3.Distance(t.transform.position, transform.position) > 4f){
+				t.gameObject.SetActive(false);
+				if(t.decal)
+				t.decal.gameObject.SetActive(false);
+			}
+			else{
+				t.gameObject.SetActive(true);
+				if(t.decal)
+				t.decal.gameObject.SetActive(true);	
+			}
+		}
+		*/
 		//pants.SetFloat ("Direction", direction);
 		//pants.SetFloat ("Speed", speed.magnitude);
 		//Debug.Log(speed.magnitude);
@@ -69,7 +84,7 @@ public class CharacterController : MonoBehaviour
 	 * Collect books
 	 */
 	void OnTriggerEnter2D(Collider2D collider) {
-				if (collider.CompareTag("Tile")) {
+		if (collider.CompareTag("Tile")) {
 			
 			//Debug.Log("tile");
 			Tile t = collider.gameObject.GetComponent<Tile>();
