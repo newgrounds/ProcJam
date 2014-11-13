@@ -83,7 +83,7 @@ public class CharacterController : MonoBehaviour
 				lastHeight = t.height;
 				//iTween.MoveTo(this.gameObject, t.transform.position, .1f);
 			
-			renderer.sortingOrder = t.sortingOrder + 1;
+			//renderer.sortingOrder = t.sortingOrder + 1;
 		}
 		CheckBooks(collider);
 	}

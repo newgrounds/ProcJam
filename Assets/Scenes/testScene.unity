@@ -260,11 +260,11 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179128777}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .0500000007
-  m_Center: {x: 0, y: -.230000004}
+  m_Radius: .0199999996
+  m_Center: {x: 0, y: -.280000001}
 --- !u!50 &179128783
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ EdgeCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179128777}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Points:
