@@ -72,7 +72,11 @@ public class Cryptogram : MonoBehaviour {
 	public void PlaceBooks() {
 		foreach (char letter in dict.Keys) {
 			Ruins chosenRuins = TerrainGenerator.ruins[Random.Range(0, TerrainGenerator.ruins.Count)];
-			Decal chosenFloor = chosenRuins.floors[Random.Range(0, chosenRuins.floors.Count)];
+			int floorIndex = Random.Range(0, chosenRuins.floors.Count);
+			while (floorIndex >= chosenRuins.floors.Count) {
+				floorIndex = Random.Range(0, chosenRuins.floors.Count);
+			}
+			Decal chosenFloor = chosenRuins.floors[floorIndex];
 			Tile tile = chosenFloor.tile;
 			//Tile tile = TerrainGenerator.tiles[Random.Range(0, TerrainGenerator.tiles.Count)];
 			GameObject bObj = (GameObject)Instantiate(book, tile.transform.position, Quaternion.identity);
