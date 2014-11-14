@@ -47,7 +47,7 @@ public class TerrainGenerator : MonoBehaviour
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 5f, 0);
 					float h = height / 1f;//Mathf.FloorToInt(height)/5f;
 					tile.GetComponent<SpriteRenderer> ().color = new Color (1f + h, 1f + h, 1f + h, 1);
-					tile.GetComponent<SpriteRenderer> ().sortingOrder = y - 1000;
+					tile.GetComponent<SpriteRenderer> ().sortingOrder = y;
 				
 					Tile tileObject = tile.GetComponent<Tile> ();
 					tileObject.sortingOrder = y;

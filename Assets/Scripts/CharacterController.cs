@@ -56,9 +56,15 @@ public class CharacterController : MonoBehaviour
 		animator.SetFloat ("Direction", direction);
 		animator.SetFloat ("Speed", speed.magnitude);
 		
-		/*
+		
 		foreach(Tile t in TerrainGenerator.tiles){
+			//if(Vector3.Distance(t.transform.position + (Vector3.up * .3f), (transform.position - (Vector3.up * .15f))) < .2f){
+			if(Vector3.Distance(t.transform.position + (Vector3.up * .4f), transform.position) < .25f){
+				renderer.sortingOrder = t.sortingOrder + 2;
+			}
+			
 			//Debug.Log(Vector3.Distance(t.transform.position, transform.position));
+			/*
 			if(Vector3.Distance(t.transform.position, transform.position) > 4f){
 				t.gameObject.SetActive(false);
 				if(t.GetDecal())
@@ -69,8 +75,9 @@ public class CharacterController : MonoBehaviour
 				if(t.GetDecal())
 					t.GetDecal().gameObject.SetActive(true);	
 			}
+			*/
 		}
-		*/
+		
 		//pants.SetFloat ("Direction", direction);
 		//pants.SetFloat ("Speed", speed.magnitude);
 		//Debug.Log(speed.magnitude);
@@ -87,10 +94,10 @@ public class CharacterController : MonoBehaviour
 		if (collider.CompareTag("Coin")) {
 			GameObject.Destroy(collider.gameObject);
 		}
+		/*
 		if (collider.CompareTag("Tile")) {
 			
 			//Debug.Log("tile");
-			Tile t = collider.gameObject.GetComponent<Tile>();
 			//Debug.Log(t.height);
 			if(t.height < lastHeight){
 				//iTween.MoveBy(gameObject, iTween.Hash("time", .3f,"y", t.height - lastHeight, "easeType", "easeOutBounce"));
@@ -100,10 +107,10 @@ public class CharacterController : MonoBehaviour
 			}
 				lastHeight = t.height;
 				//iTween.MoveTo(this.gameObject, t.transform.position, .1f);
-			
-			renderer.sortingOrder = t.sortingOrder + 1;
+			Tile t = collider.gameObject.GetComponent<Tile>();
 			
 		}
+		*/
 		CheckBooks(collider);
 	}
 	

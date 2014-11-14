@@ -105,14 +105,14 @@ public class Ruins
 				//}
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
 				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .85f, 0);
-				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1 - 999;
+				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
 				t.SetDecal(wall.GetComponent<Decal>());
 				//t.height = flatHeight;
 				tempWalls.Add(wall.GetComponent<Decal>());
 			} else if (t.GetDecal().CompareTag("Wall")) {
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
 				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .85f, 0);
-				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 100;
+				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
 				t.SetDecal(wall.GetComponent<Decal>());
 				tempWalls.Add(wall.GetComponent<Decal>());
 			}
@@ -129,7 +129,7 @@ public class Ruins
 			//}
 			GameObject wall = GameObject.Instantiate (Resources.Load (wallType)) as GameObject;
 			wall.transform.position = new Vector3 (t.transform.position.x + .05f, t.transform.position.y + .4f, 0);
-			wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder - 999 ;
+			wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder ;
 			t.SetDecal(wall.GetComponent<Decal>());
 			t.height = flatHeight;
 			floors.Add(wall.GetComponent<Decal>());
@@ -141,7 +141,7 @@ public class Ruins
 		t.transform.position = t.origin;
 		GameObject door = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
 		door.transform.position = new Vector3(t.transform.position.x - .2f, t.transform.position.y + .4f, 0);
-		door.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 1;
+		door.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder;
 		t.SetDecal(door.GetComponent<Decal>());
 	}
 }
