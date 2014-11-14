@@ -28,7 +28,6 @@ Transform:
   m_LocalScale: {x: 1.10000002, y: 1.10000002, z: 1.10000002}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -59,10 +58,11 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 05f4a44da304ba94bafb07e4756a5b87, type: 3}
-  m_Color: {r: .889705896, g: .889705896, b: .889705896, a: 1}
+  m_Color: {r: .661764741, g: .661764741, b: .661764741, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

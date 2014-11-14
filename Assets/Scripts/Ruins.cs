@@ -11,10 +11,11 @@ public class Ruins
 	private float flatHeight;
 	private float flatY;
 	private List<Tile> tiles;
+	public enum FLOOR {redwood, lightwood, darkwood};
 	// Use this for initialization
 	public Ruins (int mapWidth, int startIndex)
 	{
-		
+		FLOOR floorType = (FLOOR)Random.Range(0,3);
 		tiles = TerrainGenerator.tiles;
 		//int randStartPos = new Vector2(Random.Range(0,tiles.Count),Random.Range(0,tiles.Count));
 		int randStartPos = startIndex;
@@ -37,10 +38,7 @@ public class Ruins
 				wallsTopAndLeft.AddRange(CreateWallDecal (randStartPos + (mapWidth * i), "ruins/ruins_top"));
 			}
 
-			// place left walls
-			for (int i = 1; i < randHeight; i++) {
-				wallsTopAndLeft.AddRange(CreateWallDecal (randStartPos + i, "ruins/ruins_side"));
-			}
+
 		
 			// place bottom walls
 			for (int i = 1; i < randWidth; i++) {
@@ -51,11 +49,14 @@ public class Ruins
 			for (int i = 1; i < randHeight; i++) {
 				wallsRight.AddRange(CreateWallDecal (randStartPos + (mapWidth * randWidth) + i, "ruins/ruins_side"));
 			}
-		
+					// place left walls
+			for (int i = 1; i < randHeight; i++) {
+				wallsTopAndLeft.AddRange(CreateWallDecal (randStartPos + i, "ruins/ruins_side"));
+			}
 			// create floors
 			for (int x = 0; x <randWidth; x++) {
 				for (int y = 0; y <randHeight; y++) {
-					CreateFloorDecal (randStartPos + (mapWidth * x) + y, "ruins/ruins_floor");
+					CreateFloorDecal (randStartPos + (mapWidth * x) + y, "ruins/"+floorType.ToString());
 				}
 			}
 			
@@ -66,13 +67,18 @@ public class Ruins
 			if (Random.Range (0, 100) > 65) {
 				RemoveRandomWall(ref wallsRight);
 				TerrainGenerator.ruins.Add(new Ruins (mapWidth, startIndex + (randWidth * mapWidth)));
+			}			
+			else{
+				RemoveRandomWall(ref wallsRight);	
 			}
 			// chance to spawn another ruin below
 			if (Random.Range (0, 100) > 65) {
 				RemoveRandomWall(ref wallsBottom);
 				TerrainGenerator.ruins.Add(new Ruins (mapWidth, startIndex + randHeight));
 			}
-			
+			else{
+				RemoveRandomWall(ref wallsBottom);	
+			}
 		}
 	
 	}
@@ -98,15 +104,15 @@ public class Ruins
 				t.transform.position = t.origin;
 				//}
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
-				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .7f, 0);
+				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .85f, 0);
 				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1 - 999;
 				t.SetDecal(wall.GetComponent<Decal>());
 				//t.height = flatHeight;
 				tempWalls.Add(wall.GetComponent<Decal>());
 			} else if (t.GetDecal().CompareTag("Wall")) {
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
-				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .7f, 0);
-				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1 - 999;
+				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .85f, 0);
+				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 100;
 				t.SetDecal(wall.GetComponent<Decal>());
 				tempWalls.Add(wall.GetComponent<Decal>());
 			}
@@ -122,7 +128,7 @@ public class Ruins
 			t.transform.position = t.origin;
 			//}
 			GameObject wall = GameObject.Instantiate (Resources.Load (wallType)) as GameObject;
-			wall.transform.position = new Vector3 (t.transform.position.x + .05f, t.transform.position.y + .7f, 0);
+			wall.transform.position = new Vector3 (t.transform.position.x + .05f, t.transform.position.y + .4f, 0);
 			wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder - 999 ;
 			t.SetDecal(wall.GetComponent<Decal>());
 			t.height = flatHeight;
@@ -134,7 +140,7 @@ public class Ruins
 	{
 		t.transform.position = t.origin;
 		GameObject door = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
-		door.transform.position = new Vector3(t.transform.position.x - .2f, t.transform.position.y + .7f, 0);
+		door.transform.position = new Vector3(t.transform.position.x - .2f, t.transform.position.y + .4f, 0);
 		door.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 1;
 		t.SetDecal(door.GetComponent<Decal>());
 	}

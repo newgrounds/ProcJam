@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
+  - 60: {fileID: 6000000}
   m_Layer: 0
   m_Name: ruins_topRight
   m_TagString: Wall
@@ -25,13 +25,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.611857831, y: .41204223, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.82593966, y: -3.89669704, z: 0}
+  m_LocalScale: {x: 1.0048027, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!61 &6100000
-BoxCollider2D:
+--- !u!60 &6000000
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -39,8 +38,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .400000006, y: .699999988}
-  m_Center: {x: -.100000001, y: -.25}
+  m_Poly:
+    m_Paths:
+    - - {x: -.276292413, y: -.217597961}
+      - {x: -.047598362, y: -.524017096}
+      - {x: .108808555, y: -.521615982}
+      - {x: .106452852, y: .0499999523}
+      - {x: .0694919005, y: .0868115425}
+      - {x: -.278682292, y: .0820083618}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,10 +76,11 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 93cb049693d4c504a8bc44d866f3cf6f, type: 3}
-  m_Color: {r: .889705896, g: .889705896, b: .889705896, a: 1}
+  m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
