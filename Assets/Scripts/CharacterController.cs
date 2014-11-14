@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterController : MonoBehaviour
 {
-	
+	public int numCoins = 0;
 	private Animator animator;
 	private SpriteRenderer renderer;
 	public Animator pants;
@@ -86,6 +86,7 @@ public class CharacterController : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.CompareTag("Coin")) {
 			GameObject.Destroy(collider.gameObject);
+			numCoins++;
 		}
 		if (collider.CompareTag("Tile")) {
 			
@@ -135,5 +136,9 @@ public class CharacterController : MonoBehaviour
 			GameObject.Destroy(collider.gameObject);
 			Debug.Log("entered map");
 		}	
+	}
+	
+	void OnGUI() {
+		GUI.Box(new Rect(Screen.width - 250, 25, 200, 75), "<size=40>Coins: " + numCoins + "</size>");
 	}
 }

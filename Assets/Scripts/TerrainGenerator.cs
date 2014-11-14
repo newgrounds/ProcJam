@@ -8,12 +8,12 @@ public class TerrainGenerator : MonoBehaviour
 	public static List<Tile> tilesWithoutDecals = new List<Tile> ();
 	public static List<Ruins> ruins = new List<Ruins> ();
 	public List<Sprite> sprites;
-	private int mapWidth = 0;
+	public int mapWidth = 50;
+	public int ruinsToSpawn = 8;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		mapWidth = 50;
 		float randZ = Random.Range (0, 100000);
 		for (int x = 0; x < mapWidth; x++) {
 			for (int y = 0; y < mapWidth; y++) {
@@ -62,7 +62,7 @@ public class TerrainGenerator : MonoBehaviour
 		}
 		
 		// generate ruins
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < ruinsToSpawn; i++) {
 			ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count)));
 		}
 		
