@@ -84,6 +84,9 @@ public class CharacterController : MonoBehaviour
 	 * Collect books
 	 */
 	void OnTriggerEnter2D(Collider2D collider) {
+		if (collider.CompareTag("Coin")) {
+			GameObject.Destroy(collider.gameObject);
+		}
 		if (collider.CompareTag("Tile")) {
 			
 			//Debug.Log("tile");
