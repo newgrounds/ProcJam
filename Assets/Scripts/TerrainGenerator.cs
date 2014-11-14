@@ -13,13 +13,13 @@ public class TerrainGenerator : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
 		mapWidth = 50;
+		float randZ = Random.Range(0, 100000);
 		for (int x = 0; x < mapWidth; x++) {
 			for (int y = 0; y < mapWidth; y++) {
-				float height = SimplexNoise.Noise.Generate (x / 12f, y / 12f) / 2f;
-				float height2 = SimplexNoise.Noise.Generate (x + 1000 / 8f, y + 1000 / 8f) / 2f;
-				float height3 = SimplexNoise.Noise.Generate (x / 15f, y / 15f) / 2f;
+				float height = SimplexNoise.Noise.Generate (x / 12f, y / 12f, randZ) / 2f;
+				float height2 = SimplexNoise.Noise.Generate (x + 1000 / 8f, y + 1000 / 8f, randZ) / 2f;
+				float height3 = SimplexNoise.Noise.Generate (x / 15f, y / 15f, randZ) / 2f;
 				GameObject tile;
 				/*
 				if (height3 < -.4f) {
@@ -36,10 +36,13 @@ public class TerrainGenerator : MonoBehaviour
 					tiles.Add (tile.GetComponent<Tile> ());
 				} else if (height3 > -.4f) {
 			*/
+				
 				tile = Instantiate (Resources.Load ("tile")) as GameObject;
-				tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
-				tile.GetComponent<SpriteRenderer> ().color = new Color (1f + height, 1f + height, 1f + height, 1);
-				tile.GetComponent<SpriteRenderer> ().sortingOrder = y;
+				//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
+				tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height/5f, 0);
+				float h = height/5f;//Mathf.FloorToInt(height)/5f;
+				tile.GetComponent<SpriteRenderer> ().color = new Color (1f + h, 1f + h, 1f + h, 1);
+				tile.GetComponent<SpriteRenderer> ().sortingOrder = y - 1000;
 				
 				Tile tileObject = tile.GetComponent<Tile> ();
 				tileObject.sortingOrder = y;

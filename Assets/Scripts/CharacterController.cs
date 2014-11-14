@@ -90,15 +90,16 @@ public class CharacterController : MonoBehaviour
 			Tile t = collider.gameObject.GetComponent<Tile>();
 			//Debug.Log(t.height);
 			if(t.height < lastHeight){
-				iTween.MoveBy(gameObject, iTween.Hash("time", .3f,"y", t.height - lastHeight, "easeType", "easeOutBounce"));
+				//iTween.MoveBy(gameObject, iTween.Hash("time", .3f,"y", t.height - lastHeight, "easeType", "easeOutBounce"));
 			}
 			else if(t.height > lastHeight){
-				iTween.MoveBy(gameObject, iTween.Hash("time", .3f,"y", t.height - lastHeight, "easeType", "easeInOutCubic"));
+				//iTween.MoveBy(gameObject, iTween.Hash("time", .3f,"y", t.height - lastHeight, "easeType", "easeInOutCubic"));
 			}
 				lastHeight = t.height;
 				//iTween.MoveTo(this.gameObject, t.transform.position, .1f);
 			
-			//renderer.sortingOrder = t.sortingOrder + 1;
+			renderer.sortingOrder = t.sortingOrder + 1;
+			
 		}
 		CheckBooks(collider);
 	}
