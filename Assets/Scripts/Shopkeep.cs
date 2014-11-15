@@ -60,11 +60,11 @@ public class Shopkeep : MonoBehaviour {
 				+ " for " + itemsForSale[numPurchased].cost + " coins?</size>"
 			);
 			if (controller.numCoins >= itemsForSale[numPurchased].cost) {
-				if (GUI.Button(new Rect(50, 170, 200, 100), "Buy")) {
+				if (GUI.Button(new Rect(100, 120, 100, 50), "Buy")) {
 					Purchase();
 				}
 			} else {
-				GUI.Button(new Rect(50, 170, 200, 100), "Need more coins");
+				GUI.Button(new Rect(75, 120, 150, 50), "Need more coins");
 			}
 			GUI.EndGroup();
 		}
