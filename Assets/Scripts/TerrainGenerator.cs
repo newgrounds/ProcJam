@@ -100,7 +100,7 @@ public class TerrainGenerator : MonoBehaviour
 					float randomSize = Random.Range (-.5f, .5f);
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + + 1;	
+					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;	
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
@@ -108,7 +108,7 @@ public class TerrainGenerator : MonoBehaviour
 					GameObject grass = Instantiate (Resources.Load ("grass")) as GameObject;
 					grass.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
 					grass.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
-					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + + 1;	
+					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;	
 				}	
 			}
 		}

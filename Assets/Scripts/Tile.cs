@@ -7,7 +7,7 @@ public class Tile : MonoBehaviour {
 	public float height;
 	public float height2;
 	public float height3;
-	private Decal decal;
+	public Decal decal;
 	public Vector3 origin;
 	
 	public Decal GetDecal() {
