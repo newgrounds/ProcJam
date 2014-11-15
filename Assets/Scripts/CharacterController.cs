@@ -11,11 +11,15 @@ public class CharacterController : MonoBehaviour
 	private Vector2 speed;
 	private Tile currentTile;
 	private float lastHeight = 0;
+	
+	public float speedMod;
+	
 	// Use this for initialization
 	void Start ()
 	{
 		animator = this.GetComponent<Animator> ();
 		renderer = this.GetComponent<SpriteRenderer> ();
+		speedMod = 2f;
 		
 	}
 	
@@ -50,7 +54,7 @@ public class CharacterController : MonoBehaviour
 			speed = new Vector2 (.05f, 0);
 		}
 		
-		transform.Translate (new Vector3 (speed.x/2f, speed.y/2f, 0));
+		transform.Translate (new Vector3 (speed.x/speedMod, speed.y/speedMod, 0));
 		//rigidbody2D.AddForce(speed);// (new Vector3 (speed.x, speed.y, 0));
 		speed *= .8f;
 		animator.SetFloat ("Direction", direction);
@@ -119,7 +123,8 @@ public class CharacterController : MonoBehaviour
 		if (collider.CompareTag("Book")) {
 			Book book = collider.gameObject.GetComponent<Book>();
 			char bookChar = book.bookChar;
-			Debug.Log("collided with book with char: " + bookChar);
+			//Debug.Log("collided with book with char: " + bookChar);
+			
 			Cryptogram crypto = GameObject.Find("Cryptogram").GetComponent<Cryptogram>();
 			crypto.UnscrambleValue(bookChar);
 			crypto.Scramble(crypto.message);
@@ -127,21 +132,36 @@ public class CharacterController : MonoBehaviour
 		} else if (collider.CompareTag("Chest")) {
 			Chest chest = collider.gameObject.GetComponent<Chest>();
 			char chestChar = chest.storedChar;
-			Debug.Log("opened chest with char: " + chestChar);
+			//Debug.Log("opened chest with char: " + chestChar);
 			
 			Cryptogram crypto = GameObject.Find("Cryptogram").GetComponent<Cryptogram>();
 			
+			// if this one is already open
+			if (chest.gameObject.GetComponent<Animator>().GetBool("open", false)) {
+				// do nothing
+			}
 			// open in correct order
-			if (crypto.message[crypto.openChests].Equals(chestChar)) {
+			else if (crypto.message[crypto.openChests].Equals(chestChar)) {
 				chest.gameObject.GetComponent<Animator>().SetBool("open", true);
 				crypto.openChests++;
 			} else {
 				crypto.CloseAllChests();
 			}
-		} else if (collider.CompareTag("Map")) {
+		}
+		// collect the map
+		else if (collider.CompareTag("Map")) {
 			GameObject.Find("Minimap").GetComponent<Camera>().enabled = true;
 			GameObject.Destroy(collider.gameObject);
-			Debug.Log("entered map");
+		}
+		// collect the boots
+		else if (collider.CompareTag("Boots")) {
+			speedMod = 1.5f;
+			GameObject.Destroy(collider.gameObject);
+		}
+		// collect the better boots
+		else if (collider.CompareTag("BetterBoots")) {
+			speedMod = 1f;
+			GameObject.Destroy(collider.gameObject);
 		}
 	}
 	

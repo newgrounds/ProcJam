@@ -19,9 +19,9 @@ public class Shopkeep : MonoBehaviour {
 		// maybe make the coin counter free
 		itemsForSale.Add(new Purchasable("map", 10, mapObj));
 		itemsForSale.Add(new Purchasable("boots", 50, bootsObj));
-		itemsForSale.Add(new Purchasable("sword", 100, swordObj));
+		//itemsForSale.Add(new Purchasable("sword", 100, swordObj));
 		//itemsForSale.Add(new Purchasable("skeleton key", 200, keyObj));
-		//itemsForSale.Add(new Purchasable("better boots", 300, betterBootsObj));
+		itemsForSale.Add(new Purchasable("better boots", 300, betterBootsObj));
 		//itemsForSale.Add(new Purchasable("", 400, ));
 		// fast travel
 		//itemsForSale.Add(new Purchasable("", 500, ));
