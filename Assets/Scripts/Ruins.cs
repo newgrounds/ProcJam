@@ -12,6 +12,7 @@ public class Ruins
 	private float flatY;
 	private List<Tile> tiles;
 	public enum FLOOR {redwood, lightwood, darkwood};
+	public enum DECAL {crate, jar, barrel};
 	// Use this for initialization
 	public Ruins (int mapWidth, int startIndex)
 	{
@@ -128,6 +129,15 @@ public class Ruins
 			t.transform.position = t.origin;
 			//}
 			GameObject wall = GameObject.Instantiate (Resources.Load (wallType)) as GameObject;
+			
+			if(Random.Range(0,10) > 7){
+				DECAL decalType = (DECAL)Random.Range(0,3);
+				GameObject decal = GameObject.Instantiate (Resources.Load (decalType.ToString())) as GameObject;
+				decal.transform.position = new Vector3 (t.transform.position.x + Random.Range(-.1f,.1f), t.transform.position.y + Random.Range(-.1f,.1f), 0);
+				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
+			}
+
+			
 			wall.transform.position = new Vector3 (t.transform.position.x + .05f, t.transform.position.y + .05f, 0);
 			wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
 			t.SetDecal(wall.GetComponent<Decal>());
