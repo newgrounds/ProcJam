@@ -135,7 +135,7 @@ public class CharacterController : MonoBehaviour
 			GameObject.Find("Minimap").GetComponent<Camera>().enabled = true;
 			GameObject.Destroy(collider.gameObject);
 			Debug.Log("entered map");
-		}	
+		}
 	}
 	
 	void OnGUI() {
