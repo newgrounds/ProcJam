@@ -137,7 +137,7 @@ public class CharacterController : MonoBehaviour
 			Cryptogram crypto = GameObject.Find("Cryptogram").GetComponent<Cryptogram>();
 			
 			// if this one is already open
-			if (chest.gameObject.GetComponent<Animator>().GetBool("open", false)) {
+			if (chest.gameObject.GetComponent<Animator>().GetBool("open")) {
 				// do nothing
 			}
 			// open in correct order
