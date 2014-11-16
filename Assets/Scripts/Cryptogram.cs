@@ -24,9 +24,9 @@ public class Cryptogram : MonoBehaviour {
 		GenerateDictionary();
 		Debug.Log(dict);
 		
-		PlaceBooks();
+		//PlaceBooks();
 		
-		PlaceChests();
+		//PlaceChests();
 	}
 	
 	void GenerateDictionary() {
@@ -69,7 +69,7 @@ public class Cryptogram : MonoBehaviour {
 	 * This requires the terrain to have already been generated
 	 * so I changed the script execution order so that happens first
 	 */
-	public void PlaceBooks() {
+	/*public void PlaceBooks() {
 		foreach (char letter in dict.Keys) {
 			Ruins chosenRuins = TerrainGenerator.ruins[Random.Range(0, TerrainGenerator.ruins.Count)];
 			int floorIndex = Random.Range(0, chosenRuins.floors.Count);
@@ -83,9 +83,9 @@ public class Cryptogram : MonoBehaviour {
 			Book b = bObj.GetComponent<Book>();
 			b.bookChar = letter;
 		}
-	}
+	}*/
 	
-	public void PlaceChests() {
+	/*public void PlaceChests() {
 		List<char> keys = new List<char>(dict.Keys);
 		for (int i = 0; i < numChests; i++) {
 			Tile tile = TerrainGenerator.tilesWithoutDecals[Random.Range(0, TerrainGenerator.tilesWithoutDecals.Count)];
@@ -96,7 +96,7 @@ public class Cryptogram : MonoBehaviour {
 			keys.Remove(c.storedChar);
 		}
 		Scramble(message);
-	}
+	}*/
 	
 	public void CloseAllChests() {
 		GameObject[] chests = GameObject.FindGameObjectsWithTag("Chest");

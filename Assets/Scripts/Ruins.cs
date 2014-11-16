@@ -16,7 +16,7 @@ public class Ruins
 	// Use this for initialization
 	public Ruins (int mapWidth, int startIndex)
 	{
-		FLOOR floorType = (FLOOR)Random.Range(0,3);
+		/*FLOOR floorType = (FLOOR)Random.Range(0,3);
 		tiles = TerrainGenerator.tiles;
 		//int randStartPos = new Vector2(Random.Range(0,tiles.Count),Random.Range(0,tiles.Count));
 		int randStartPos = startIndex;
@@ -80,7 +80,7 @@ public class Ruins
 			else{
 				RemoveRandomWall(ref wallsBottom);	
 			}
-		}
+		}*/
 	
 	}
 	

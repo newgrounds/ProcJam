@@ -61,7 +61,7 @@ public class CharacterController : MonoBehaviour
 		animator.SetFloat ("Speed", speed.magnitude);
 		
 		
-		foreach(Tile t in TerrainGenerator.tiles){
+		/*foreach(Tile t in TerrainGenerator.tiles){
 			//if(Vector3.Distance(t.transform.position + (Vector3.up * .3f), (transform.position - (Vector3.up * .15f))) < .2f){
 			if(Vector3.Distance(t.transform.position + (Vector3.up * .4f), transform.position) < .25f){
 				renderer.sortingOrder = t.sortingOrder + 2;
@@ -80,7 +80,7 @@ public class CharacterController : MonoBehaviour
 					t.GetDecal().gameObject.SetActive(true);	
 			}
 			*/
-		}
+		//}
 		
 		//pants.SetFloat ("Direction", direction);
 		//pants.SetFloat ("Speed", speed.magnitude);

@@ -45,8 +45,8 @@ public class Shopkeep : MonoBehaviour {
 		}
 		// spawn somewhere random
 		else {
-			Tile t = TerrainGenerator.tilesWithoutDecals[Random.Range(0, TerrainGenerator.tilesWithoutDecals.Count)];
-			transform.position = t.transform.position;
+			//Tile t = TerrainGenerator.tilesWithoutDecals[Random.Range(0, TerrainGenerator.tilesWithoutDecals.Count)];
+			//transform.position = t.transform.position;
 		}
 	}
 	
