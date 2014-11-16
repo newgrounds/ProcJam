@@ -14,7 +14,7 @@ public class CharacterController : MonoBehaviour
 	private Tile currentTile;
 	private float lastHeight = 0;
 	private bool attacking = false;
-	private bool isAttacking = false;
+	public bool isAttacking = false;
 	
 	public float speedMod;
 	
