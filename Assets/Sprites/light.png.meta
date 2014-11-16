@@ -1,185 +1,6 @@
 fileFormatVersion: 2
 guid: c1eebae5b14e4984fbaf5e8e017b838f
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: light_0
-    21300002: light_1
-    21300004: light_2
-    21300006: light_3
-    21300008: light_4
-    21300010: light_5
-    21300012: light_6
-    21300014: light_7
-    21300016: light_8
-    21300018: light_9
-    21300020: light_10
-    21300022: light_11
-    21300024: light_12
-    21300026: light_13
-    21300028: light_14
-    21300030: light_15
-    21300032: light_16
-    21300034: light_17
-    21300036: light_18
-    21300038: light_19
-    21300040: light_20
-    21300042: light_21
-    21300044: light_22
-    21300046: light_23
-    21300048: light_24
-    21300050: light_25
-    21300052: light_26
-    21300054: light_27
-    21300056: light_28
-    21300058: light_29
-    21300060: light_30
-    21300062: light_31
-    21300064: light_32
-    21300066: light_33
-    21300068: light_34
-    21300070: light_35
-    21300072: light_36
-    21300074: light_37
-    21300076: light_38
-    21300078: light_39
-    21300080: light_40
-    21300082: light_41
-    21300084: light_42
-    21300086: light_43
-    21300088: light_44
-    21300090: light_45
-    21300092: light_46
-    21300094: light_47
-    21300096: light_48
-    21300098: light_49
-    21300100: light_50
-    21300102: light_51
-    21300104: light_52
-    21300106: light_53
-    21300108: light_54
-    21300110: light_55
-    21300112: light_56
-    21300114: light_57
-    21300116: light_58
-    21300118: light_59
-    21300120: light_60
-    21300122: light_61
-    21300124: light_62
-    21300126: light_63
-    21300128: light_64
-    21300130: light_65
-    21300132: light_66
-    21300134: light_67
-    21300136: light_68
-    21300138: light_69
-    21300140: light_70
-    21300142: light_71
-    21300144: light_72
-    21300146: light_73
-    21300148: light_74
-    21300150: light_75
-    21300152: light_76
-    21300154: light_77
-    21300156: light_78
-    21300158: light_79
-    21300160: light_80
-    21300162: light_81
-    21300164: light_82
-    21300166: light_83
-    21300168: light_84
-    21300170: light_85
-    21300172: light_86
-    21300174: light_87
-    21300176: light_88
-    21300178: light_89
-    21300180: light_90
-    21300182: light_91
-    21300184: light_92
-    21300186: light_93
-    21300188: light_94
-    21300190: light_95
-    21300192: light_96
-    21300194: light_97
-    21300196: light_98
-    21300198: light_99
-    21300200: light_100
-    21300202: light_101
-    21300204: light_102
-    21300206: light_103
-    21300208: light_104
-    21300210: light_105
-    21300212: light_106
-    21300214: light_107
-    21300216: light_108
-    21300218: light_109
-    21300220: light_110
-    21300222: light_111
-    21300224: light_112
-    21300226: light_113
-    21300228: light_114
-    21300230: light_115
-    21300232: light_116
-    21300234: light_117
-    21300236: light_118
-    21300238: light_119
-    21300240: light_120
-    21300242: light_121
-    21300244: light_122
-    21300246: light_123
-    21300248: light_124
-    21300250: light_125
-    21300252: light_126
-    21300254: light_127
-    21300256: light_128
-    21300258: light_129
-    21300260: light_130
-    21300262: light_131
-    21300264: light_132
-    21300266: light_133
-    21300268: light_134
-    21300270: light_135
-    21300272: light_136
-    21300274: light_137
-    21300276: light_138
-    21300278: light_139
-    21300280: light_140
-    21300282: light_141
-    21300284: light_142
-    21300286: light_143
-    21300288: light_144
-    21300290: light_145
-    21300292: light_146
-    21300294: light_147
-    21300296: light_148
-    21300298: light_149
-    21300300: light_150
-    21300302: light_151
-    21300304: light_152
-    21300306: light_153
-    21300308: light_154
-    21300310: light_155
-    21300312: light_156
-    21300314: light_157
-    21300316: light_158
-    21300318: light_159
-    21300320: light_160
-    21300322: light_161
-    21300324: light_162
-    21300326: light_163
-    21300328: light_164
-    21300330: light_165
-    21300332: light_166
-    21300334: light_167
-    21300336: light_168
-    21300338: light_169
-    21300340: light_170
-    21300342: light_171
-    21300344: light_172
-    21300346: light_173
-    21300348: light_174
-    21300350: light_175
-    21300352: light_176
-    21300354: light_177
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -214,7 +35,6 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -233,8 +53,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_1
       rect:
         serializedVersion: 2
@@ -243,8 +62,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_2
       rect:
         serializedVersion: 2
@@ -253,8 +71,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_3
       rect:
         serializedVersion: 2
@@ -263,8 +80,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_4
       rect:
         serializedVersion: 2
@@ -273,8 +89,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_5
       rect:
         serializedVersion: 2
@@ -283,8 +98,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_6
       rect:
         serializedVersion: 2
@@ -293,8 +107,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_7
       rect:
         serializedVersion: 2
@@ -303,8 +116,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_8
       rect:
         serializedVersion: 2
@@ -313,8 +125,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_9
       rect:
         serializedVersion: 2
@@ -323,8 +134,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_10
       rect:
         serializedVersion: 2
@@ -333,8 +143,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_11
       rect:
         serializedVersion: 2
@@ -343,8 +152,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_12
       rect:
         serializedVersion: 2
@@ -353,8 +161,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_13
       rect:
         serializedVersion: 2
@@ -363,8 +170,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_14
       rect:
         serializedVersion: 2
@@ -373,8 +179,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_15
       rect:
         serializedVersion: 2
@@ -383,8 +188,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_16
       rect:
         serializedVersion: 2
@@ -393,8 +197,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_17
       rect:
         serializedVersion: 2
@@ -403,8 +206,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_18
       rect:
         serializedVersion: 2
@@ -413,8 +215,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_19
       rect:
         serializedVersion: 2
@@ -423,8 +224,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_20
       rect:
         serializedVersion: 2
@@ -433,8 +233,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_21
       rect:
         serializedVersion: 2
@@ -443,8 +242,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_22
       rect:
         serializedVersion: 2
@@ -453,8 +251,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_23
       rect:
         serializedVersion: 2
@@ -463,8 +260,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_24
       rect:
         serializedVersion: 2
@@ -473,8 +269,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_25
       rect:
         serializedVersion: 2
@@ -483,8 +278,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_26
       rect:
         serializedVersion: 2
@@ -493,8 +287,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_27
       rect:
         serializedVersion: 2
@@ -503,8 +296,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_28
       rect:
         serializedVersion: 2
@@ -513,8 +305,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_29
       rect:
         serializedVersion: 2
@@ -523,8 +314,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_30
       rect:
         serializedVersion: 2
@@ -533,8 +323,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_31
       rect:
         serializedVersion: 2
@@ -543,8 +332,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_32
       rect:
         serializedVersion: 2
@@ -553,8 +341,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_33
       rect:
         serializedVersion: 2
@@ -563,8 +350,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_34
       rect:
         serializedVersion: 2
@@ -573,8 +359,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_35
       rect:
         serializedVersion: 2
@@ -583,8 +368,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_36
       rect:
         serializedVersion: 2
@@ -593,8 +377,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_37
       rect:
         serializedVersion: 2
@@ -603,8 +386,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_38
       rect:
         serializedVersion: 2
@@ -613,8 +395,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_39
       rect:
         serializedVersion: 2
@@ -623,8 +404,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_40
       rect:
         serializedVersion: 2
@@ -633,8 +413,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_41
       rect:
         serializedVersion: 2
@@ -643,8 +422,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_42
       rect:
         serializedVersion: 2
@@ -653,8 +431,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_43
       rect:
         serializedVersion: 2
@@ -663,8 +440,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_44
       rect:
         serializedVersion: 2
@@ -673,8 +449,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_45
       rect:
         serializedVersion: 2
@@ -683,8 +458,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_46
       rect:
         serializedVersion: 2
@@ -693,8 +467,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_47
       rect:
         serializedVersion: 2
@@ -703,8 +476,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_48
       rect:
         serializedVersion: 2
@@ -713,8 +485,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_49
       rect:
         serializedVersion: 2
@@ -723,8 +494,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_50
       rect:
         serializedVersion: 2
@@ -733,8 +503,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_51
       rect:
         serializedVersion: 2
@@ -743,8 +512,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_52
       rect:
         serializedVersion: 2
@@ -753,8 +521,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_53
       rect:
         serializedVersion: 2
@@ -763,8 +530,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_54
       rect:
         serializedVersion: 2
@@ -773,8 +539,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_55
       rect:
         serializedVersion: 2
@@ -783,8 +548,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_56
       rect:
         serializedVersion: 2
@@ -793,8 +557,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_57
       rect:
         serializedVersion: 2
@@ -803,8 +566,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_58
       rect:
         serializedVersion: 2
@@ -813,8 +575,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_59
       rect:
         serializedVersion: 2
@@ -823,8 +584,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_60
       rect:
         serializedVersion: 2
@@ -833,8 +593,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_61
       rect:
         serializedVersion: 2
@@ -843,8 +602,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_62
       rect:
         serializedVersion: 2
@@ -853,8 +611,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_63
       rect:
         serializedVersion: 2
@@ -863,8 +620,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_64
       rect:
         serializedVersion: 2
@@ -873,8 +629,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_65
       rect:
         serializedVersion: 2
@@ -883,8 +638,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_66
       rect:
         serializedVersion: 2
@@ -893,8 +647,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_67
       rect:
         serializedVersion: 2
@@ -903,8 +656,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_68
       rect:
         serializedVersion: 2
@@ -913,8 +665,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_69
       rect:
         serializedVersion: 2
@@ -923,8 +674,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_70
       rect:
         serializedVersion: 2
@@ -933,8 +683,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_71
       rect:
         serializedVersion: 2
@@ -943,8 +692,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_72
       rect:
         serializedVersion: 2
@@ -953,8 +701,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_73
       rect:
         serializedVersion: 2
@@ -963,8 +710,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_74
       rect:
         serializedVersion: 2
@@ -973,8 +719,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_75
       rect:
         serializedVersion: 2
@@ -983,8 +728,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_76
       rect:
         serializedVersion: 2
@@ -993,8 +737,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_77
       rect:
         serializedVersion: 2
@@ -1003,8 +746,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_78
       rect:
         serializedVersion: 2
@@ -1013,8 +755,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_79
       rect:
         serializedVersion: 2
@@ -1023,8 +764,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_80
       rect:
         serializedVersion: 2
@@ -1033,8 +773,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_81
       rect:
         serializedVersion: 2
@@ -1043,8 +782,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_82
       rect:
         serializedVersion: 2
@@ -1053,8 +791,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_83
       rect:
         serializedVersion: 2
@@ -1063,8 +800,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_84
       rect:
         serializedVersion: 2
@@ -1073,8 +809,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_85
       rect:
         serializedVersion: 2
@@ -1083,8 +818,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_86
       rect:
         serializedVersion: 2
@@ -1093,8 +827,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_87
       rect:
         serializedVersion: 2
@@ -1103,8 +836,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_88
       rect:
         serializedVersion: 2
@@ -1113,8 +845,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_89
       rect:
         serializedVersion: 2
@@ -1123,8 +854,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_90
       rect:
         serializedVersion: 2
@@ -1133,8 +863,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_91
       rect:
         serializedVersion: 2
@@ -1143,8 +872,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_92
       rect:
         serializedVersion: 2
@@ -1153,8 +881,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_93
       rect:
         serializedVersion: 2
@@ -1163,8 +890,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_94
       rect:
         serializedVersion: 2
@@ -1173,8 +899,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_95
       rect:
         serializedVersion: 2
@@ -1183,8 +908,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_96
       rect:
         serializedVersion: 2
@@ -1193,8 +917,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_97
       rect:
         serializedVersion: 2
@@ -1203,8 +926,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_98
       rect:
         serializedVersion: 2
@@ -1213,8 +935,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_99
       rect:
         serializedVersion: 2
@@ -1223,8 +944,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_100
       rect:
         serializedVersion: 2
@@ -1233,8 +953,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_101
       rect:
         serializedVersion: 2
@@ -1243,8 +962,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_102
       rect:
         serializedVersion: 2
@@ -1253,8 +971,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_103
       rect:
         serializedVersion: 2
@@ -1263,8 +980,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_104
       rect:
         serializedVersion: 2
@@ -1273,8 +989,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_105
       rect:
         serializedVersion: 2
@@ -1283,8 +998,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_106
       rect:
         serializedVersion: 2
@@ -1293,8 +1007,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_107
       rect:
         serializedVersion: 2
@@ -1303,8 +1016,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_108
       rect:
         serializedVersion: 2
@@ -1313,8 +1025,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_109
       rect:
         serializedVersion: 2
@@ -1323,8 +1034,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_110
       rect:
         serializedVersion: 2
@@ -1333,8 +1043,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_111
       rect:
         serializedVersion: 2
@@ -1343,8 +1052,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_112
       rect:
         serializedVersion: 2
@@ -1353,8 +1061,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_113
       rect:
         serializedVersion: 2
@@ -1363,8 +1070,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_114
       rect:
         serializedVersion: 2
@@ -1373,8 +1079,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_115
       rect:
         serializedVersion: 2
@@ -1383,8 +1088,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_116
       rect:
         serializedVersion: 2
@@ -1393,8 +1097,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_117
       rect:
         serializedVersion: 2
@@ -1403,8 +1106,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_118
       rect:
         serializedVersion: 2
@@ -1413,8 +1115,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_119
       rect:
         serializedVersion: 2
@@ -1423,8 +1124,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_120
       rect:
         serializedVersion: 2
@@ -1433,8 +1133,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_121
       rect:
         serializedVersion: 2
@@ -1443,8 +1142,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_122
       rect:
         serializedVersion: 2
@@ -1453,8 +1151,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_123
       rect:
         serializedVersion: 2
@@ -1463,8 +1160,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_124
       rect:
         serializedVersion: 2
@@ -1473,8 +1169,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_125
       rect:
         serializedVersion: 2
@@ -1483,8 +1178,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_126
       rect:
         serializedVersion: 2
@@ -1493,8 +1187,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_127
       rect:
         serializedVersion: 2
@@ -1503,8 +1196,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_128
       rect:
         serializedVersion: 2
@@ -1513,8 +1205,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_129
       rect:
         serializedVersion: 2
@@ -1523,8 +1214,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_130
       rect:
         serializedVersion: 2
@@ -1533,8 +1223,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_131
       rect:
         serializedVersion: 2
@@ -1543,8 +1232,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_132
       rect:
         serializedVersion: 2
@@ -1553,8 +1241,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_133
       rect:
         serializedVersion: 2
@@ -1563,8 +1250,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_134
       rect:
         serializedVersion: 2
@@ -1573,8 +1259,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_135
       rect:
         serializedVersion: 2
@@ -1583,8 +1268,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_136
       rect:
         serializedVersion: 2
@@ -1593,8 +1277,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_137
       rect:
         serializedVersion: 2
@@ -1603,8 +1286,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_138
       rect:
         serializedVersion: 2
@@ -1613,8 +1295,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_139
       rect:
         serializedVersion: 2
@@ -1623,8 +1304,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_140
       rect:
         serializedVersion: 2
@@ -1633,8 +1313,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_141
       rect:
         serializedVersion: 2
@@ -1643,8 +1322,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_142
       rect:
         serializedVersion: 2
@@ -1653,8 +1331,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_143
       rect:
         serializedVersion: 2
@@ -1663,8 +1340,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_144
       rect:
         serializedVersion: 2
@@ -1673,8 +1349,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_145
       rect:
         serializedVersion: 2
@@ -1683,8 +1358,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_146
       rect:
         serializedVersion: 2
@@ -1693,8 +1367,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_147
       rect:
         serializedVersion: 2
@@ -1703,8 +1376,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_148
       rect:
         serializedVersion: 2
@@ -1713,8 +1385,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_149
       rect:
         serializedVersion: 2
@@ -1723,8 +1394,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_150
       rect:
         serializedVersion: 2
@@ -1733,8 +1403,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_151
       rect:
         serializedVersion: 2
@@ -1743,8 +1412,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_152
       rect:
         serializedVersion: 2
@@ -1753,8 +1421,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_153
       rect:
         serializedVersion: 2
@@ -1763,8 +1430,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_154
       rect:
         serializedVersion: 2
@@ -1773,8 +1439,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_155
       rect:
         serializedVersion: 2
@@ -1783,8 +1448,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_156
       rect:
         serializedVersion: 2
@@ -1793,8 +1457,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_157
       rect:
         serializedVersion: 2
@@ -1803,8 +1466,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_158
       rect:
         serializedVersion: 2
@@ -1813,8 +1475,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_159
       rect:
         serializedVersion: 2
@@ -1823,8 +1484,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_160
       rect:
         serializedVersion: 2
@@ -1833,8 +1493,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_161
       rect:
         serializedVersion: 2
@@ -1843,8 +1502,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_162
       rect:
         serializedVersion: 2
@@ -1853,8 +1511,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_163
       rect:
         serializedVersion: 2
@@ -1863,8 +1520,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_164
       rect:
         serializedVersion: 2
@@ -1873,8 +1529,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_165
       rect:
         serializedVersion: 2
@@ -1883,8 +1538,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_166
       rect:
         serializedVersion: 2
@@ -1893,8 +1547,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_167
       rect:
         serializedVersion: 2
@@ -1903,8 +1556,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_168
       rect:
         serializedVersion: 2
@@ -1913,8 +1565,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_169
       rect:
         serializedVersion: 2
@@ -1923,8 +1574,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_170
       rect:
         serializedVersion: 2
@@ -1933,8 +1583,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_171
       rect:
         serializedVersion: 2
@@ -1943,8 +1592,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_172
       rect:
         serializedVersion: 2
@@ -1953,8 +1601,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_173
       rect:
         serializedVersion: 2
@@ -1963,8 +1610,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_174
       rect:
         serializedVersion: 2
@@ -1973,8 +1619,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_175
       rect:
         serializedVersion: 2
@@ -1983,8 +1628,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_176
       rect:
         serializedVersion: 2
@@ -1993,8 +1637,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
     - name: light_177
       rect:
         serializedVersion: 2
@@ -2003,7 +1646,6 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

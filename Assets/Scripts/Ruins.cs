@@ -11,7 +11,7 @@ public class Ruins
 	private float flatHeight;
 	private float flatY;
 	private List<Tile> tiles;
-	public enum FLOOR {redwood, lightwood, darkwood};
+	public enum FLOOR {redwood, lightwood, darkwood, stone};
 	public enum DECAL {crate, jar, barrel};
 	// Use this for initialization
 	public Ruins (int mapWidth, int startIndex)
@@ -106,14 +106,14 @@ public class Ruins
 				//}
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
 				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .5f, 0);
-				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
+				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 				t.SetDecal(wall.GetComponent<Decal>());
 				//t.height = flatHeight;
 				tempWalls.Add(wall.GetComponent<Decal>());
 			} else if (t.GetDecal().CompareTag("Wall")) {
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
 				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .5f, 0);
-				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
+				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 				t.SetDecal(wall.GetComponent<Decal>());
 				tempWalls.Add(wall.GetComponent<Decal>());
 			}
@@ -134,7 +134,7 @@ public class Ruins
 				DECAL decalType = (DECAL)Random.Range(0,3);
 				GameObject decal = GameObject.Instantiate (Resources.Load (decalType.ToString())) as GameObject;
 				decal.transform.position = new Vector3 (t.transform.position.x + Random.Range(-.1f,.1f), t.transform.position.y + Random.Range(-.1f,.1f), 0);
-				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
+				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 4;	
 			}
 
 			
@@ -151,7 +151,7 @@ public class Ruins
 		t.transform.position = t.origin;
 		GameObject door = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
 		door.transform.position = new Vector3(t.transform.position.x  + .05f, t.transform.position.y + .05f, 0);
-		door.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 1;
+		door.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 2;
 		t.SetDecal(door.GetComponent<Decal>());
 	}
 }
