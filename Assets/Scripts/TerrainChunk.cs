@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class TerrainChunk : MonoBehaviour {
 	public GameObject camera;
-	public static List<Tile> tiles = new List<Tile> ();
+	public List<Tile> tiles = new List<Tile> ();
 	public static List<Tile> tilesWithoutDecals = new List<Tile> ();
 	public static List<Ruins> ruins = new List<Ruins> ();
 	public List<Sprite> sprites;
@@ -144,7 +144,7 @@ public class TerrainChunk : MonoBehaviour {
 					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 				}	
 			}
-		}
+		}*/
 		
 		foreach (Tile t in tiles) {
 			float height = t.height;
@@ -157,6 +157,7 @@ public class TerrainChunk : MonoBehaviour {
 					string type = "Coin";
 					//if(Random.Range(0,10) > 9) type = "gem"; else type = "Coin";
 					GameObject coin = Instantiate (Resources.Load (type)) as GameObject;
+					coin.transform.parent = transform;
 					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					coin.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .5f, 0);
 					coin.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
@@ -167,6 +168,7 @@ public class TerrainChunk : MonoBehaviour {
 			}
 		}
 		
+		/*
 		// get a list of tiles without decals
 		foreach (Tile t in tiles) {
 			if (t.GetDecal () == null) {
