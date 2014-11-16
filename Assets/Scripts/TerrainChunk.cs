@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class TerrainChunk : MonoBehaviour {
 	public GameObject camera;
 	public List<Tile> tiles = new List<Tile> ();
-	public static List<Tile> tilesWithoutDecals = new List<Tile> ();
+	public List<Tile> tilesWithoutDecals = new List<Tile> ();
 	public List<Ruins> ruins = new List<Ruins> ();
 	public List<Sprite> sprites;
 	public static int mapWidth = 10;
@@ -180,12 +180,11 @@ public class TerrainChunk : MonoBehaviour {
 			}
 		}
 		
-		/*
 		// get a list of tiles without decals
 		foreach (Tile t in tiles) {
-			if (t.GetDecal () == null) {
-				tilesWithoutDecals.Add (t);
+			if (t.GetDecal() == null) {
+				tilesWithoutDecals.Add(t);
 			}
-		}*/
+		}
 	}
 }

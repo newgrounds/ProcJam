@@ -132,19 +132,19 @@ public class Ruins {
 			//if(Random.Range(0,10) > 2){
 			t.transform.position = t.origin;
 			//}
-			GameObject wall = GameObject.Instantiate (Resources.Load (wallType)) as GameObject;
+			GameObject wall = GameObject.Instantiate(Resources.Load (wallType)) as GameObject;
 			wall.transform.parent = chunk.transform;
 			
 			if(Random.Range(0,10) > 7){
 				DECAL decalType = (DECAL)Random.Range(0,3);
-				GameObject decal = GameObject.Instantiate (Resources.Load (decalType.ToString())) as GameObject;
+				GameObject decal = GameObject.Instantiate(Resources.Load (decalType.ToString())) as GameObject;
 				decal.transform.parent = chunk.transform;
 				decal.transform.position = new Vector3 (t.transform.position.x + Random.Range(-.1f,.1f), t.transform.position.y + Random.Range(-.1f,.1f), 0);
 				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 5;	
 			}
 			
-			wall.transform.position = new Vector3 (t.transform.position.x + .05f, t.transform.position.y + .05f, 0);
-			wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
+			wall.transform.position = new Vector3(t.transform.position.x + .05f, t.transform.position.y + .05f, 0);
+			wall.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 1;
 			t.SetDecal(wall.GetComponent<Decal>());
 			t.height = flatHeight;
 			floors.Add(wall.GetComponent<Decal>());

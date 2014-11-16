@@ -83,6 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 21177479}
   - 20: {fileID: 21177478}
+  - 114: {fileID: 21177475}
   m_Layer: 0
   m_Name: Minimap
   m_TagString: Untagged
@@ -90,6 +91,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &21177475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21177474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f0a01bc3cbc46a5814d46f515e7d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetHeight: .400000006
 --- !u!20 &21177478
 Camera:
   m_ObjectHideFlags: 0
@@ -102,15 +115,15 @@ Camera:
   m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: .800000012
+    x: .600000024
     y: 0
-    width: .200000003
+    width: .400000006
     height: .400000006
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 5
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -129,11 +142,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 21177474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.29999995, y: -1.60000002, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 932953270}
+  m_RootOrder: 0
 --- !u!1 &89846749
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +241,7 @@ Transform:
   m_Children:
   - {fileID: 279331200}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!61 &111748397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -451,6 +464,7 @@ GameObject:
   - 124: {fileID: 932953267}
   - 81: {fileID: 932953266}
   - 114: {fileID: 932953271}
+  - 114: {fileID: 932953272}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -520,7 +534,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 21177479}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!114 &932953271
@@ -536,6 +551,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 179128780}
   smooth: 2
+--- !u!114 &932953272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932953265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c18019ae55704e438b46b5dfd7e55d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &986927016
 Prefab:
   m_ObjectHideFlags: 0
