@@ -10,13 +10,19 @@ public class TerrainChunk : MonoBehaviour {
 	public List<Sprite> sprites;
 	public static int mapWidth = 10;
 	public static float tileSize = 0.5f;
-	public int ruinsToSpawn = 8;
+	private int ruinsToSpawn = 3;
 	Transform player;
 	public bool containsPlayer;
+	public Vector2 normalizedPos;
 	
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
+		
+		normalizedPos = new Vector2(
+			(TerrainGenerator.terrainOrigin.x - transform.position.x) / (mapWidth * tileSize),
+			(TerrainGenerator.terrainOrigin.y - transform.position.y) / (mapWidth * tileSize)
+		);
 		
 		// first chunk
 		GenerateChunk();
@@ -42,14 +48,18 @@ public class TerrainChunk : MonoBehaviour {
 	
 	void GenerateChunk() {
 		// random seed
-		float randZ = Random.Range (0, 100000);
+		//float randZ = Random.Range (0, 100000);
+		float randZ = TerrainGenerator.randZ;
+		
+		float offsetX = normalizedPos.x * mapWidth;
+		float offsetY = normalizedPos.y * mapWidth;
 		
 		// loop to generate tiles
 		for (int x = 0; x < mapWidth; x++) {
 			for (int y = 0; y < mapWidth; y++) {
-				float height = SimplexNoise.Noise.Generate (x / 12f, y / 12f, randZ) / 2f;
-				float height2 = SimplexNoise.Noise.Generate (x + 1000 / 8f, y + 1000 / 8f, randZ) / 2f;
-				float height3 = SimplexNoise.Noise.Generate (x / 15f, y / 15f, randZ) / 2f;
+				float height = SimplexNoise.Noise.Generate ((offsetX - x) / 12f, (offsetY + y) / 12f, randZ) / 2f;
+				float height2 = SimplexNoise.Noise.Generate ((offsetX - x) + 1000 / 8f, (offsetY + y) + 1000 / 8f, randZ) / 2f;
+				float height3 = SimplexNoise.Noise.Generate ((offsetX - x) / 15f, (offsetY + y) / 15f, randZ) / 2f;
 				GameObject tile;
 				
 				/*
@@ -92,7 +102,6 @@ public class TerrainChunk : MonoBehaviour {
 			//}
 		}
 		
-		/*
 		// generate ruins
 		for (int i = 0; i < ruinsToSpawn; i++) {
 			ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count)));
@@ -103,7 +112,7 @@ public class TerrainChunk : MonoBehaviour {
 			if (ruins [i].floors.Count == 0) {
 				ruins.Remove (ruins [i]);
 			}
-		}*/
+		}
 		
 		// tree generation
 		foreach (Tile t in tiles) {

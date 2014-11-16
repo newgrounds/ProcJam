@@ -5,11 +5,15 @@ public class TerrainGenerator : MonoBehaviour {
 	public GameObject chunkPrefab;
 	public static List<TerrainChunk> spawnedChunks = new List<TerrainChunk>();
 	public static List<Vector3> validChunkPosns = new List<Vector3>();
+	public static float randZ;
+	public static Vector3 terrainOrigin;
 	
 	// Use this for initialization
 	void Start () {
+		randZ = Random.Range (0, 100000);
 		float offset = -TerrainChunk.mapWidth * TerrainChunk.tileSize / 2f;
 		Vector3 firstChunkPos = new Vector3(offset, -offset, 0);
+		terrainOrigin = firstChunkPos;
 		GameObject spawnedChunk = Instantiate(chunkPrefab, firstChunkPos, Quaternion.identity) as GameObject;
 		TerrainChunk firstChunk = spawnedChunk.GetComponent<TerrainChunk>();
 		//validChunkPosns.Add(spawnedChunk.transform.position);
