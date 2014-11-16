@@ -88,10 +88,11 @@ public class TerrainChunk : MonoBehaviour {
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 5f, 0);
 					float h = height / 1f;//Mathf.FloorToInt(height)/5f;
 					tile.GetComponent<SpriteRenderer> ().color = new Color (1f + h, 1f + h, 1f + h, 1);
-					tile.GetComponent<SpriteRenderer> ().sortingOrder = y;
+					int tileOrder = (y + (int)offsetY) + (10 * (int)offsetY);
+					tile.GetComponent<SpriteRenderer> ().sortingOrder = tileOrder;
 				
 					Tile tileObject = tile.GetComponent<Tile> ();
-					tileObject.sortingOrder = y*10;
+					tileObject.sortingOrder = tileOrder;
 					tileObject.height = height;
 					tileObject.height2 = height2;
 					tileObject.height3 = height3;
@@ -104,7 +105,7 @@ public class TerrainChunk : MonoBehaviour {
 		
 		// generate ruins
 		//for (int i = 0; i < ruinsToSpawn; i++) {
-		ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count), this));
+		//ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count), this));
 		//}
 		
 		// remove any empty ruins
@@ -125,9 +126,9 @@ public class TerrainChunk : MonoBehaviour {
 					float xOffset = 0;//Random.Range(-.5f, .5f) ;
 					GameObject tree = Instantiate (Resources.Load ("pine")) as GameObject;
 					tree.transform.parent = transform;
-					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
-					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
+					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
+					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, 0);
+					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 3;
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
@@ -142,18 +143,18 @@ public class TerrainChunk : MonoBehaviour {
 					}
 					tree.transform.parent = transform;
 					float randomSize = Random.Range (-.5f, .5f);
-					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
-					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
+					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
+					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, 0);
+					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 3;	
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
 				} else if (height > .2f) {
 					GameObject grass = Instantiate (Resources.Load ("grass")) as GameObject;
 					grass.transform.parent = transform;
-					grass.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
+					grass.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, 0);
 					grass.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
-					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
+					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 3;	
 				}	
 			}
 		}
@@ -164,15 +165,13 @@ public class TerrainChunk : MonoBehaviour {
 			float height3 = t.height3;
 			if (t.GetDecal () == null) {
 				if (height3 > .1f) {
-					//float randomSize = Random.Range (-.5f, .5f);
-					//float xOffset = 0;//Random.Range(-.5f, .5f) ;
 					string type = "Coin";
 					//if(Random.Range(0,10) > 9) type = "gem"; else type = "Coin";
 					GameObject coin = Instantiate (Resources.Load (type)) as GameObject;
 					coin.transform.parent = transform;
 					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
-					coin.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .5f, 0);
-					coin.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
+					coin.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, 0);
+					coin.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 3;
 					//tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					//t.SetDecal (coin.GetComponent<Decal> ());
 				

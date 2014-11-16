@@ -9,6 +9,7 @@ public class Shopkeep : MonoBehaviour {
 	
 	public GameObject mapObj;
 	public GameObject bootsObj;
+	public GameObject attackObj;
 	public GameObject swordObj;
 	public GameObject keyObj;
 	public GameObject betterBootsObj;
@@ -19,6 +20,7 @@ public class Shopkeep : MonoBehaviour {
 		// maybe make the coin counter free
 		itemsForSale.Add(new Purchasable("map", 10, mapObj));
 		itemsForSale.Add(new Purchasable("boots", 50, bootsObj));
+		itemsForSale.Add(new Purchasable("attack", 100, attackObj));
 		//itemsForSale.Add(new Purchasable("sword", 100, swordObj));
 		//itemsForSale.Add(new Purchasable("skeleton key", 200, keyObj));
 		itemsForSale.Add(new Purchasable("better boots", 300, betterBootsObj));
