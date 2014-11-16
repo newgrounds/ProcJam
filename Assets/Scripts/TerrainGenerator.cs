@@ -29,6 +29,7 @@ public class TerrainGenerator : MonoBehaviour {
 				playerChunk = t;
 			}
 		}
+		
 		if (playerChunk == null) {
 			return;
 		}

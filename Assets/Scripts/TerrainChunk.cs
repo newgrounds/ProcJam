@@ -75,22 +75,23 @@ public class TerrainChunk : MonoBehaviour {
 					tile = Instantiate (Resources.Load ("tile")) as GameObject;
 					tile.transform.parent = transform;
 					//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
-					tile.transform.position = new Vector3 (transform.position.x + x * tileSize, transform.position.y - y * tileSize + height / 5f, 0);
+					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 5f, 0);
 					float h = height / 1f;//Mathf.FloorToInt(height)/5f;
 					tile.GetComponent<SpriteRenderer> ().color = new Color (1f + h, 1f + h, 1f + h, 1);
 					tile.GetComponent<SpriteRenderer> ().sortingOrder = y;
 				
 					Tile tileObject = tile.GetComponent<Tile> ();
-					tileObject.sortingOrder = y;
+					tileObject.sortingOrder = y*10;
 					tileObject.height = height;
 					tileObject.height2 = height2;
 					tileObject.height3 = height3;
-					tileObject.origin = new Vector3 (transform.position.x + x * tileSize, transform.position.y - y * tileSize, 0);
+					tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 					tiles.Add (tileObject);
 				
 				}
 			//}
 		}
+		
 		/*
 		// generate ruins
 		for (int i = 0; i < ruinsToSpawn; i++) {
@@ -103,7 +104,7 @@ public class TerrainChunk : MonoBehaviour {
 				ruins.Remove (ruins [i]);
 			}
 		}
-
+		
 		// tree generation
 		foreach (Tile t in tiles) {
 			float height = t.height;
@@ -116,7 +117,7 @@ public class TerrainChunk : MonoBehaviour {
 					GameObject tree = Instantiate (Resources.Load ("pine")) as GameObject;
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
+					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
@@ -132,7 +133,7 @@ public class TerrainChunk : MonoBehaviour {
 					float randomSize = Random.Range (-.5f, .5f);
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;	
+					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
@@ -140,7 +141,7 @@ public class TerrainChunk : MonoBehaviour {
 					GameObject grass = Instantiate (Resources.Load ("grass")) as GameObject;
 					grass.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .2f, 0);
 					grass.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
-					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;	
+					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 				}	
 			}
 		}
@@ -158,7 +159,7 @@ public class TerrainChunk : MonoBehaviour {
 					GameObject coin = Instantiate (Resources.Load (type)) as GameObject;
 					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					coin.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y + .5f, 0);
-					coin.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
+					coin.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 					//tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					//t.SetDecal (coin.GetComponent<Decal> ());
 				
