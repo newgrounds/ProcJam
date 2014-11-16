@@ -6,7 +6,7 @@ public class TerrainChunk : MonoBehaviour {
 	public GameObject camera;
 	public List<Tile> tiles = new List<Tile> ();
 	public static List<Tile> tilesWithoutDecals = new List<Tile> ();
-	public static List<Ruins> ruins = new List<Ruins> ();
+	public List<Ruins> ruins = new List<Ruins> ();
 	public List<Sprite> sprites;
 	public static int mapWidth = 10;
 	public static float tileSize = 0.5f;
@@ -103,9 +103,9 @@ public class TerrainChunk : MonoBehaviour {
 		}
 		
 		// generate ruins
-		for (int i = 0; i < ruinsToSpawn; i++) {
-			ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count)));
-		}
+		//for (int i = 0; i < ruinsToSpawn; i++) {
+		ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count), this));
+		//}
 		
 		// remove any empty ruins
 		for (int i = 0; i < ruins.Count; i++) {
