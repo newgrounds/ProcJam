@@ -2,8 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Ruins
-{
+public class Ruins {
 	public List<Decal> wallsTopAndLeft = new List<Decal>();
 	public List<Decal> wallsRight = new List<Decal>();
 	public List<Decal> wallsBottom = new List<Decal>();
@@ -13,11 +12,15 @@ public class Ruins
 	private List<Tile> tiles;
 	public enum FLOOR {redwood, lightwood, darkwood, stone};
 	public enum DECAL {crate, jar, barrel};
-	// Use this for initialization
-	public Ruins (int mapWidth, int startIndex)
-	{
+	TerrainChunk chunk;
+	
+	public Ruins (int mapWidth, int startIndex, TerrainChunk c) {
+		// store passed in chunk
+		chunk = c;
+		
+		// choose random floor type
 		FLOOR floorType = (FLOOR)Random.Range(0,3);
-		tiles = TerrainGenerator.tiles;
+		tiles = chunk.tiles;
 		//int randStartPos = new Vector2(Random.Range(0,tiles.Count),Random.Range(0,tiles.Count));
 		int randStartPos = startIndex;
 		int randWidth = Random.Range (2, 6);
@@ -38,8 +41,6 @@ public class Ruins
 			for (int i = 1; i < randWidth; i++) {
 				wallsTopAndLeft.AddRange(CreateWallDecal (randStartPos + (mapWidth * i), "ruins/ruins_top"));
 			}
-
-
 		
 			// place bottom walls
 			for (int i = 1; i < randWidth; i++) {
@@ -50,10 +51,12 @@ public class Ruins
 			for (int i = 1; i < randHeight; i++) {
 				wallsRight.AddRange(CreateWallDecal (randStartPos + (mapWidth * randWidth) + i, "ruins/ruins_side"));
 			}
-					// place left walls
+			
+			// place left walls
 			for (int i = 1; i < randHeight; i++) {
 				wallsTopAndLeft.AddRange(CreateWallDecal (randStartPos + i, "ruins/ruins_side"));
 			}
+			
 			// create floors
 			for (int x = 0; x <randWidth; x++) {
 				for (int y = 0; y <randHeight; y++) {
@@ -67,21 +70,22 @@ public class Ruins
 			// chance to spawn another ruin to the right
 			if (Random.Range (0, 100) > 65) {
 				RemoveRandomWall(ref wallsRight);
-				TerrainGenerator.ruins.Add(new Ruins (mapWidth, startIndex + (randWidth * mapWidth)));
+				chunk.ruins.Add(new Ruins (mapWidth, startIndex + (randWidth * mapWidth), chunk));
 			}			
-			else{
+			else {
 				RemoveRandomWall(ref wallsRight);	
 			}
 			// chance to spawn another ruin below
 			if (Random.Range (0, 100) > 65) {
 				RemoveRandomWall(ref wallsBottom);
-				TerrainGenerator.ruins.Add(new Ruins (mapWidth, startIndex + randHeight));
+				chunk.ruins.Add(new Ruins (mapWidth, startIndex + randHeight, chunk));
 			}
-			else{
+			else {
 				RemoveRandomWall(ref wallsBottom);	
 			}
+		} else {
+			Debug.Log("failed to create ruins");
 		}
-	
 	}
 	
 	void RemoveRandomWall(ref List<Decal> wallList) {
@@ -93,8 +97,7 @@ public class Ruins
 		}
 	}
 
-	List<Decal> CreateWallDecal (int index, string wallType)
-	{
+	List<Decal> CreateWallDecal (int index, string wallType) {
 		List<Decal> tempWalls = new List<Decal>();
 		if (index < tiles.Count) {
 			Tile t = tiles[index];
@@ -105,6 +108,7 @@ public class Ruins
 				t.transform.position = t.origin;
 				//}
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
+				wall.transform.parent = chunk.transform;
 				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .5f, 0);
 				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 				t.SetDecal(wall.GetComponent<Decal>());
@@ -112,6 +116,7 @@ public class Ruins
 				tempWalls.Add(wall.GetComponent<Decal>());
 			} else if (t.GetDecal().CompareTag("Wall")) {
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
+				wall.transform.parent = chunk.transform;
 				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .5f, 0);
 				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 				t.SetDecal(wall.GetComponent<Decal>());
@@ -121,35 +126,35 @@ public class Ruins
 		return tempWalls;
 	}
 	
-	void CreateFloorDecal (int index, string wallType)
-	{
+	void CreateFloorDecal (int index, string wallType) {
 		if (index < tiles.Count) {
 			Tile t = tiles [index];
 			//if(Random.Range(0,10) > 2){
 			t.transform.position = t.origin;
 			//}
-			GameObject wall = GameObject.Instantiate (Resources.Load (wallType)) as GameObject;
+			GameObject wall = GameObject.Instantiate(Resources.Load (wallType)) as GameObject;
+			wall.transform.parent = chunk.transform;
 			
 			if(Random.Range(0,10) > 7){
 				DECAL decalType = (DECAL)Random.Range(0,3);
-				GameObject decal = GameObject.Instantiate (Resources.Load (decalType.ToString())) as GameObject;
+				GameObject decal = GameObject.Instantiate(Resources.Load (decalType.ToString())) as GameObject;
+				decal.transform.parent = chunk.transform;
 				decal.transform.position = new Vector3 (t.transform.position.x + Random.Range(-.1f,.1f), t.transform.position.y + Random.Range(-.1f,.1f), 0);
 				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 5;	
 			}
-
 			
-			wall.transform.position = new Vector3 (t.transform.position.x + .05f, t.transform.position.y + .05f, 0);
-			wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 1;
+			wall.transform.position = new Vector3(t.transform.position.x + .05f, t.transform.position.y + .05f, 0);
+			wall.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 1;
 			t.SetDecal(wall.GetComponent<Decal>());
 			t.height = flatHeight;
 			floors.Add(wall.GetComponent<Decal>());
 		}
 	}
 	
-	void CreateDoorDecal (Tile t, string wallType)
-	{
+	void CreateDoorDecal (Tile t, string wallType) {
 		t.transform.position = t.origin;
 		GameObject door = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
+		door.transform.parent = chunk.transform;
 		door.transform.position = new Vector3(t.transform.position.x  + .05f, t.transform.position.y + .05f, 0);
 		door.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 2;
 		t.SetDecal(door.GetComponent<Decal>());

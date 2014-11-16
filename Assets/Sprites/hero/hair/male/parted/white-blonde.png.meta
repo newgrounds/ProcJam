@@ -1,6 +1,185 @@
 fileFormatVersion: 2
 guid: 10e5a9ddc0c2241f6a594e63bd3bbf12
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: white-blonde_0
+    21300002: white-blonde_1
+    21300004: white-blonde_2
+    21300006: white-blonde_3
+    21300008: white-blonde_4
+    21300010: white-blonde_5
+    21300012: white-blonde_6
+    21300014: white-blonde_7
+    21300016: white-blonde_8
+    21300018: white-blonde_9
+    21300020: white-blonde_10
+    21300022: white-blonde_11
+    21300024: white-blonde_12
+    21300026: white-blonde_13
+    21300028: white-blonde_14
+    21300030: white-blonde_15
+    21300032: white-blonde_16
+    21300034: white-blonde_17
+    21300036: white-blonde_18
+    21300038: white-blonde_19
+    21300040: white-blonde_20
+    21300042: white-blonde_21
+    21300044: white-blonde_22
+    21300046: white-blonde_23
+    21300048: white-blonde_24
+    21300050: white-blonde_25
+    21300052: white-blonde_26
+    21300054: white-blonde_27
+    21300056: white-blonde_28
+    21300058: white-blonde_29
+    21300060: white-blonde_30
+    21300062: white-blonde_31
+    21300064: white-blonde_32
+    21300066: white-blonde_33
+    21300068: white-blonde_34
+    21300070: white-blonde_35
+    21300072: white-blonde_36
+    21300074: white-blonde_37
+    21300076: white-blonde_38
+    21300078: white-blonde_39
+    21300080: white-blonde_40
+    21300082: white-blonde_41
+    21300084: white-blonde_42
+    21300086: white-blonde_43
+    21300088: white-blonde_44
+    21300090: white-blonde_45
+    21300092: white-blonde_46
+    21300094: white-blonde_47
+    21300096: white-blonde_48
+    21300098: white-blonde_49
+    21300100: white-blonde_50
+    21300102: white-blonde_51
+    21300104: white-blonde_52
+    21300106: white-blonde_53
+    21300108: white-blonde_54
+    21300110: white-blonde_55
+    21300112: white-blonde_56
+    21300114: white-blonde_57
+    21300116: white-blonde_58
+    21300118: white-blonde_59
+    21300120: white-blonde_60
+    21300122: white-blonde_61
+    21300124: white-blonde_62
+    21300126: white-blonde_63
+    21300128: white-blonde_64
+    21300130: white-blonde_65
+    21300132: white-blonde_66
+    21300134: white-blonde_67
+    21300136: white-blonde_68
+    21300138: white-blonde_69
+    21300140: white-blonde_70
+    21300142: white-blonde_71
+    21300144: white-blonde_72
+    21300146: white-blonde_73
+    21300148: white-blonde_74
+    21300150: white-blonde_75
+    21300152: white-blonde_76
+    21300154: white-blonde_77
+    21300156: white-blonde_78
+    21300158: white-blonde_79
+    21300160: white-blonde_80
+    21300162: white-blonde_81
+    21300164: white-blonde_82
+    21300166: white-blonde_83
+    21300168: white-blonde_84
+    21300170: white-blonde_85
+    21300172: white-blonde_86
+    21300174: white-blonde_87
+    21300176: white-blonde_88
+    21300178: white-blonde_89
+    21300180: white-blonde_90
+    21300182: white-blonde_91
+    21300184: white-blonde_92
+    21300186: white-blonde_93
+    21300188: white-blonde_94
+    21300190: white-blonde_95
+    21300192: white-blonde_96
+    21300194: white-blonde_97
+    21300196: white-blonde_98
+    21300198: white-blonde_99
+    21300200: white-blonde_100
+    21300202: white-blonde_101
+    21300204: white-blonde_102
+    21300206: white-blonde_103
+    21300208: white-blonde_104
+    21300210: white-blonde_105
+    21300212: white-blonde_106
+    21300214: white-blonde_107
+    21300216: white-blonde_108
+    21300218: white-blonde_109
+    21300220: white-blonde_110
+    21300222: white-blonde_111
+    21300224: white-blonde_112
+    21300226: white-blonde_113
+    21300228: white-blonde_114
+    21300230: white-blonde_115
+    21300232: white-blonde_116
+    21300234: white-blonde_117
+    21300236: white-blonde_118
+    21300238: white-blonde_119
+    21300240: white-blonde_120
+    21300242: white-blonde_121
+    21300244: white-blonde_122
+    21300246: white-blonde_123
+    21300248: white-blonde_124
+    21300250: white-blonde_125
+    21300252: white-blonde_126
+    21300254: white-blonde_127
+    21300256: white-blonde_128
+    21300258: white-blonde_129
+    21300260: white-blonde_130
+    21300262: white-blonde_131
+    21300264: white-blonde_132
+    21300266: white-blonde_133
+    21300268: white-blonde_134
+    21300270: white-blonde_135
+    21300272: white-blonde_136
+    21300274: white-blonde_137
+    21300276: white-blonde_138
+    21300278: white-blonde_139
+    21300280: white-blonde_140
+    21300282: white-blonde_141
+    21300284: white-blonde_142
+    21300286: white-blonde_143
+    21300288: white-blonde_144
+    21300290: white-blonde_145
+    21300292: white-blonde_146
+    21300294: white-blonde_147
+    21300296: white-blonde_148
+    21300298: white-blonde_149
+    21300300: white-blonde_150
+    21300302: white-blonde_151
+    21300304: white-blonde_152
+    21300306: white-blonde_153
+    21300308: white-blonde_154
+    21300310: white-blonde_155
+    21300312: white-blonde_156
+    21300314: white-blonde_157
+    21300316: white-blonde_158
+    21300318: white-blonde_159
+    21300320: white-blonde_160
+    21300322: white-blonde_161
+    21300324: white-blonde_162
+    21300326: white-blonde_163
+    21300328: white-blonde_164
+    21300330: white-blonde_165
+    21300332: white-blonde_166
+    21300334: white-blonde_167
+    21300336: white-blonde_168
+    21300338: white-blonde_169
+    21300340: white-blonde_170
+    21300342: white-blonde_171
+    21300344: white-blonde_172
+    21300346: white-blonde_173
+    21300348: white-blonde_174
+    21300350: white-blonde_175
+    21300352: white-blonde_176
+    21300354: white-blonde_177
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +214,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +230,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_1
       rect:
         serializedVersion: 2
@@ -59,6 +240,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_2
       rect:
         serializedVersion: 2
@@ -68,6 +250,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_3
       rect:
         serializedVersion: 2
@@ -77,6 +260,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_4
       rect:
         serializedVersion: 2
@@ -86,6 +270,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_5
       rect:
         serializedVersion: 2
@@ -95,6 +280,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_6
       rect:
         serializedVersion: 2
@@ -104,6 +290,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_7
       rect:
         serializedVersion: 2
@@ -113,6 +300,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_8
       rect:
         serializedVersion: 2
@@ -122,6 +310,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_9
       rect:
         serializedVersion: 2
@@ -131,6 +320,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_10
       rect:
         serializedVersion: 2
@@ -140,6 +330,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_11
       rect:
         serializedVersion: 2
@@ -149,6 +340,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_12
       rect:
         serializedVersion: 2
@@ -158,6 +350,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_13
       rect:
         serializedVersion: 2
@@ -167,6 +360,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_14
       rect:
         serializedVersion: 2
@@ -176,6 +370,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_15
       rect:
         serializedVersion: 2
@@ -185,6 +380,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_16
       rect:
         serializedVersion: 2
@@ -194,6 +390,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_17
       rect:
         serializedVersion: 2
@@ -203,6 +400,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_18
       rect:
         serializedVersion: 2
@@ -212,6 +410,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_19
       rect:
         serializedVersion: 2
@@ -221,6 +420,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_20
       rect:
         serializedVersion: 2
@@ -230,6 +430,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_21
       rect:
         serializedVersion: 2
@@ -239,6 +440,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_22
       rect:
         serializedVersion: 2
@@ -248,6 +450,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_23
       rect:
         serializedVersion: 2
@@ -257,6 +460,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_24
       rect:
         serializedVersion: 2
@@ -266,6 +470,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_25
       rect:
         serializedVersion: 2
@@ -275,6 +480,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_26
       rect:
         serializedVersion: 2
@@ -284,6 +490,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_27
       rect:
         serializedVersion: 2
@@ -293,6 +500,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_28
       rect:
         serializedVersion: 2
@@ -302,6 +510,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_29
       rect:
         serializedVersion: 2
@@ -311,6 +520,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_30
       rect:
         serializedVersion: 2
@@ -320,6 +530,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_31
       rect:
         serializedVersion: 2
@@ -329,6 +540,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_32
       rect:
         serializedVersion: 2
@@ -338,6 +550,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_33
       rect:
         serializedVersion: 2
@@ -347,6 +560,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_34
       rect:
         serializedVersion: 2
@@ -356,6 +570,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_35
       rect:
         serializedVersion: 2
@@ -365,6 +580,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_36
       rect:
         serializedVersion: 2
@@ -374,6 +590,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_37
       rect:
         serializedVersion: 2
@@ -383,6 +600,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_38
       rect:
         serializedVersion: 2
@@ -392,6 +610,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_39
       rect:
         serializedVersion: 2
@@ -401,6 +620,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_40
       rect:
         serializedVersion: 2
@@ -410,6 +630,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_41
       rect:
         serializedVersion: 2
@@ -419,6 +640,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_42
       rect:
         serializedVersion: 2
@@ -428,6 +650,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_43
       rect:
         serializedVersion: 2
@@ -437,6 +660,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_44
       rect:
         serializedVersion: 2
@@ -446,6 +670,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_45
       rect:
         serializedVersion: 2
@@ -455,6 +680,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_46
       rect:
         serializedVersion: 2
@@ -464,6 +690,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_47
       rect:
         serializedVersion: 2
@@ -473,6 +700,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_48
       rect:
         serializedVersion: 2
@@ -482,6 +710,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_49
       rect:
         serializedVersion: 2
@@ -491,6 +720,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_50
       rect:
         serializedVersion: 2
@@ -500,6 +730,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_51
       rect:
         serializedVersion: 2
@@ -509,6 +740,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_52
       rect:
         serializedVersion: 2
@@ -518,6 +750,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_53
       rect:
         serializedVersion: 2
@@ -527,6 +760,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_54
       rect:
         serializedVersion: 2
@@ -536,6 +770,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_55
       rect:
         serializedVersion: 2
@@ -545,6 +780,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_56
       rect:
         serializedVersion: 2
@@ -554,6 +790,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_57
       rect:
         serializedVersion: 2
@@ -563,6 +800,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_58
       rect:
         serializedVersion: 2
@@ -572,6 +810,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_59
       rect:
         serializedVersion: 2
@@ -581,6 +820,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_60
       rect:
         serializedVersion: 2
@@ -590,6 +830,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_61
       rect:
         serializedVersion: 2
@@ -599,6 +840,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_62
       rect:
         serializedVersion: 2
@@ -608,6 +850,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_63
       rect:
         serializedVersion: 2
@@ -617,6 +860,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_64
       rect:
         serializedVersion: 2
@@ -626,6 +870,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_65
       rect:
         serializedVersion: 2
@@ -635,6 +880,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_66
       rect:
         serializedVersion: 2
@@ -644,6 +890,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_67
       rect:
         serializedVersion: 2
@@ -653,6 +900,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_68
       rect:
         serializedVersion: 2
@@ -662,6 +910,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_69
       rect:
         serializedVersion: 2
@@ -671,6 +920,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_70
       rect:
         serializedVersion: 2
@@ -680,6 +930,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_71
       rect:
         serializedVersion: 2
@@ -689,6 +940,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_72
       rect:
         serializedVersion: 2
@@ -698,6 +950,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_73
       rect:
         serializedVersion: 2
@@ -707,6 +960,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_74
       rect:
         serializedVersion: 2
@@ -716,6 +970,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_75
       rect:
         serializedVersion: 2
@@ -725,6 +980,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_76
       rect:
         serializedVersion: 2
@@ -734,6 +990,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_77
       rect:
         serializedVersion: 2
@@ -743,6 +1000,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_78
       rect:
         serializedVersion: 2
@@ -752,6 +1010,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_79
       rect:
         serializedVersion: 2
@@ -761,6 +1020,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_80
       rect:
         serializedVersion: 2
@@ -770,6 +1030,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_81
       rect:
         serializedVersion: 2
@@ -779,6 +1040,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_82
       rect:
         serializedVersion: 2
@@ -788,6 +1050,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_83
       rect:
         serializedVersion: 2
@@ -797,6 +1060,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_84
       rect:
         serializedVersion: 2
@@ -806,6 +1070,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_85
       rect:
         serializedVersion: 2
@@ -815,6 +1080,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_86
       rect:
         serializedVersion: 2
@@ -824,6 +1090,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_87
       rect:
         serializedVersion: 2
@@ -833,6 +1100,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_88
       rect:
         serializedVersion: 2
@@ -842,6 +1110,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_89
       rect:
         serializedVersion: 2
@@ -851,6 +1120,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_90
       rect:
         serializedVersion: 2
@@ -860,6 +1130,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_91
       rect:
         serializedVersion: 2
@@ -869,6 +1140,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_92
       rect:
         serializedVersion: 2
@@ -878,6 +1150,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_93
       rect:
         serializedVersion: 2
@@ -887,6 +1160,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_94
       rect:
         serializedVersion: 2
@@ -896,6 +1170,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_95
       rect:
         serializedVersion: 2
@@ -905,6 +1180,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_96
       rect:
         serializedVersion: 2
@@ -914,6 +1190,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_97
       rect:
         serializedVersion: 2
@@ -923,6 +1200,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_98
       rect:
         serializedVersion: 2
@@ -932,6 +1210,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_99
       rect:
         serializedVersion: 2
@@ -941,6 +1220,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_100
       rect:
         serializedVersion: 2
@@ -950,6 +1230,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_101
       rect:
         serializedVersion: 2
@@ -959,6 +1240,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_102
       rect:
         serializedVersion: 2
@@ -968,6 +1250,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_103
       rect:
         serializedVersion: 2
@@ -977,6 +1260,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_104
       rect:
         serializedVersion: 2
@@ -986,6 +1270,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_105
       rect:
         serializedVersion: 2
@@ -995,6 +1280,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_106
       rect:
         serializedVersion: 2
@@ -1004,6 +1290,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_107
       rect:
         serializedVersion: 2
@@ -1013,6 +1300,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_108
       rect:
         serializedVersion: 2
@@ -1022,6 +1310,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_109
       rect:
         serializedVersion: 2
@@ -1031,6 +1320,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_110
       rect:
         serializedVersion: 2
@@ -1040,6 +1330,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_111
       rect:
         serializedVersion: 2
@@ -1049,6 +1340,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_112
       rect:
         serializedVersion: 2
@@ -1058,6 +1350,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_113
       rect:
         serializedVersion: 2
@@ -1067,6 +1360,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_114
       rect:
         serializedVersion: 2
@@ -1076,6 +1370,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_115
       rect:
         serializedVersion: 2
@@ -1085,6 +1380,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_116
       rect:
         serializedVersion: 2
@@ -1094,6 +1390,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_117
       rect:
         serializedVersion: 2
@@ -1103,6 +1400,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_118
       rect:
         serializedVersion: 2
@@ -1112,6 +1410,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_119
       rect:
         serializedVersion: 2
@@ -1121,6 +1420,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_120
       rect:
         serializedVersion: 2
@@ -1130,6 +1430,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_121
       rect:
         serializedVersion: 2
@@ -1139,6 +1440,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_122
       rect:
         serializedVersion: 2
@@ -1148,6 +1450,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_123
       rect:
         serializedVersion: 2
@@ -1157,6 +1460,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_124
       rect:
         serializedVersion: 2
@@ -1166,6 +1470,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_125
       rect:
         serializedVersion: 2
@@ -1175,6 +1480,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_126
       rect:
         serializedVersion: 2
@@ -1184,6 +1490,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_127
       rect:
         serializedVersion: 2
@@ -1193,6 +1500,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_128
       rect:
         serializedVersion: 2
@@ -1202,6 +1510,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_129
       rect:
         serializedVersion: 2
@@ -1211,6 +1520,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_130
       rect:
         serializedVersion: 2
@@ -1220,6 +1530,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_131
       rect:
         serializedVersion: 2
@@ -1229,6 +1540,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_132
       rect:
         serializedVersion: 2
@@ -1238,6 +1550,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_133
       rect:
         serializedVersion: 2
@@ -1247,6 +1560,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_134
       rect:
         serializedVersion: 2
@@ -1256,6 +1570,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_135
       rect:
         serializedVersion: 2
@@ -1265,6 +1580,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_136
       rect:
         serializedVersion: 2
@@ -1274,6 +1590,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_137
       rect:
         serializedVersion: 2
@@ -1283,6 +1600,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_138
       rect:
         serializedVersion: 2
@@ -1292,6 +1610,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_139
       rect:
         serializedVersion: 2
@@ -1301,6 +1620,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_140
       rect:
         serializedVersion: 2
@@ -1310,6 +1630,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_141
       rect:
         serializedVersion: 2
@@ -1319,6 +1640,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_142
       rect:
         serializedVersion: 2
@@ -1328,6 +1650,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_143
       rect:
         serializedVersion: 2
@@ -1337,6 +1660,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_144
       rect:
         serializedVersion: 2
@@ -1346,6 +1670,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_145
       rect:
         serializedVersion: 2
@@ -1355,6 +1680,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_146
       rect:
         serializedVersion: 2
@@ -1364,6 +1690,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_147
       rect:
         serializedVersion: 2
@@ -1373,6 +1700,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_148
       rect:
         serializedVersion: 2
@@ -1382,6 +1710,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_149
       rect:
         serializedVersion: 2
@@ -1391,6 +1720,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_150
       rect:
         serializedVersion: 2
@@ -1400,6 +1730,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_151
       rect:
         serializedVersion: 2
@@ -1409,6 +1740,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_152
       rect:
         serializedVersion: 2
@@ -1418,6 +1750,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_153
       rect:
         serializedVersion: 2
@@ -1427,6 +1760,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_154
       rect:
         serializedVersion: 2
@@ -1436,6 +1770,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_155
       rect:
         serializedVersion: 2
@@ -1445,6 +1780,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_156
       rect:
         serializedVersion: 2
@@ -1454,6 +1790,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_157
       rect:
         serializedVersion: 2
@@ -1463,6 +1800,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_158
       rect:
         serializedVersion: 2
@@ -1472,6 +1810,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_159
       rect:
         serializedVersion: 2
@@ -1481,6 +1820,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_160
       rect:
         serializedVersion: 2
@@ -1490,6 +1830,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_161
       rect:
         serializedVersion: 2
@@ -1499,6 +1840,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_162
       rect:
         serializedVersion: 2
@@ -1508,6 +1850,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_163
       rect:
         serializedVersion: 2
@@ -1517,6 +1860,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_164
       rect:
         serializedVersion: 2
@@ -1526,6 +1870,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_165
       rect:
         serializedVersion: 2
@@ -1535,6 +1880,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_166
       rect:
         serializedVersion: 2
@@ -1544,6 +1890,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_167
       rect:
         serializedVersion: 2
@@ -1553,6 +1900,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_168
       rect:
         serializedVersion: 2
@@ -1562,6 +1910,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_169
       rect:
         serializedVersion: 2
@@ -1571,6 +1920,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_170
       rect:
         serializedVersion: 2
@@ -1580,6 +1930,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_171
       rect:
         serializedVersion: 2
@@ -1589,6 +1940,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_172
       rect:
         serializedVersion: 2
@@ -1598,6 +1950,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_173
       rect:
         serializedVersion: 2
@@ -1607,6 +1960,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_174
       rect:
         serializedVersion: 2
@@ -1616,6 +1970,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_175
       rect:
         serializedVersion: 2
@@ -1625,6 +1980,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_176
       rect:
         serializedVersion: 2
@@ -1634,6 +1990,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: white-blonde_177
       rect:
         serializedVersion: 2
@@ -1643,5 +2000,6 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

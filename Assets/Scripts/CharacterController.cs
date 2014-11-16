@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterController : MonoBehaviour
-{
+public class CharacterController : MonoBehaviour {
 	public int numCoins = 0;
 	private Animator animator;
 	private SpriteRenderer renderer;
@@ -15,12 +14,10 @@ public class CharacterController : MonoBehaviour
 	private float lastHeight = 0;
 	private bool attacking = false;
 	public bool isAttacking = false;
-	
 	public float speedMod;
+	public bool canAttack;
 	
-	// Use this for initialization
-	void Start ()
-	{
+	void Start () {
 		animator = this.GetComponent<Animator> ();
 		renderer = this.GetComponent<SpriteRenderer> ();
 		float randTint = Random.Range(0,230);
@@ -29,10 +26,8 @@ public class CharacterController : MonoBehaviour
 		
 	}
 	
-	// Update is called once per frame
-	void FixedUpdate ()
-	{
-		if(Input.GetKey(KeyCode.Space) && speed.magnitude == 0 && !isAttacking){
+	void FixedUpdate () {
+		if (canAttack && Input.GetKeyDown(KeyCode.Space) && speed.magnitude == 0 && !isAttacking) {
 			attacking = true;
 		}
 
@@ -69,59 +64,39 @@ public class CharacterController : MonoBehaviour
 		}
 		//rigidbody2D.AddForce(speed);// (new Vector3 (speed.x, speed.y, 0));
 		speed *= .8f;
-		if(speed.magnitude <= .001f){
+		if (speed.magnitude <= .001f) {
 			speed = Vector2.zero;
 		}
-		if(speed.magnitude <= .01f && !attacking){
+		if (speed.magnitude <= .01f && !attacking) {
 			animator.Play("Idle");
 			pants.Play("Idle");
 			shirt.Play("Idle");
 			hair.Play("Idle");
-		
 		}
-		 if(this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-		   {
-		       // Avoid any reload.
-		       isAttacking = true;
-		   }
-		   else if (isAttacking)
-		   {
-		        isAttacking = false;
-				attacking = false;
-		        // You have just leaved your state!
-		   }
-	   
+		if(this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")) {
+		   // Avoid any reload.
+		   isAttacking = true;
+		} else if (isAttacking) {
+		    isAttacking = false;
+			attacking = false;
+		    // You have just leaved your state!
+		}
 		
-		foreach(Tile t in TerrainGenerator.tiles){
-			//if(Vector3.Distance(t.transform.position + (Vector3.up * .3f), (transform.position - (Vector3.up * .15f))) < .2f){
-			if(Vector3.Distance(t.transform.position + (Vector3.up * .4f), transform.position) < .25f){
-				hair.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 4;
-				pants.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 4;
-				shirt.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 4;
-				renderer.sortingOrder = t.sortingOrder + 3;
-				
+		// fix character sorting order
+		foreach(TerrainChunk c in TerrainGenerator.spawnedChunks) {
+			foreach(Tile t in c.tiles){
+				if(Vector3.Distance(t.transform.position + (Vector3.up * 0.5f), transform.position) < .25f){
+					hair.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 3;
+					pants.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 3;
+					shirt.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 3;
+					renderer.sortingOrder = t.sortingOrder + 2;
+				}
 			}
-			
-			//Debug.Log(Vector3.Distance(t.transform.position, transform.position));
-			/*
-			if(Vector3.Distance(t.transform.position, transform.position) > 4f){
-				t.gameObject.SetActive(false);
-				if(t.GetDecal())
-					t.GetDecal().gameObject.SetActive(false);
-			}
-			else{
-				t.gameObject.SetActive(true);
-				if(t.GetDecal())
-					t.GetDecal().gameObject.SetActive(true);	
-			}
-			*/
 		}
 		animator.SetFloat ("Direction", direction);
 		animator.SetFloat ("Speed", speed.magnitude* 100f);
 		//Debug.Log(speed.magnitude);
 		animator.SetBool ("Attacking", attacking);
-		
-		
 		
 		pants.SetFloat ("Direction", direction);
 		pants.SetFloat ("Speed", speed.magnitude* 100f);
@@ -168,10 +143,10 @@ public class CharacterController : MonoBehaviour
 			
 		}
 		*/
-		CheckBooks(collider);
+		CheckCollectables(collider);
 	}
 	
-	void CheckBooks(Collider2D collider){
+	void CheckCollectables(Collider2D collider) {
 		if (collider.CompareTag("Book")) {
 			Book book = collider.gameObject.GetComponent<Book>();
 			char bookChar = book.bookChar;
@@ -207,12 +182,17 @@ public class CharacterController : MonoBehaviour
 		}
 		// collect the boots
 		else if (collider.CompareTag("Boots")) {
-			speedMod = 1.5f;
+			speedMod -= 0.5f;
 			GameObject.Destroy(collider.gameObject);
 		}
 		// collect the better boots
 		else if (collider.CompareTag("BetterBoots")) {
-			speedMod = 1f;
+			speedMod -= 0.5f;
+			GameObject.Destroy(collider.gameObject);
+		}
+		// collect the attack
+		else if (collider.CompareTag("AttackEnabler")) {
+			canAttack = true;
 			GameObject.Destroy(collider.gameObject);
 		}
 	}

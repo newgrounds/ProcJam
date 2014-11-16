@@ -110,6 +110,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapObj: {fileID: 100000, guid: bb679a3a935ed4665bb4a9b357683dac, type: 2}
+  bootsObj: {fileID: 100000, guid: c74e800911c80427e93f0dd2f929f829, type: 2}
+  attackObj: {fileID: 100000, guid: 7d726197e465a49ddbd59a9e0fce951b, type: 2}
+  swordObj: {fileID: 0}
+  keyObj: {fileID: 0}
+  betterBootsObj: {fileID: 100000, guid: f971f3ab2a76c493e9a0a03267bd109d, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

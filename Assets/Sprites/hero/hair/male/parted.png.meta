@@ -1,6 +1,185 @@
 fileFormatVersion: 2
 guid: e8e42d83ff9024995b2b1037bb3de195
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: parted_0
+    21300002: parted_1
+    21300004: parted_2
+    21300006: parted_3
+    21300008: parted_4
+    21300010: parted_5
+    21300012: parted_6
+    21300014: parted_7
+    21300016: parted_8
+    21300018: parted_9
+    21300020: parted_10
+    21300022: parted_11
+    21300024: parted_12
+    21300026: parted_13
+    21300028: parted_14
+    21300030: parted_15
+    21300032: parted_16
+    21300034: parted_17
+    21300036: parted_18
+    21300038: parted_19
+    21300040: parted_20
+    21300042: parted_21
+    21300044: parted_22
+    21300046: parted_23
+    21300048: parted_24
+    21300050: parted_25
+    21300052: parted_26
+    21300054: parted_27
+    21300056: parted_28
+    21300058: parted_29
+    21300060: parted_30
+    21300062: parted_31
+    21300064: parted_32
+    21300066: parted_33
+    21300068: parted_34
+    21300070: parted_35
+    21300072: parted_36
+    21300074: parted_37
+    21300076: parted_38
+    21300078: parted_39
+    21300080: parted_40
+    21300082: parted_41
+    21300084: parted_42
+    21300086: parted_43
+    21300088: parted_44
+    21300090: parted_45
+    21300092: parted_46
+    21300094: parted_47
+    21300096: parted_48
+    21300098: parted_49
+    21300100: parted_50
+    21300102: parted_51
+    21300104: parted_52
+    21300106: parted_53
+    21300108: parted_54
+    21300110: parted_55
+    21300112: parted_56
+    21300114: parted_57
+    21300116: parted_58
+    21300118: parted_59
+    21300120: parted_60
+    21300122: parted_61
+    21300124: parted_62
+    21300126: parted_63
+    21300128: parted_64
+    21300130: parted_65
+    21300132: parted_66
+    21300134: parted_67
+    21300136: parted_68
+    21300138: parted_69
+    21300140: parted_70
+    21300142: parted_71
+    21300144: parted_72
+    21300146: parted_73
+    21300148: parted_74
+    21300150: parted_75
+    21300152: parted_76
+    21300154: parted_77
+    21300156: parted_78
+    21300158: parted_79
+    21300160: parted_80
+    21300162: parted_81
+    21300164: parted_82
+    21300166: parted_83
+    21300168: parted_84
+    21300170: parted_85
+    21300172: parted_86
+    21300174: parted_87
+    21300176: parted_88
+    21300178: parted_89
+    21300180: parted_90
+    21300182: parted_91
+    21300184: parted_92
+    21300186: parted_93
+    21300188: parted_94
+    21300190: parted_95
+    21300192: parted_96
+    21300194: parted_97
+    21300196: parted_98
+    21300198: parted_99
+    21300200: parted_100
+    21300202: parted_101
+    21300204: parted_102
+    21300206: parted_103
+    21300208: parted_104
+    21300210: parted_105
+    21300212: parted_106
+    21300214: parted_107
+    21300216: parted_108
+    21300218: parted_109
+    21300220: parted_110
+    21300222: parted_111
+    21300224: parted_112
+    21300226: parted_113
+    21300228: parted_114
+    21300230: parted_115
+    21300232: parted_116
+    21300234: parted_117
+    21300236: parted_118
+    21300238: parted_119
+    21300240: parted_120
+    21300242: parted_121
+    21300244: parted_122
+    21300246: parted_123
+    21300248: parted_124
+    21300250: parted_125
+    21300252: parted_126
+    21300254: parted_127
+    21300256: parted_128
+    21300258: parted_129
+    21300260: parted_130
+    21300262: parted_131
+    21300264: parted_132
+    21300266: parted_133
+    21300268: parted_134
+    21300270: parted_135
+    21300272: parted_136
+    21300274: parted_137
+    21300276: parted_138
+    21300278: parted_139
+    21300280: parted_140
+    21300282: parted_141
+    21300284: parted_142
+    21300286: parted_143
+    21300288: parted_144
+    21300290: parted_145
+    21300292: parted_146
+    21300294: parted_147
+    21300296: parted_148
+    21300298: parted_149
+    21300300: parted_150
+    21300302: parted_151
+    21300304: parted_152
+    21300306: parted_153
+    21300308: parted_154
+    21300310: parted_155
+    21300312: parted_156
+    21300314: parted_157
+    21300316: parted_158
+    21300318: parted_159
+    21300320: parted_160
+    21300322: parted_161
+    21300324: parted_162
+    21300326: parted_163
+    21300328: parted_164
+    21300330: parted_165
+    21300332: parted_166
+    21300334: parted_167
+    21300336: parted_168
+    21300338: parted_169
+    21300340: parted_170
+    21300342: parted_171
+    21300344: parted_172
+    21300346: parted_173
+    21300348: parted_174
+    21300350: parted_175
+    21300352: parted_176
+    21300354: parted_177
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +214,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +230,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_1
       rect:
         serializedVersion: 2
@@ -59,6 +240,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_2
       rect:
         serializedVersion: 2
@@ -68,6 +250,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_3
       rect:
         serializedVersion: 2
@@ -77,6 +260,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_4
       rect:
         serializedVersion: 2
@@ -86,6 +270,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_5
       rect:
         serializedVersion: 2
@@ -95,6 +280,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_6
       rect:
         serializedVersion: 2
@@ -104,6 +290,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_7
       rect:
         serializedVersion: 2
@@ -113,6 +300,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_8
       rect:
         serializedVersion: 2
@@ -122,6 +310,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_9
       rect:
         serializedVersion: 2
@@ -131,6 +320,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_10
       rect:
         serializedVersion: 2
@@ -140,6 +330,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_11
       rect:
         serializedVersion: 2
@@ -149,6 +340,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_12
       rect:
         serializedVersion: 2
@@ -158,6 +350,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_13
       rect:
         serializedVersion: 2
@@ -167,6 +360,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_14
       rect:
         serializedVersion: 2
@@ -176,6 +370,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_15
       rect:
         serializedVersion: 2
@@ -185,6 +380,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_16
       rect:
         serializedVersion: 2
@@ -194,6 +390,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_17
       rect:
         serializedVersion: 2
@@ -203,6 +400,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_18
       rect:
         serializedVersion: 2
@@ -212,6 +410,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_19
       rect:
         serializedVersion: 2
@@ -221,6 +420,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_20
       rect:
         serializedVersion: 2
@@ -230,6 +430,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_21
       rect:
         serializedVersion: 2
@@ -239,6 +440,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_22
       rect:
         serializedVersion: 2
@@ -248,6 +450,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_23
       rect:
         serializedVersion: 2
@@ -257,6 +460,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_24
       rect:
         serializedVersion: 2
@@ -266,6 +470,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_25
       rect:
         serializedVersion: 2
@@ -275,6 +480,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_26
       rect:
         serializedVersion: 2
@@ -284,6 +490,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_27
       rect:
         serializedVersion: 2
@@ -293,6 +500,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_28
       rect:
         serializedVersion: 2
@@ -302,6 +510,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_29
       rect:
         serializedVersion: 2
@@ -311,6 +520,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_30
       rect:
         serializedVersion: 2
@@ -320,6 +530,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_31
       rect:
         serializedVersion: 2
@@ -329,6 +540,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_32
       rect:
         serializedVersion: 2
@@ -338,6 +550,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_33
       rect:
         serializedVersion: 2
@@ -347,6 +560,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_34
       rect:
         serializedVersion: 2
@@ -356,6 +570,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_35
       rect:
         serializedVersion: 2
@@ -365,6 +580,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_36
       rect:
         serializedVersion: 2
@@ -374,6 +590,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_37
       rect:
         serializedVersion: 2
@@ -383,6 +600,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_38
       rect:
         serializedVersion: 2
@@ -392,6 +610,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_39
       rect:
         serializedVersion: 2
@@ -401,6 +620,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_40
       rect:
         serializedVersion: 2
@@ -410,6 +630,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_41
       rect:
         serializedVersion: 2
@@ -419,6 +640,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_42
       rect:
         serializedVersion: 2
@@ -428,6 +650,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_43
       rect:
         serializedVersion: 2
@@ -437,6 +660,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_44
       rect:
         serializedVersion: 2
@@ -446,6 +670,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_45
       rect:
         serializedVersion: 2
@@ -455,6 +680,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_46
       rect:
         serializedVersion: 2
@@ -464,6 +690,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_47
       rect:
         serializedVersion: 2
@@ -473,6 +700,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_48
       rect:
         serializedVersion: 2
@@ -482,6 +710,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_49
       rect:
         serializedVersion: 2
@@ -491,6 +720,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_50
       rect:
         serializedVersion: 2
@@ -500,6 +730,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_51
       rect:
         serializedVersion: 2
@@ -509,6 +740,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_52
       rect:
         serializedVersion: 2
@@ -518,6 +750,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_53
       rect:
         serializedVersion: 2
@@ -527,6 +760,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_54
       rect:
         serializedVersion: 2
@@ -536,6 +770,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_55
       rect:
         serializedVersion: 2
@@ -545,6 +780,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_56
       rect:
         serializedVersion: 2
@@ -554,6 +790,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_57
       rect:
         serializedVersion: 2
@@ -563,6 +800,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_58
       rect:
         serializedVersion: 2
@@ -572,6 +810,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_59
       rect:
         serializedVersion: 2
@@ -581,6 +820,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_60
       rect:
         serializedVersion: 2
@@ -590,6 +830,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_61
       rect:
         serializedVersion: 2
@@ -599,6 +840,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_62
       rect:
         serializedVersion: 2
@@ -608,6 +850,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_63
       rect:
         serializedVersion: 2
@@ -617,6 +860,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_64
       rect:
         serializedVersion: 2
@@ -626,6 +870,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_65
       rect:
         serializedVersion: 2
@@ -635,6 +880,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_66
       rect:
         serializedVersion: 2
@@ -644,6 +890,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_67
       rect:
         serializedVersion: 2
@@ -653,6 +900,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_68
       rect:
         serializedVersion: 2
@@ -662,6 +910,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_69
       rect:
         serializedVersion: 2
@@ -671,6 +920,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_70
       rect:
         serializedVersion: 2
@@ -680,6 +930,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_71
       rect:
         serializedVersion: 2
@@ -689,6 +940,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_72
       rect:
         serializedVersion: 2
@@ -698,6 +950,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_73
       rect:
         serializedVersion: 2
@@ -707,6 +960,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_74
       rect:
         serializedVersion: 2
@@ -716,6 +970,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_75
       rect:
         serializedVersion: 2
@@ -725,6 +980,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_76
       rect:
         serializedVersion: 2
@@ -734,6 +990,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_77
       rect:
         serializedVersion: 2
@@ -743,6 +1000,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_78
       rect:
         serializedVersion: 2
@@ -752,6 +1010,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_79
       rect:
         serializedVersion: 2
@@ -761,6 +1020,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_80
       rect:
         serializedVersion: 2
@@ -770,6 +1030,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_81
       rect:
         serializedVersion: 2
@@ -779,6 +1040,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_82
       rect:
         serializedVersion: 2
@@ -788,6 +1050,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_83
       rect:
         serializedVersion: 2
@@ -797,6 +1060,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_84
       rect:
         serializedVersion: 2
@@ -806,6 +1070,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_85
       rect:
         serializedVersion: 2
@@ -815,6 +1080,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_86
       rect:
         serializedVersion: 2
@@ -824,6 +1090,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_87
       rect:
         serializedVersion: 2
@@ -833,6 +1100,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_88
       rect:
         serializedVersion: 2
@@ -842,6 +1110,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_89
       rect:
         serializedVersion: 2
@@ -851,6 +1120,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_90
       rect:
         serializedVersion: 2
@@ -860,6 +1130,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_91
       rect:
         serializedVersion: 2
@@ -869,6 +1140,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_92
       rect:
         serializedVersion: 2
@@ -878,6 +1150,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_93
       rect:
         serializedVersion: 2
@@ -887,6 +1160,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_94
       rect:
         serializedVersion: 2
@@ -896,6 +1170,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_95
       rect:
         serializedVersion: 2
@@ -905,6 +1180,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_96
       rect:
         serializedVersion: 2
@@ -914,6 +1190,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_97
       rect:
         serializedVersion: 2
@@ -923,6 +1200,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_98
       rect:
         serializedVersion: 2
@@ -932,6 +1210,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_99
       rect:
         serializedVersion: 2
@@ -941,6 +1220,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_100
       rect:
         serializedVersion: 2
@@ -950,6 +1230,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_101
       rect:
         serializedVersion: 2
@@ -959,6 +1240,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_102
       rect:
         serializedVersion: 2
@@ -968,6 +1250,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_103
       rect:
         serializedVersion: 2
@@ -977,6 +1260,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_104
       rect:
         serializedVersion: 2
@@ -986,6 +1270,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_105
       rect:
         serializedVersion: 2
@@ -995,6 +1280,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_106
       rect:
         serializedVersion: 2
@@ -1004,6 +1290,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_107
       rect:
         serializedVersion: 2
@@ -1013,6 +1300,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_108
       rect:
         serializedVersion: 2
@@ -1022,6 +1310,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_109
       rect:
         serializedVersion: 2
@@ -1031,6 +1320,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_110
       rect:
         serializedVersion: 2
@@ -1040,6 +1330,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_111
       rect:
         serializedVersion: 2
@@ -1049,6 +1340,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_112
       rect:
         serializedVersion: 2
@@ -1058,6 +1350,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_113
       rect:
         serializedVersion: 2
@@ -1067,6 +1360,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_114
       rect:
         serializedVersion: 2
@@ -1076,6 +1370,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_115
       rect:
         serializedVersion: 2
@@ -1085,6 +1380,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_116
       rect:
         serializedVersion: 2
@@ -1094,6 +1390,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_117
       rect:
         serializedVersion: 2
@@ -1103,6 +1400,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_118
       rect:
         serializedVersion: 2
@@ -1112,6 +1410,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_119
       rect:
         serializedVersion: 2
@@ -1121,6 +1420,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_120
       rect:
         serializedVersion: 2
@@ -1130,6 +1430,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_121
       rect:
         serializedVersion: 2
@@ -1139,6 +1440,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_122
       rect:
         serializedVersion: 2
@@ -1148,6 +1450,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_123
       rect:
         serializedVersion: 2
@@ -1157,6 +1460,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_124
       rect:
         serializedVersion: 2
@@ -1166,6 +1470,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_125
       rect:
         serializedVersion: 2
@@ -1175,6 +1480,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_126
       rect:
         serializedVersion: 2
@@ -1184,6 +1490,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_127
       rect:
         serializedVersion: 2
@@ -1193,6 +1500,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_128
       rect:
         serializedVersion: 2
@@ -1202,6 +1510,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_129
       rect:
         serializedVersion: 2
@@ -1211,6 +1520,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_130
       rect:
         serializedVersion: 2
@@ -1220,6 +1530,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_131
       rect:
         serializedVersion: 2
@@ -1229,6 +1540,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_132
       rect:
         serializedVersion: 2
@@ -1238,6 +1550,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_133
       rect:
         serializedVersion: 2
@@ -1247,6 +1560,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_134
       rect:
         serializedVersion: 2
@@ -1256,6 +1570,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_135
       rect:
         serializedVersion: 2
@@ -1265,6 +1580,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_136
       rect:
         serializedVersion: 2
@@ -1274,6 +1590,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_137
       rect:
         serializedVersion: 2
@@ -1283,6 +1600,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_138
       rect:
         serializedVersion: 2
@@ -1292,6 +1610,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_139
       rect:
         serializedVersion: 2
@@ -1301,6 +1620,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_140
       rect:
         serializedVersion: 2
@@ -1310,6 +1630,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_141
       rect:
         serializedVersion: 2
@@ -1319,6 +1640,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_142
       rect:
         serializedVersion: 2
@@ -1328,6 +1650,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_143
       rect:
         serializedVersion: 2
@@ -1337,6 +1660,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_144
       rect:
         serializedVersion: 2
@@ -1346,6 +1670,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_145
       rect:
         serializedVersion: 2
@@ -1355,6 +1680,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_146
       rect:
         serializedVersion: 2
@@ -1364,6 +1690,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_147
       rect:
         serializedVersion: 2
@@ -1373,6 +1700,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_148
       rect:
         serializedVersion: 2
@@ -1382,6 +1710,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_149
       rect:
         serializedVersion: 2
@@ -1391,6 +1720,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_150
       rect:
         serializedVersion: 2
@@ -1400,6 +1730,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_151
       rect:
         serializedVersion: 2
@@ -1409,6 +1740,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_152
       rect:
         serializedVersion: 2
@@ -1418,6 +1750,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_153
       rect:
         serializedVersion: 2
@@ -1427,6 +1760,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_154
       rect:
         serializedVersion: 2
@@ -1436,6 +1770,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_155
       rect:
         serializedVersion: 2
@@ -1445,6 +1780,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_156
       rect:
         serializedVersion: 2
@@ -1454,6 +1790,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_157
       rect:
         serializedVersion: 2
@@ -1463,6 +1800,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_158
       rect:
         serializedVersion: 2
@@ -1472,6 +1810,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_159
       rect:
         serializedVersion: 2
@@ -1481,6 +1820,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_160
       rect:
         serializedVersion: 2
@@ -1490,6 +1830,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_161
       rect:
         serializedVersion: 2
@@ -1499,6 +1840,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_162
       rect:
         serializedVersion: 2
@@ -1508,6 +1850,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_163
       rect:
         serializedVersion: 2
@@ -1517,6 +1860,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_164
       rect:
         serializedVersion: 2
@@ -1526,6 +1870,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_165
       rect:
         serializedVersion: 2
@@ -1535,6 +1880,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_166
       rect:
         serializedVersion: 2
@@ -1544,6 +1890,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_167
       rect:
         serializedVersion: 2
@@ -1553,6 +1900,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_168
       rect:
         serializedVersion: 2
@@ -1562,6 +1910,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_169
       rect:
         serializedVersion: 2
@@ -1571,6 +1920,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_170
       rect:
         serializedVersion: 2
@@ -1580,6 +1930,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_171
       rect:
         serializedVersion: 2
@@ -1589,6 +1940,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_172
       rect:
         serializedVersion: 2
@@ -1598,6 +1950,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_173
       rect:
         serializedVersion: 2
@@ -1607,6 +1960,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_174
       rect:
         serializedVersion: 2
@@ -1616,6 +1970,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_175
       rect:
         serializedVersion: 2
@@ -1625,6 +1980,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_176
       rect:
         serializedVersion: 2
@@ -1634,6 +1990,7 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: parted_177
       rect:
         serializedVersion: 2
@@ -1643,5 +2000,6 @@ TextureImporter:
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
