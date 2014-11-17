@@ -7,6 +7,7 @@ public class TerrainGenerator : MonoBehaviour {
 	public static List<Vector3> validChunkPosns = new List<Vector3>();
 	public static float randZ;
 	public static Vector3 terrainOrigin;
+	public static int globalTimer = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class TerrainGenerator : MonoBehaviour {
 	}
 	
 	void Update() {
+		globalTimer++;
 		CalculateValidChunkPosns();
 		
 		GenerateMissingChunks();

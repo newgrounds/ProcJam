@@ -86,12 +86,14 @@ public class TerrainChunk : MonoBehaviour {
 					tile.transform.parent = transform;
 					//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 5f, 0);
-					float h = height / 1f;//Mathf.FloorToInt(height)/5f;
-					tile.GetComponent<SpriteRenderer> ().color = new Color (1f + h, 1f + h, 1f + h, 1);
+					
+				
 					int tileOrder = (y + (int)offsetY) + (10 * (int)offsetY);
 					tile.GetComponent<SpriteRenderer> ().sortingOrder = tileOrder;
 				
 					Tile tileObject = tile.GetComponent<Tile> ();
+					tileObject.posn = new Vector2(x,y);
+					tileObject.offsetPosn = new Vector2(offsetX,offsetY);
 					tileObject.sortingOrder = tileOrder;
 					tileObject.height = height;
 					tileObject.height2 = height2;
@@ -128,8 +130,9 @@ public class TerrainChunk : MonoBehaviour {
 					tree.transform.parent = transform;
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -1);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
-					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
+					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
+					
+					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
 				} else if (height > .25f) {
@@ -138,15 +141,15 @@ public class TerrainChunk : MonoBehaviour {
 						tree = Instantiate (Resources.Load ("deadTree")) as GameObject;
 					} else {
 						tree = Instantiate (Resources.Load ("tree")) as GameObject;
-						tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
+						tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					
 					}
 					tree.transform.parent = transform;
 					float randomSize = Random.Range (-.5f, .5f);
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -1);
-					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
-					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
+					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
+					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
 				} else if (height > .2f) {
