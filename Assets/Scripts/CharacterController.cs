@@ -123,7 +123,9 @@ public class CharacterController : MonoBehaviour {
 	 */
 	void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.CompareTag("Coin")) {
-			GameObject.Destroy(collider.gameObject);
+			iTween.MoveBy(collider.gameObject, iTween.Hash("time", 0.5f, "easeType", "easeInOutCubic", "loopType", "pingPong", "amount", Vector3.up / 3f));
+			iTween.ColorTo(collider.gameObject, iTween.Hash("time", 1.5f, "easeType", "easeInOutCubic", "a", 0f));
+			GameObject.Destroy(collider.gameObject, 1f);
 			numCoins++;
 		}
 		/*
