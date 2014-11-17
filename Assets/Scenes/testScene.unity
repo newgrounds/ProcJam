@@ -366,7 +366,7 @@ MonoBehaviour:
   hair: {fileID: 1279229830}
   isAttacking: 0
   speedMod: 0
-  canAttack: 1
+  canAttack: 0
 --- !u!61 &179128782
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f8bf2422b6d9d4aed829487b78ebfc62, type: 2}
       propertyPath: canAttack
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8bf2422b6d9d4aed829487b78ebfc62, type: 2}
@@ -1017,7 +1017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1694068279
 MonoBehaviour:
   m_ObjectHideFlags: 0
