@@ -60,7 +60,7 @@ public class Ruins {
 			// create floors
 			for (int x = 0; x <randWidth; x++) {
 				for (int y = 0; y <randHeight; y++) {
-					CreateFloorDecal (randStartPos + (mapWidth * x) + y, "ruins/"+floorType.ToString());
+					//CreateFloorDecal (randStartPos + (mapWidth * x) + y, "ruins/"+floorType.ToString());
 				}
 			}
 			
@@ -109,7 +109,7 @@ public class Ruins {
 				//}
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
 				wall.transform.parent = chunk.transform;
-				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .5f, 0);
+				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + 0.2f, -1);
 				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 				t.SetDecal(wall.GetComponent<Decal>());
 				//t.height = flatHeight;
@@ -117,7 +117,7 @@ public class Ruins {
 			} else if (t.GetDecal().CompareTag("Wall")) {
 				wall = GameObject.Instantiate(Resources.Load(wallType)) as GameObject;
 				wall.transform.parent = chunk.transform;
-				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + .5f, 0);
+				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + 0.2f, -1);
 				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 				t.SetDecal(wall.GetComponent<Decal>());
 				tempWalls.Add(wall.GetComponent<Decal>());
@@ -139,12 +139,12 @@ public class Ruins {
 				DECAL decalType = (DECAL)Random.Range(0,3);
 				GameObject decal = GameObject.Instantiate(Resources.Load (decalType.ToString())) as GameObject;
 				decal.transform.parent = chunk.transform;
-				decal.transform.position = new Vector3 (t.transform.position.x + Random.Range(-.1f,.1f), t.transform.position.y + Random.Range(-.1f,.1f), 0);
-				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 5;	
+				decal.transform.position = new Vector3 (t.transform.position.x + Random.Range(-.1f,.1f), t.transform.position.y + Random.Range(-.1f,.1f), -1);
+				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 			}
 			
 			wall.transform.position = new Vector3(t.transform.position.x + .05f, t.transform.position.y + .05f, 0);
-			wall.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 1;
+			//wall.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 1;
 			t.SetDecal(wall.GetComponent<Decal>());
 			t.height = flatHeight;
 			floors.Add(wall.GetComponent<Decal>());

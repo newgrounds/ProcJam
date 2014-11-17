@@ -105,7 +105,7 @@ public class TerrainChunk : MonoBehaviour {
 		
 		// generate ruins
 		//for (int i = 0; i < ruinsToSpawn; i++) {
-		//ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count), this));
+		ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count), this));
 		//}
 		
 		// remove any empty ruins
@@ -126,7 +126,7 @@ public class TerrainChunk : MonoBehaviour {
 					float xOffset = 0;//Random.Range(-.5f, .5f) ;
 					GameObject tree = Instantiate (Resources.Load ("pine")) as GameObject;
 					tree.transform.parent = transform;
-					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
+					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -1);
 					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
@@ -143,7 +143,7 @@ public class TerrainChunk : MonoBehaviour {
 					}
 					tree.transform.parent = transform;
 					float randomSize = Random.Range (-.5f, .5f);
-					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
+					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -1);
 					tree.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 					tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);

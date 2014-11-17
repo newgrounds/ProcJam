@@ -25,10 +25,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.74496555, y: -.691112816, z: 0}
+  m_LocalPosition: {x: -.801689565, y: 3.53561616, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!60 &6000000
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -40,14 +41,13 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: -.0664186478, y: .216418743}
-      - {x: -.0664186478, y: .167598248}
+    - - {x: -.0460118651, y: .085971117}
       - {x: -.0616152287, y: -.231615543}
       - {x: -.0175981522, y: -.231615067}
       - {x: .286025286, y: -.231615067}
       - {x: .283623695, y: -.12233758}
       - {x: .0709028244, y: -.122227788}
-      - {x: .0697870255, y: .216418505}
+      - {x: .0663859248, y: .0837745667}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,9 +78,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8888ee0bfb288442a4513c3bce93080, type: 3}
   m_Color: {r: .786764741, g: .786764741, b: .786764741, a: 1}
 --- !u!1001 &100100000

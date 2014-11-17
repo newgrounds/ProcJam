@@ -49,6 +49,14 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
+  - name: Tile
+    userID: 1
+    uniqueID: 3827389503
+    locked: 0
+  - name: Floor
+    userID: 2
+    uniqueID: 1472200329
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
