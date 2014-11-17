@@ -139,7 +139,7 @@ public class Ruins {
 				DECAL decalType = (DECAL)Random.Range(0,3);
 				GameObject decal = GameObject.Instantiate(Resources.Load (decalType.ToString())) as GameObject;
 				decal.transform.parent = chunk.transform;
-				decal.transform.position = new Vector3 (t.transform.position.x /*+ Random.Range(-.1f,.1f)*/, t.transform.position.y /*+ Random.Range(-.1f,.1f)*/, -1);
+				decal.transform.position = new Vector3 (t.transform.position.x /*+ Random.Range(-.1f,.1f)*/, t.transform.position.y /*+ Random.Range(-.1f,.1f)*/, -2);
 				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 			}
 			

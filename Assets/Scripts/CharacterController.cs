@@ -23,7 +23,9 @@ public class CharacterController : MonoBehaviour {
 		float randTint = Random.Range(0,230);
 		renderer.color = new Color((255 - randTint + 70)/255f, (255 - randTint + 35)/255f, (255 - randTint)/255f);
 		speedMod = 3f;
-		
+		pants.gameObject.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0, 255f)/255f, Random.Range(0, 255f)/255f, Random.Range(0, 255f)/255f);
+		shirt.gameObject.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0, 255f)/255f, Random.Range(0, 255f)/255f, Random.Range(0, 255f)/255f);
+		hair.gameObject.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0, 255f)/255f, Random.Range(0, 255f)/255f, Random.Range(0, 255f)/255f);
 	}
 	
 	void FixedUpdate () {
