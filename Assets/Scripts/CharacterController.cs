@@ -86,9 +86,9 @@ public class CharacterController : MonoBehaviour {
 		foreach(TerrainChunk c in TerrainGenerator.spawnedChunks) {
 			foreach(Tile t in c.tiles){
 				if(Vector3.Distance(t.transform.position + (Vector3.up * 0.5f), transform.position) < .25f){
-					hair.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 3;
-					pants.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 3;
-					shirt.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 3;
+					hair.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 2;
+					pants.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 2;
+					shirt.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 2;
 					renderer.sortingOrder = t.sortingOrder + 2;
 				}
 			}
