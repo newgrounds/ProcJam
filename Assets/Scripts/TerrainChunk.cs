@@ -61,36 +61,33 @@ public class TerrainChunk : MonoBehaviour {
 				float height2 = SimplexNoise.Noise.Generate ((offsetX - x) + 1000 / 8f, (offsetY + y) + 1000 / 8f, randZ) / 2f;
 				float height3 = SimplexNoise.Noise.Generate ((offsetX - x) / 15f, (offsetY + y) / 15f, randZ) / 2f;
 				GameObject tile;
+				int tileOrder = (y + (int)offsetY) + (10 * (int)offsetY);
 				
 				/*
-				if (height3 < -.4f) {
-					tile = Instantiate (Resources.Load ("stoneTile")) as GameObject;
+				if (TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y) < 0 && TerrainGenerator.GetGlobalNoiseFringe(offsetX - x,offsetY + y) < 0 ) {
+					tile = Instantiate (Resources.Load ("sand")) as GameObject;
+					tile.transform.parent = transform;
 					//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
-					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 2f, 0);
-					float h = height / 1f;//Mathf.FloorToInt(height)/5f;
-					tile.GetComponent<SpriteRenderer> ().color = new Color (1f + h, 1f + h, 1f + h, 1);
-					tile.GetComponent<SpriteRenderer> ().sortingOrder = y - 1000;
-				
+					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 5f, 0);
+					tile.GetComponent<SpriteRenderer> ().sortingOrder = tileOrder;
 					Tile tileObject = tile.GetComponent<Tile> ();
-					tileObject.sortingOrder = y;
+					tileObject.posn = new Vector2(x,y);
+					tileObject.offsetPosn = new Vector2(offsetX,offsetY);
+					tileObject.sortingOrder = tileOrder;
 					tileObject.height = height;
 					tileObject.height2 = height2;
 					tileObject.height3 = height3;
 					tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
-					tiles.Add (tileObject);	
+					tiles.Add (tileObject);
 
-				} else if (height3 > -.4f) {
-			
-				*/
+				} else if (TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y) >= 0) {
+			*/
+				
 					tile = Instantiate (Resources.Load ("tile")) as GameObject;
 					tile.transform.parent = transform;
 					//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 5f, 0);
-					
-				
-					int tileOrder = (y + (int)offsetY) + (10 * (int)offsetY);
 					tile.GetComponent<SpriteRenderer> ().sortingOrder = tileOrder;
-				
 					Tile tileObject = tile.GetComponent<Tile> ();
 					tileObject.posn = new Vector2(x,y);
 					tileObject.offsetPosn = new Vector2(offsetX,offsetY);
@@ -101,8 +98,8 @@ public class TerrainChunk : MonoBehaviour {
 					tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 					tiles.Add (tileObject);
 				
-				}
-			//}
+				//}
+			}
 		}
 		
 		// generate ruins

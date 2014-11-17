@@ -9,6 +9,13 @@ public class TerrainGenerator : MonoBehaviour {
 	public static Vector3 terrainOrigin;
 	public static int globalTimer = 0;
 	
+	public static float GetGlobalNoise(float x, float y){
+		return SimplexNoise.Noise.Generate (x / 40f, y / 40f, 0) / 2f;
+	}
+	
+	public static float GetGlobalNoiseFringe(float x, float y){
+		return SimplexNoise.Noise.Generate (x / 5f, y / 5f, 0) / 2f;
+	}
 	// Use this for initialization
 	void Start () {
 		randZ = Random.Range (0, 100000);
