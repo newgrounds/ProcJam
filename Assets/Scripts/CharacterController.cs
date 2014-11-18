@@ -16,6 +16,7 @@ public class CharacterController : MonoBehaviour {
 	public bool isAttacking = false;
 	public float speedMod;
 	public bool canAttack;
+	public bool underRoof = false;
 	
 	void Start () {
 		animator = this.GetComponent<Animator> ();
