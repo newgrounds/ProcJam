@@ -86,7 +86,6 @@ public class TerrainChunk : MonoBehaviour {
 					tile = Instantiate (Resources.Load ("tile")) as GameObject;
 					tile.transform.parent = transform;
 					//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
-					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 5f, 0);
 					tile.GetComponent<SpriteRenderer> ().sortingOrder = tileOrder;
 					Tile tileObject = tile.GetComponent<Tile> ();
 					tileObject.posn = new Vector2(x,y);
@@ -97,6 +96,13 @@ public class TerrainChunk : MonoBehaviour {
 					tileObject.height3 = height3;
 					tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 					tiles.Add (tileObject);
+				
+					float h = TerrainGenerator.GetGlobalNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f) * 1f;
+					Color c = new Color ((200f/255f) + h, 1.1f + h, 0, 1);
+					tileObject.color = c;
+					tileObject.GetComponent<SpriteRenderer> ().color = c;
+					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
+				
 				
 				//}
 			}

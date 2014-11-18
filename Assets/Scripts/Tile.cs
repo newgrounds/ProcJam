@@ -11,6 +11,7 @@ public class Tile : MonoBehaviour {
 	public Vector3 origin;
 	public Vector2 posn;
 	public Vector2 offsetPosn;
+	public Color color;
 	
 	
 	public Decal GetDecal() {
@@ -27,8 +28,8 @@ public class Tile : MonoBehaviour {
 	}
 	
 	public void FixedUpdate(){
-		float h = SimplexNoise.Noise.Generate ((offsetPosn.x - posn.x + TerrainGenerator.globalTimer/50f) / 12f, (offsetPosn.y + posn.y) / 12f, 0) / 2f;//Mathf.FloorToInt(height)/5f;
-		this.GetComponent<SpriteRenderer> ().color = new Color (1f + h, 1f + h, 1f + h, 1);
+		float h = SimplexNoise.Noise.Generate ((offsetPosn.x - posn.x + TerrainGenerator.globalTimer/50f) / 12f, (offsetPosn.y + posn.y) / 12f, 0) / 4f;//Mathf.FloorToInt(height)/5f;
+		this.GetComponent<SpriteRenderer> ().color = new Color (this.color.r + h, this.color.g + h, this.color.b + h, 1);
 		
 		
 	}

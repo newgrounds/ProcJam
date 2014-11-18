@@ -11,7 +11,7 @@ public class SineShear : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		timer++;
 		timer2++;
 		this.transform.localScale = new Vector3(.8f + Mathf.Sin(timer/50f)/10f, .8f + Mathf.Sin(timer2/50f)/10f, 0);
