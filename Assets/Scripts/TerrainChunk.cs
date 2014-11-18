@@ -105,6 +105,14 @@ public class TerrainChunk : MonoBehaviour {
 		// generate ruins
 		//for (int i = 0; i < ruinsToSpawn; i++) {
 		ruins.Add (new Ruins (mapWidth, Random.Range (0, 0), this, 0));
+		
+		if(Random.Range(0,10) > 5){
+			Vector3 bunnyPos = tiles[Random.Range(0,tiles.Count)].transform.position;
+			GameObject bunny = Instantiate (Resources.Load ("Animals/MisterBunny")) as GameObject;
+			bunny.transform.position = bunnyPos;
+			bunny.transform.parent = transform;
+		}
+
 		//}
 		
 		// remove any empty ruins
