@@ -8,6 +8,7 @@ public class Ruins
 	public List<Decal> wallsRight = new List<Decal> ();
 	public List<Decal> wallsBottom = new List<Decal> ();
 	public List<Decal> floors = new List<Decal> ();
+	public GameObject roof;
 	private float flatHeight;
 	private float flatY;
 	private List<Tile> tiles;
@@ -23,7 +24,8 @@ public class Ruins
 	{
 		crate,
 		jar,
-		barrel
+		barrel,
+		chest
 	};
 	private int recursiveCount;
 	TerrainChunk chunk;
@@ -31,6 +33,8 @@ public class Ruins
 	public Ruins (int mapWidth, int startIndex, TerrainChunk c, int recursiveCount)
 	{
 		this.recursiveCount = recursiveCount;
+		this.roof =  GameObject.Instantiate (Resources.Load ("ruins/EmptyRoof")) as GameObject;
+		this.roof.transform.parent = c.transform;
 		// store passed in chunk
 		chunk = c;
 		
@@ -154,10 +158,13 @@ public class Ruins
 			t.transform.position = t.origin;
 			//}
 			GameObject wall = GameObject.Instantiate (Resources.Load (wallType)) as GameObject;
+			GameObject roof = GameObject.Instantiate (Resources.Load ("ruins/roofTile")) as GameObject;
 			wall.transform.parent = chunk.transform;
+			roof.transform.parent = this.roof.transform;
+			roof.transform.position = new Vector3 (t.transform.position.x + .05f, t.transform.position.y + .15f, 0);
 			
 			if (Random.Range (0, 10) > 7) {
-				DECAL decalType = (DECAL)Random.Range (0, 3);
+				DECAL decalType = (DECAL)Random.Range (0, 4);
 				GameObject decal = GameObject.Instantiate (Resources.Load (decalType.ToString ())) as GameObject;
 				decal.transform.parent = chunk.transform;
 				decal.transform.position = new Vector3 (t.transform.position.x /*+ Random.Range(-.1f,.1f)*/, t.transform.position.y /*+ Random.Range(-.1f,.1f)*/, -2);
