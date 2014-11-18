@@ -30,20 +30,20 @@ public class TerrainChunk : MonoBehaviour {
 	
 	void Update() {
 		// if player is in bounds of terrain
-		if (player.position.x >= transform.position.x &&
-			player.position.x <= (transform.position.x + (mapWidth * tileSize)) &&
-			player.position.y <= transform.position.y &&
-			player.position.y >= (transform.position.y - (mapWidth * tileSize))) {
-			containsPlayer = true;
-		} else {
-			containsPlayer = false;
-		}
+		containsPlayer = Contains(player.transform);
 		
 		// check if we should be deleted
 		if (!containsPlayer && !TerrainGenerator.validChunkPosns.Contains(transform.position)) {
 			TerrainGenerator.spawnedChunks.Remove(this);
 			Destroy(gameObject);
 		}
+	}
+	
+	public bool Contains(Transform trans) {
+		return trans.position.x >= transform.position.x &&
+		trans.position.x <= (transform.position.x + (mapWidth * tileSize)) &&
+		trans.position.y <= transform.position.y &&
+		trans.position.y >= (transform.position.y - (mapWidth * tileSize));
 	}
 	
 	void GenerateChunk() {
