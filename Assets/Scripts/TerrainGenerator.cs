@@ -9,8 +9,8 @@ public class TerrainGenerator : MonoBehaviour {
 	public static Vector3 terrainOrigin;
 	public static int globalTimer = 0;
 	
-	public static float GetGlobalNoise(float x, float y){
-		return SimplexNoise.Noise.Generate (x / 40f, y / 40f, 0) / 2f;
+	public static float GetGlobalNoise(float x, float y, float z){
+		return SimplexNoise.Noise.Generate (x / 40f, y / 40f, z) / 2f;
 	}
 	
 	public static float GetGlobalNoiseFringe(float x, float y){

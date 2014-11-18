@@ -97,8 +97,9 @@ public class TerrainChunk : MonoBehaviour {
 					tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 					tiles.Add (tileObject);
 				
-					float h = TerrainGenerator.GetGlobalNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f) * 1f;
-					Color c = new Color ((200f/255f) + h, 1.1f + h, 0, 1);
+					float h = TerrainGenerator.GetGlobalNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
+					tileObject.geoHeight = h;
+					Color c = new Color ((200f/255f) + h, 1f - h/10f, 0, 1);
 					tileObject.color = c;
 					tileObject.GetComponent<SpriteRenderer> ().color = c;
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
@@ -134,10 +135,18 @@ public class TerrainChunk : MonoBehaviour {
 			float height2 = t.height2;
 			float height3 = t.height3;
 			if (t.GetDecal () == null) {
-				if (height2 > .3f) {
+				if (height2 > .35f) {
 					float randomSize = Random.Range (-.5f, .5f);
 					float xOffset = 0;//Random.Range(-.5f, .5f) ;
-					GameObject tree = Instantiate (Resources.Load ("pine")) as GameObject;
+					
+					GameObject tree;
+					
+					if(t.geoHeight > 0f){
+						tree = Instantiate (Resources.Load ("tempTree")) as GameObject;
+					}
+					else{
+						tree = Instantiate (Resources.Load ("pine")) as GameObject;
+					}
 					tree.transform.parent = transform;
 					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
 					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -1);
@@ -146,12 +155,19 @@ public class TerrainChunk : MonoBehaviour {
 					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
-				} else if (height > .25f) {
+				} else if (height > .3f) {
 					GameObject tree;
 					if (Random.Range (0, 10) > 8) {
 						tree = Instantiate (Resources.Load ("deadTree")) as GameObject;
 					} else {
-						tree = Instantiate (Resources.Load ("tree")) as GameObject;
+
+						if(t.geoHeight > .1f){
+							tree = Instantiate (Resources.Load ("oldTree")) as GameObject;
+						}
+						else{
+							tree = Instantiate (Resources.Load ("tree")) as GameObject;
+						}
+						
 						tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					
 					}
@@ -164,11 +180,13 @@ public class TerrainChunk : MonoBehaviour {
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
 				} else if (height > .2f) {
+					/*
 					GameObject grass = Instantiate (Resources.Load ("grass")) as GameObject;
 					grass.transform.parent = transform;
 					grass.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -1);
 					grass.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
+					*/
 				}	
 			}
 		}
