@@ -133,7 +133,7 @@ public class Ruins
 				//}
 				wall = GameObject.Instantiate (Resources.Load (wallType)) as GameObject;
 				wall.transform.parent = chunk.transform;
-				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + 0.2f, -1);
+				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + 0.2f, -2);
 				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 				t.SetDecal (wall.GetComponent<Decal> ());
 				//t.height = flatHeight;
@@ -141,7 +141,7 @@ public class Ruins
 			} else if (t.GetDecal ().CompareTag ("Wall")) {
 				wall = GameObject.Instantiate (Resources.Load (wallType)) as GameObject;
 				wall.transform.parent = chunk.transform;
-				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + 0.2f, -1);
+				wall.transform.position = new Vector3 (t.transform.position.x - .2f, t.transform.position.y + 0.2f, -2);
 				wall.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;
 				t.SetDecal (wall.GetComponent<Decal> ());
 				tempWalls.Add (wall.GetComponent<Decal> ());
@@ -167,7 +167,7 @@ public class Ruins
 				DECAL decalType = (DECAL)Random.Range (0, 4);
 				GameObject decal = GameObject.Instantiate (Resources.Load (decalType.ToString ())) as GameObject;
 				decal.transform.parent = chunk.transform;
-				decal.transform.position = new Vector3 (t.transform.position.x /*+ Random.Range(-.1f,.1f)*/, t.transform.position.y /*+ Random.Range(-.1f,.1f)*/, -2);
+				decal.transform.position = new Vector3 (t.transform.position.x /*+ Random.Range(-.1f,.1f)*/, t.transform.position.y /*+ Random.Range(-.1f,.1f)*/, -3);
 				decal.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 			}
 			
