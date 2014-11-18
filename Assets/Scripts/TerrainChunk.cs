@@ -104,7 +104,7 @@ public class TerrainChunk : MonoBehaviour {
 		
 		// generate ruins
 		//for (int i = 0; i < ruinsToSpawn; i++) {
-		ruins.Add (new Ruins (mapWidth, Random.Range (0, tiles.Count), this));
+		ruins.Add (new Ruins (mapWidth, Random.Range (0, 0), this, 0));
 		//}
 		
 		// remove any empty ruins
