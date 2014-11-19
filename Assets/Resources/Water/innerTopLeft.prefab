@@ -9,11 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 95: {fileID: 9500000}
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
+  - 60: {fileID: 6000000}
   m_Layer: 0
-  m_Name: water
+  m_Name: innerTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,11 +26,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.945889, y: -6.21765852, z: 0}
+  m_LocalPosition: {x: 10.8829212, y: -7.68095016, z: 0}
   m_LocalScale: {x: 1.57000005, y: 1.57000005, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+--- !u!60 &6000000
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: -.159999996, y: .159999996}
+      - {x: -.159999996, y: -.159999996}
+      - {x: .099999994, y: -.159999996}
+      - {x: .159999996, y: -.0799999982}
+      - {x: .159999996, y: .159999996}
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -39,24 +54,9 @@ BoxCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: .319999993, y: .319999993}
+  m_IsTrigger: 1
+  m_Size: {x: .319999963, y: .319999963}
   m_Center: {x: 0, y: 0}
---- !u!95 &9500000
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03e318adfab469d448e324918a17ee4d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,7 +70,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortingOrder: 0
   height: 0
+  height2: 0
+  height3: 0
+  geoHeight: 0
   decal: {fileID: 0}
+  origin: {x: 0, y: 0, z: 0}
+  posn: {x: 0, y: 0}
+  offsetPosn: {x: 0, y: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  waterLevel: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -89,9 +97,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300050, guid: aefcece1f0be0d64aa5ec495e9450624, type: 3}
+  m_SortingLayerID: 1472200329
+  m_Sprite: {fileID: 21300002, guid: 84792a49d0207bc4d9af03eda8076469, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

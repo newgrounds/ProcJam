@@ -13,7 +13,7 @@ public class Tile : MonoBehaviour {
 	public Vector2 posn;
 	public Vector2 offsetPosn;
 	public Color color;
-	
+	public float waterLevel;
 	
 	public Decal GetDecal() {
 		return decal;

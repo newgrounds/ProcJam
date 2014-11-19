@@ -53,6 +53,7 @@ public class TerrainChunk : MonoBehaviour {
 		
 		float offsetX = normalizedPos.x * mapWidth;
 		float offsetY = normalizedPos.y * mapWidth;
+		float thresh = .1f;
 		
 		// loop to generate tiles
 		for (int x = 0; x < mapWidth; x++) {
@@ -63,12 +64,102 @@ public class TerrainChunk : MonoBehaviour {
 				GameObject tile;
 				int tileOrder = (y + (int)offsetY) + (10 * (int)offsetY);
 				
-				/*
-				if (TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y) < 0 && TerrainGenerator.GetGlobalNoiseFringe(offsetX - x,offsetY + y) < 0 ) {
-					tile = Instantiate (Resources.Load ("sand")) as GameObject;
+				float center = TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y, randZ);
+				float above = TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y - 1, randZ);
+				float below = TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y + 1, randZ);
+				float left = TerrainGenerator.GetGlobalNoise(offsetX - x - 1,offsetY + y, randZ);
+				float right = TerrainGenerator.GetGlobalNoise(offsetX - x + 1,offsetY + y, randZ);
+				
+				float topRight = TerrainGenerator.GetGlobalNoise(offsetX - x + 1,offsetY + y - 1, randZ);
+				float topLeft = TerrainGenerator.GetGlobalNoise(offsetX - x - 1,offsetY + y - 1, randZ);
+				
+				float bottomRight = TerrainGenerator.GetGlobalNoise(offsetX - x + 1,offsetY + y + 1, randZ);
+				float bottomLeft = TerrainGenerator.GetGlobalNoise(offsetX - x - 1,offsetY + y + 1, randZ);
+				
+				if (center < thresh) {
+					
+					//place fringe case sides
+					if(above < thresh && below < thresh && right < thresh && topRight >= thresh && bottomRight >= thresh){
+						tile = Instantiate (Resources.Load ("Water/right")) as GameObject;
+					}
+					else if(above < thresh && below < thresh && left < thresh && topLeft >= thresh && bottomLeft >= thresh){
+						tile = Instantiate (Resources.Load ("Water/right")) as GameObject;
+					}
+					else if(left < thresh && right < thresh && below < thresh && bottomLeft >= thresh && bottomRight >= thresh){
+						tile = Instantiate (Resources.Load ("Water/right")) as GameObject;
+					}
+					else if(left < thresh && right < thresh && above < thresh && topLeft >= thresh && topRight >= thresh){
+						tile = Instantiate (Resources.Load ("Water/right")) as GameObject;
+					}
+					
+					//outer corners
+					else if(right < thresh && above < thresh && left >= thresh && below >= thresh){
+						tile = Instantiate (Resources.Load ("Water/bottomRight")) as GameObject;
+					}	
+					else if(left < thresh && above < thresh && right >= thresh && below >= thresh){
+						tile = Instantiate (Resources.Load ("Water/bottomLeft")) as GameObject;
+					}
+					else if(right < thresh && below < thresh && left >= thresh && above >= thresh){
+						tile = Instantiate (Resources.Load ("Water/topRight")) as GameObject;
+					}	
+					else if(left < thresh && below < thresh && right >= thresh && above >= thresh){
+						tile = Instantiate (Resources.Load ("Water/topLeft")) as GameObject;
+					}
+					
+					//place fringe case puddles
+					else if(below >= thresh && left >= thresh && right >= thresh && above < thresh){
+						tile = Instantiate (Resources.Load ("Water/smallPuddle")) as GameObject;
+					}
+					else if(above >= thresh && left >= thresh && right >= thresh && below < thresh){
+						tile = Instantiate (Resources.Load ("Water/smallPuddle")) as GameObject;
+					}					
+					else if(below >= thresh && above >= thresh && left >= thresh && right < thresh){
+						tile = Instantiate (Resources.Load ("Water/smallPuddle")) as GameObject;
+					}					
+					else if(below >= thresh && above >= thresh && right >= thresh && left < thresh){
+						tile = Instantiate (Resources.Load ("Water/smallPuddle")) as GameObject;
+					}
+					
+					//top and bottom
+					else if(above < thresh && below >= thresh){
+						tile = Instantiate (Resources.Load ("Water/bottom")) as GameObject;
+					}
+					else if(below < thresh && above >= thresh){
+						tile = Instantiate (Resources.Load ("Water/top")) as GameObject;
+					}
+					//right and left
+					else if(right < thresh && left >= thresh){
+						tile = Instantiate (Resources.Load ("Water/right")) as GameObject;
+					}					
+					else if(left < thresh && right >= thresh){
+						tile = Instantiate (Resources.Load ("Water/left")) as GameObject;
+					}
+	
+					//inner corners
+					//inner bottom left corner
+					else if(left < thresh && above < thresh && topLeft >= thresh){
+						tile = Instantiate (Resources.Load ("Water/innerBottomLeft")) as GameObject;
+					}			
+					//inner bottom right corner
+					else if(right < thresh && above < thresh && topRight >= thresh){
+						tile = Instantiate (Resources.Load ("Water/innerBottomRight")) as GameObject;
+					}	
+					//inner top left corner
+					else if(left < thresh && above < thresh && bottomLeft >= thresh){
+						tile = Instantiate (Resources.Load ("Water/innerTopLeft")) as GameObject;
+					}			
+					//inner top right corner
+					else if(right < thresh && above < thresh && bottomRight >= thresh){
+						tile = Instantiate (Resources.Load ("Water/innerTopRight")) as GameObject;
+					}	
+					
+					//center
+					else{
+						tile = Instantiate (Resources.Load ("Water/center")) as GameObject;
+					}
+					
 					tile.transform.parent = transform;
 					//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
-					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height / 5f, 0);
 					tile.GetComponent<SpriteRenderer> ().sortingOrder = tileOrder;
 					Tile tileObject = tile.GetComponent<Tile> ();
 					tileObject.posn = new Vector2(x,y);
@@ -78,10 +169,19 @@ public class TerrainChunk : MonoBehaviour {
 					tileObject.height2 = height2;
 					tileObject.height3 = height3;
 					tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
+					tileObject.waterLevel = thresh;
 					tiles.Add (tileObject);
+					
+					
+					float h = TerrainGenerator.GetGlobalNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
+					tileObject.geoHeight = h;
+					Color c = new Color (.7f + h*5f, .7f + h*5f,1f, 1f);
+					tileObject.color = c;//
+					//tileObject.GetComponent<SpriteRenderer> ().color = c;
+					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 
-				} else if (TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y) >= 0) {
-			*/
+				} 
+				if (TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y, TerrainGenerator.randZ) >= -.3f) {
 				
 					tile = Instantiate (Resources.Load ("tile")) as GameObject;
 					tile.transform.parent = transform;
@@ -105,12 +205,13 @@ public class TerrainChunk : MonoBehaviour {
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 				
 				
-				//}
+				}
 			}
 		}
 		
 		// generate ruins
 		//for (int i = 0; i < ruinsToSpawn; i++) {
+		/*
 		ruins.Add (new Ruins (mapWidth, Random.Range (0, 0), this, 0));
 		
 		if(Random.Range(0,10) > 5){
@@ -119,7 +220,7 @@ public class TerrainChunk : MonoBehaviour {
 			bunny.transform.position = bunnyPos;
 			bunny.transform.parent = transform;
 		}
-
+		
 		//}
 		
 		// remove any empty ruins
@@ -128,14 +229,17 @@ public class TerrainChunk : MonoBehaviour {
 				ruins.Remove (ruins [i]);
 			}
 		}
+		*/
+		
 		
 		// tree generation
 		foreach (Tile t in tiles) {
 			float height = t.height;
 			float height2 = t.height2;
 			float height3 = t.height3;
+			float geoHeight = t.geoHeight;
 			if (t.GetDecal () == null) {
-				if (height2 > .35f) {
+				if (height2 > .35f && geoHeight > thresh) {
 					float randomSize = Random.Range (-.5f, .5f);
 					float xOffset = 0;//Random.Range(-.5f, .5f) ;
 					
@@ -155,7 +259,7 @@ public class TerrainChunk : MonoBehaviour {
 					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
-				} else if (height > .3f) {
+				} else if (height > .3f && geoHeight > thresh) {
 					GameObject tree;
 					if (Random.Range (0, 10) > 8) {
 						tree = Instantiate (Resources.Load ("deadTree")) as GameObject;
@@ -179,18 +283,19 @@ public class TerrainChunk : MonoBehaviour {
 					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					t.SetDecal (tree.GetComponent<Decal> ());
 				
-				} else if (height > .2f) {
-					/*
+				} else if (height > .2f && geoHeight > thresh) {
+					
 					GameObject grass = Instantiate (Resources.Load ("grass")) as GameObject;
 					grass.transform.parent = transform;
 					grass.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -1);
 					grass.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
-					*/
+					
 				}	
 			}
 		}
-		
+
+		/*
 		foreach (Tile t in tiles) {
 			float height = t.height;
 			float height2 = t.height2;
@@ -210,12 +315,13 @@ public class TerrainChunk : MonoBehaviour {
 				} 
 			}
 		}
-		
+		*/
 		// get a list of tiles without decals
 		foreach (Tile t in tiles) {
 			if (t.GetDecal() == null) {
 				tilesWithoutDecals.Add(t);
 			}
 		}
+		
 	}
 }

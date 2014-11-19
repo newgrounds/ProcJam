@@ -45,7 +45,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: water_0
+    - name: big_puddle
       rect:
         serializedVersion: 2
         x: 0
@@ -53,8 +53,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_1
+      pivot: {x: .5, y: .5}
+    - name: inner_top_left
       rect:
         serializedVersion: 2
         x: 32
@@ -62,8 +62,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_2
+      pivot: {x: .5, y: .5}
+    - name: inner_top_right
       rect:
         serializedVersion: 2
         x: 64
@@ -71,8 +71,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_3
+      pivot: {x: .5, y: .5}
+    - name: small_puddle
       rect:
         serializedVersion: 2
         x: 0
@@ -80,8 +80,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_4
+      pivot: {x: .5, y: .5}
+    - name: inner_bottom_left
       rect:
         serializedVersion: 2
         x: 32
@@ -89,8 +89,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_5
+      pivot: {x: .5, y: .5}
+    - name: inner_bottom_right
       rect:
         serializedVersion: 2
         x: 64
@@ -98,8 +98,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_6
+      pivot: {x: .5, y: .5}
+    - name: top_left
       rect:
         serializedVersion: 2
         x: 0
@@ -107,8 +107,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_7
+      pivot: {x: .5, y: .5}
+    - name: top
       rect:
         serializedVersion: 2
         x: 32
@@ -116,8 +116,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_8
+      pivot: {x: .5, y: .5}
+    - name: top_right
       rect:
         serializedVersion: 2
         x: 64
@@ -125,8 +125,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_9
+      pivot: {x: .5, y: .5}
+    - name: left
       rect:
         serializedVersion: 2
         x: 0
@@ -134,8 +134,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_10
+      pivot: {x: .5, y: .5}
+    - name: center
       rect:
         serializedVersion: 2
         x: 32
@@ -143,8 +143,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_11
+      pivot: {x: .5, y: .5}
+    - name: right
       rect:
         serializedVersion: 2
         x: 64
@@ -152,8 +152,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_12
+      pivot: {x: .5, y: .5}
+    - name: bottom_left
       rect:
         serializedVersion: 2
         x: 0
@@ -161,8 +161,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_13
+      pivot: {x: .5, y: .5}
+    - name: bottom
       rect:
         serializedVersion: 2
         x: 32
@@ -170,8 +170,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_14
+      pivot: {x: .5, y: .5}
+    - name: bottom_right
       rect:
         serializedVersion: 2
         x: 64
@@ -179,8 +179,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_15
+      pivot: {x: .5, y: .5}
+    - name: 1
       rect:
         serializedVersion: 2
         x: 0
@@ -188,8 +188,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_16
+      pivot: {x: .5, y: .5}
+    - name: 2
       rect:
         serializedVersion: 2
         x: 32
@@ -197,8 +197,8 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: water_17
+      pivot: {x: .5, y: .5}
+    - name: 3
       rect:
         serializedVersion: 2
         x: 64
@@ -206,6 +206,6 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
