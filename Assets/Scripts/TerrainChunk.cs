@@ -181,7 +181,8 @@ public class TerrainChunk : MonoBehaviour {
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 
 				} 
-				if (TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y, TerrainGenerator.randZ) >= -.3f) {
+				
+				if (TerrainGenerator.GetGlobalNoise(offsetX - x,offsetY + y, TerrainGenerator.randZ) >= 0f) {
 				
 					tile = Instantiate (Resources.Load ("tile")) as GameObject;
 					tile.transform.parent = transform;
@@ -206,6 +207,7 @@ public class TerrainChunk : MonoBehaviour {
 				
 				
 				}
+				
 			}
 		}
 		
