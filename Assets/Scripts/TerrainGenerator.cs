@@ -9,12 +9,26 @@ public class TerrainGenerator : MonoBehaviour {
 	public static Vector3 terrainOrigin;
 	public static int globalTimer = 0;
 	
-	public static float GetGlobalNoise(float x, float y, float z){
-		return SimplexNoise.Noise.Generate (x / 40f, y / 40f, z) / 2f;
+	public delegate float GetGlobalNoise(float x, float y, float z);
+	
+	public static float GetLandNoise(float x, float y, float z){
+		return SimplexNoise.Noise.Generate (x / 25f, y / 25f, z) - 
+			(SimplexNoise.Noise.Generate (x / 5f, y /5f, z) / 1f);
+	}
+		
+	public static float GetDirtNoise(float x, float y, float z){
+		return SimplexNoise.Noise.Generate (x/ 20f, y / 20f, z);// -
+			   //(SimplexNoise.Noise.Generate (x / 15f, y / 15f, z) / 5f);
 	}
 	
-	public static float GetGlobalNoiseFringe(float x, float y){
-		return SimplexNoise.Noise.Generate (x / 5f, y / 5f, 0) / 2f;
+	public static float GetSandNoise(float x, float y, float z){
+		return SimplexNoise.Noise.Generate (x / 30f, y / 30f, z*2) - 
+			(SimplexNoise.Noise.Generate (x / 5f, y /5f, z) / 2f);
+	}	
+	
+	public static float GetWaterNoise(float x, float y, float z){
+		return SimplexNoise.Noise.Generate (x / 25f, y / 25f, z) - 
+			(SimplexNoise.Noise.Generate (x / 3f, y /3f, z) / 1f);
 	}
 	// Use this for initialization
 	void Start () {
@@ -29,6 +43,7 @@ public class TerrainGenerator : MonoBehaviour {
 	}
 	
 	void Update() {
+		//randZ+=.001f;
 		globalTimer++;
 		CalculateValidChunkPosns();
 		
