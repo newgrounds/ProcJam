@@ -71,7 +71,7 @@ public class TerrainChunk : MonoBehaviour {
 				//string waterFolder = "Water/";
 	
 				CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise);
-				CreateTileLayer(x,y, .1f, -2f, "Sand/", TerrainGenerator.GetSandNoise);
+				CreateTileLayer(x,y, .175f, -2f, "Sand/", TerrainGenerator.GetSandNoise);
 				//CreateTileLayer(x,y, .3f, -.3f, "Dirt/", TerrainGenerator.GetDirtNoise);
 				
 				//CreateTileLayer(x,y, .1f, "Water/");
@@ -128,7 +128,7 @@ public class TerrainChunk : MonoBehaviour {
 		}
 		*/
 		
-		/*
+		
 		// tree generation
 		foreach (Tile t in tiles) {
 			float height = t.height;
@@ -136,13 +136,35 @@ public class TerrainChunk : MonoBehaviour {
 			float height3 = t.height3;
 			float geoHeight = t.geoHeight;
 			if (t.GetDecal () == null) {
+				if (geoHeight > .5f) {
+					float randomSize = Random.Range (-.5f, .5f);
+					float xOffset = 0;//Random.Range(-.5f, .5f) ;
+					
+					GameObject tree;
+					
+					if(t.height3 > 0f){
+						tree = Instantiate (Resources.Load ("tempTree")) as GameObject;
+					}
+					else{
+						tree = Instantiate (Resources.Load ("pine")) as GameObject;
+					}
+					tree.transform.parent = transform;
+					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
+					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -2);
+					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
+					
+					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
+					t.SetDecal (tree.GetComponent<Decal> ());
+				
+				} 
+				/*
 				if (height2 > .35f && geoHeight > thresh) {
 					float randomSize = Random.Range (-.5f, .5f);
 					float xOffset = 0;//Random.Range(-.5f, .5f) ;
 					
 					GameObject tree;
 					
-					if(t.geoHeight > 0f){
+					if(t.height3 > 0f){
 						tree = Instantiate (Resources.Load ("tempTree")) as GameObject;
 					}
 					else{
@@ -189,9 +211,11 @@ public class TerrainChunk : MonoBehaviour {
 					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 					
 				}	
+				*/
 			}
+			
 		}
-		*/
+		
 
 		/*
 		foreach (Tile t in tiles) {
@@ -265,7 +289,7 @@ public class TerrainChunk : MonoBehaviour {
 			}
 			
 			//4split with gap
-			if(above < thresh && right < thresh && left < thresh && below < thresh 
+			else if(above < thresh && right < thresh && left < thresh && below < thresh 
 				&& bottomLeft >= thresh && bottomRight >= thresh
 				&& topLeft >= thresh && topRight < thresh){
 				tile = Instantiate (Resources.Load (rootFolder + "4SplitGapXYFlip")) as GameObject;
@@ -471,12 +495,12 @@ public class TerrainChunk : MonoBehaviour {
 			//tileObject.height2 = height2;
 			//tileObject.height3 = height3;
 			tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
-			tileObject.waterLevel = thresh;
+			//tileObject.waterLevel = thresh;
 			tiles.Add (tileObject);
 			
 			
 			float h = f  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
-			tileObject.geoHeight = h;
+			tileObject.geoHeight = center;//h;
 			//Color c = new Color (.7f + h*5f, .7f + h*5f,1f, 1f);
 			Color c = new Color (1,1,1,1);
 			tileObject.color = c;//

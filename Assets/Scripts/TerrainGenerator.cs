@@ -22,12 +22,12 @@ public class TerrainGenerator : MonoBehaviour {
 	}
 	
 	public static float GetSandNoise(float x, float y, float z){
-	return SimplexNoise.Noise.Generate (x / 25f, y / 25f, z) - 
+	return SimplexNoise.Noise.Generate (x / 40f, y / 40f, z + 2f) - 
 			(SimplexNoise.Noise.Generate (x / 3f, y /3f, z) / 1f);
 	}	
 	
 	public static float GetWaterNoise(float x, float y, float z){
-		return SimplexNoise.Noise.Generate (x / 25f, y / 25f, z) - 
+		return SimplexNoise.Noise.Generate (x / 40f, y / 40f, z) - 
 			(SimplexNoise.Noise.Generate (x / 3f, y /3f, z) / 1f);
 	}
 	// Use this for initialization
