@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   - 60: {fileID: 6000000}
+  - 60: {fileID: 6000002}
   m_Layer: 0
   m_Name: 4Split
   m_TagString: Untagged
@@ -44,6 +45,25 @@ PolygonCollider2D:
       - {x: -.0899999961, y: -.159999996}
       - {x: .159999996, y: -.159999996}
       - {x: .159999996, y: .159999996}
+--- !u!60 &6000002
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: -.129999995, y: .159999996}
+      - {x: -.159999996, y: .0700000003}
+      - {x: -.159999996, y: -.129999995}
+      - {x: -.119999997, y: -.159999996}
+      - {x: .109999999, y: -.159999996}
+      - {x: .159999996, y: -.129999995}
+      - {x: .159999996, y: .119999997}
+      - {x: .149999991, y: .159999996}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1

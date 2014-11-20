@@ -71,7 +71,7 @@ public class TerrainChunk : MonoBehaviour {
 				//string waterFolder = "Water/";
 	
 				CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise);
-				CreateTileLayer(x,y, .15f, -2f, "Sand/", TerrainGenerator.GetSandNoise);
+				CreateTileLayer(x,y, .1f, -2f, "Sand/", TerrainGenerator.GetSandNoise);
 				//CreateTileLayer(x,y, .3f, -.3f, "Dirt/", TerrainGenerator.GetDirtNoise);
 				
 				//CreateTileLayer(x,y, .1f, "Water/");
