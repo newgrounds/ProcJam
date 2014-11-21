@@ -29,8 +29,8 @@ public class Tile : MonoBehaviour {
 	}
 	
 	public void FixedUpdate(){
-		float h = SimplexNoise.Noise.Generate ((offsetPosn.x - posn.x + TerrainGenerator.globalTimer/50f) / 12f, (offsetPosn.y + posn.y) / 12f, 0) / 4f;//Mathf.FloorToInt(height)/5f;
-		this.GetComponent<SpriteRenderer> ().color = new Color (this.color.r + h, this.color.g + h, this.color.b + h, 1);
+		//float h = SimplexNoise.Noise.Generate ((offsetPosn.x - posn.x + TerrainGenerator.globalTimer/50f) / 12f, (offsetPosn.y + posn.y) / 12f, 0) / 4f;//Mathf.FloorToInt(height)/5f;
+		//this.GetComponent<SpriteRenderer> ().color = new Color (this.color.r + h, this.color.g + h, this.color.b + h, 1);
 		
 		
 	}

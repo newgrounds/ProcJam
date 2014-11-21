@@ -8,7 +8,7 @@ public class TerrainChunk : MonoBehaviour {
 	public List<Tile> tilesWithoutDecals = new List<Tile> ();
 	public List<Ruins> ruins = new List<Ruins> ();
 	public List<Sprite> sprites;
-	public static int mapWidth = 10;
+	public static int mapWidth = 5;
 	public static float tileSize = 0.5f;
 	private int ruinsToSpawn = 3;
 	Transform player;
@@ -70,17 +70,19 @@ public class TerrainChunk : MonoBehaviour {
 				
 				//string waterFolder = "Water/";
 	
-				CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise);
-				CreateTileLayer(x,y, .175f, -2f, "Sand/", TerrainGenerator.GetSandNoise);
+				//CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise);
+				//CreateTileLayer(x,y, .175f, -2f, "Sand/", TerrainGenerator.GetSandNoise);
 				//CreateTileLayer(x,y, .3f, -.3f, "Dirt/", TerrainGenerator.GetDirtNoise);
 				
 				//CreateTileLayer(x,y, .1f, "Water/");
 					
 				if (TerrainGenerator.GetLandNoise(offsetX - x,offsetY + y, TerrainGenerator.randZ) >= -2f) {
 					GameObject tile;
-					tile = Instantiate (Resources.Load ("tile")) as GameObject;
+					tile = Instantiate (Resources.Load ("tile"), new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0), Quaternion.identity) as GameObject;
 					tile.transform.parent = transform;
 					//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
+					
+					
 					tile.GetComponent<SpriteRenderer> ().sortingOrder = tileOrder;
 					Tile tileObject = tile.GetComponent<Tile> ();
 					tileObject.posn = new Vector2(x,y);
@@ -90,8 +92,11 @@ public class TerrainChunk : MonoBehaviour {
 					tileObject.height2 = height2;
 					tileObject.height3 = height3;
 					tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
+					
+					
 					tiles.Add (tileObject);
 				
+					/*
 					float h = TerrainGenerator.GetLandNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
 					tileObject.geoHeight = h;
 					//Color c = new Color ((200f/255f) + h, 1f - h/10f, 0, 1);
@@ -99,7 +104,7 @@ public class TerrainChunk : MonoBehaviour {
 					tileObject.color = c;
 					tileObject.GetComponent<SpriteRenderer> ().color = c;
 					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
-				
+					*/
 				
 				}
 				
@@ -266,7 +271,7 @@ public class TerrainChunk : MonoBehaviour {
 		float bottomRight = f(offsetX - x + 1,offsetY + y + 1, randZ);
 		float bottomLeft = f(offsetX - x - 1,offsetY + y + 1, randZ);
 		
-		
+		string assetPath;
 
 		if ( center > minThresh && center < thresh) {
 			/*
@@ -285,204 +290,206 @@ public class TerrainChunk : MonoBehaviour {
 			if(above < thresh && right < thresh && left < thresh && below < thresh 
 				&& bottomLeft >= thresh && bottomRight >= thresh
 				&& topLeft >= thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "4Split")) as GameObject;
+				assetPath = rootFolder + "4Split";
 			}
 			
 			//4split with gap
 			else if(above < thresh && right < thresh && left < thresh && below < thresh 
 				&& bottomLeft >= thresh && bottomRight >= thresh
 				&& topLeft >= thresh && topRight < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "4SplitGapXYFlip")) as GameObject;
+				assetPath = rootFolder + "4SplitGapXYFlip";
 			}	
 			else if(above < thresh && right < thresh && left < thresh && below < thresh 
 				&& bottomLeft >= thresh && bottomRight >= thresh
 				&& topLeft < thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "4SplitGapYFlip")) as GameObject;
+				assetPath = rootFolder + "4SplitGapYFlip";
 			}	
 			else if(above < thresh && right < thresh && left < thresh && below < thresh 
 				&& bottomLeft < thresh && bottomRight >= thresh
 				&& topLeft >= thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "4SplitGap")) as GameObject;
+				assetPath = rootFolder + "4SplitGap";
 			}	
 			else if(above < thresh && right < thresh && left < thresh && below < thresh 
 				&& bottomLeft >= thresh && bottomRight < thresh
 				&& topLeft >= thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "4SplitGapXFlip")) as GameObject;
+				assetPath = rootFolder + "4SplitGapXFlip";
 			}	
 			//tsplit
 			//left/right
 			else if(above < thresh && left >= thresh && right < thresh && below < thresh && bottomRight >= thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "tsplitXFlip")) as GameObject;
+				assetPath = rootFolder + "tsplitXFlip";
 			}
 			else if(above < thresh && right >= thresh && left < thresh && below < thresh && bottomLeft >= thresh && topLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "tsplit")) as GameObject;
+				assetPath = rootFolder + "tsplit";
 			}	
 			//top/bottom
 			else if(above < thresh && right < thresh && left < thresh && below >= thresh && topLeft >= thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "tsplit90")) as GameObject;
+				assetPath = rootFolder + "tsplit90";
 			}	
 			else if(above >= thresh && right < thresh && left < thresh && below < thresh && bottomLeft >= thresh && bottomRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "tsplitYFlip90")) as GameObject;
+				assetPath = rootFolder + "tsplitYFlip90";
 			}			
 			
 			//squeezes
 			//above
 			else if(above >= thresh && left < thresh && right < thresh && below < thresh && bottomRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "squeezeXFlip90")) as GameObject;
+				assetPath = rootFolder + "squeezeXFlip90";
 			}
 			else if(above >= thresh && left < thresh && right < thresh && below < thresh && bottomLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "squeezeXYFlip90")) as GameObject;
+				assetPath = rootFolder + "squeezeXYFlip90";
 			}
 			//below
 			else if(above < thresh && left < thresh && right < thresh && below >= thresh && topLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "squeezeYFlip90")) as GameObject;
+				assetPath = rootFolder + "squeezeYFlip90";
 			}
 			else if(above < thresh && left < thresh && right < thresh && below >= thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "squeeze90")) as GameObject;
+				assetPath = rootFolder + "squeeze90";
 			}
 			
 			
 			//left
 			else if(above < thresh && left >= thresh && right < thresh && below < thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "squeezeXFlip")) as GameObject;
+				assetPath = rootFolder + "squeezeXFlip";
 			}
 			else if(above < thresh && left >= thresh && right < thresh && below < thresh && bottomRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "squeezeXYFlip")) as GameObject;
+				assetPath = rootFolder + "squeezeXYFlip";
 			}
 			//right
 			else if(above < thresh && left < thresh && right >= thresh && below < thresh  && topLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "squeeze")) as GameObject;
+				assetPath = rootFolder + "squeeze";
 			}	
 			else if(above < thresh && left < thresh && right >= thresh && below < thresh  && bottomLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "squeezeYFlip")) as GameObject;
+				assetPath = rootFolder + "squeezeYFlip";
 			}	
 			
 			//narrow entries
 			else if( left < thresh && right < thresh && below < thresh && above < thresh && bottomLeft < thresh && bottomRight < thresh && topLeft >= thresh && topRight >=thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowEntry")) as GameObject;
+				assetPath = rootFolder + "narrowEntry";
 			}
 			else if( left < thresh && right < thresh && below < thresh && above < thresh && bottomLeft >= thresh && bottomRight >= thresh && topLeft < thresh && topRight < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowEntryYFlip")) as GameObject;
+				assetPath = rootFolder + "narrowEntryYFlip";
 			}	
 			else if( left < thresh && right < thresh && below < thresh && above < thresh && bottomLeft >= thresh && topLeft >= thresh && bottomRight < thresh && topRight < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowEntryXFlip90")) as GameObject;
+				assetPath = rootFolder + "narrowEntryXFlip90";
 			}			
 			else if( left < thresh && right < thresh && below < thresh && above < thresh && topRight >= thresh && bottomRight >= thresh && topLeft < thresh && bottomLeft < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowEntry90")) as GameObject;
+				assetPath = rootFolder + "narrowEntry90";
 			}		
 			
 			//place fringe case puddles
 			else if(below >= thresh && left >= thresh && right >= thresh && above < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowEnd")) as GameObject;
+				assetPath = rootFolder + "narrowEnd";
 			}
 			else if(above >= thresh && left >= thresh && right >= thresh && below < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowEndYFlip")) as GameObject;
+				assetPath = rootFolder + "narrowEndYFlip";
 			}					
 			else if(below >= thresh && above >= thresh && left >= thresh && right < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowEnd90")) as GameObject;
+				assetPath = rootFolder + "narrowEnd90";
 			}					
 			else if(below >= thresh && above >= thresh && right >= thresh && left < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowEndXFlip90")) as GameObject;
+				assetPath = rootFolder + "narrowEndXFlip90";
 			}
 
 			//place fringe narrows
 			else if(left < thresh && right < thresh && above >= thresh && below >= thresh ){
-				tile = Instantiate (Resources.Load (rootFolder + "narrow90")) as GameObject;
+				assetPath = rootFolder + "narrow90";
 			}
 			else if(above < thresh && below < thresh && left >= thresh && right >= thresh ){
-				tile = Instantiate (Resources.Load (rootFolder + "narrow")) as GameObject;
+				assetPath = rootFolder + "narrow";
 			}
 			
 			//place fringe case sides
 			else if(above < thresh && below < thresh && right < thresh && topRight >= thresh && bottomRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "left")) as GameObject;
+				assetPath = rootFolder + "left";
 			}
 			else if(above < thresh && below < thresh && left < thresh && topLeft >= thresh && bottomLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "right")) as GameObject;
+				assetPath = rootFolder + "right";
 			}
 			else if(left < thresh && right < thresh && below < thresh && bottomLeft >= thresh && bottomRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "bottom")) as GameObject;
+				assetPath = rootFolder + "bottom";
 			}
 			else if(left < thresh && right < thresh && above < thresh && topLeft >= thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "top")) as GameObject;
+				assetPath = rootFolder + "top";
 			}
 			
 			//narrow turns
 			else if(above < thresh && right < thresh && left >= thresh && below >= thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowTurn")) as GameObject;
+				assetPath = rootFolder + "narrowTurn";
 			}
 			
 			else if(below < thresh && right < thresh && left >= thresh && above >= thresh && bottomRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowTurnXFlip")) as GameObject;
+				assetPath = rootFolder + "narrowTurnXFlip";
 			}
 			else if(below < thresh && left < thresh && right >= thresh && above >= thresh && bottomLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowTurnXFlip90")) as GameObject;
+				assetPath = rootFolder + "narrowTurnXFlip90";
 			}
 			else if(above < thresh && left < thresh && right >= thresh && below >= thresh && topLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "narrowTurnXYFlip90")) as GameObject;
+				assetPath = rootFolder + "narrowTurnXYFlip90";
 			}
 			
 						//outer corners
 			else if(right < thresh && above < thresh && left >= thresh && below >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "bottomRight")) as GameObject;
+				assetPath = rootFolder + "bottomRight";
 			}	
 			else if(left < thresh && above < thresh && right >= thresh && below >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "bottomLeft")) as GameObject;
+				assetPath = rootFolder + "bottomLeft";
 			}
 			else if(right < thresh && below < thresh && left >= thresh && above >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "topRight")) as GameObject;
+				assetPath = rootFolder + "topRight";
 			}	
 			else if(left < thresh && below < thresh && right >= thresh && above >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "topLeft")) as GameObject;
+				assetPath = rootFolder + "topLeft";
 			}
 			
 			//top and bottom
 			else if(above < thresh && below >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "bottom")) as GameObject;
+				assetPath = rootFolder + "bottom";
 			}
 			else if(below < thresh && above >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "top")) as GameObject;
+				assetPath = rootFolder + "top";
 			}
 			//right and left
 			else if(right < thresh && left >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "right")) as GameObject;
+				assetPath = rootFolder + "right";
 			}					
 			else if(left < thresh && right >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "left")) as GameObject;
+				assetPath = rootFolder + "left";
 			}
 			
 			//place double corners
 			else if(topRight >= thresh && bottomLeft >= thresh && left < thresh && right < thresh && above < thresh && below < thresh && topLeft < thresh && bottomRight < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "doubleCorner90")) as GameObject;
+				assetPath = rootFolder + "doubleCorner90";
 			}
 			else if(topLeft >= thresh && bottomRight >= thresh && left < thresh && right < thresh && above < thresh && below < thresh && topRight < thresh && bottomLeft < thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "doubleCorner")) as GameObject;
+				assetPath = rootFolder + "doubleCorner";
 			}
 			//inner corners
 			//inner bottom left corner
 			else if(left < thresh && above < thresh && topLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "innerBottomLeft")) as GameObject;
+				assetPath = rootFolder + "innerBottomLeft";
 			}			
 			//inner bottom right corner
 			else if(right < thresh && above < thresh && topRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "innerBottomRight")) as GameObject;
+				assetPath = rootFolder + "innerBottomRight";
 			}	
 			//inner top left corner
 			else if(left < thresh && above < thresh && bottomLeft >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "innerTopLeft")) as GameObject;
+				assetPath = rootFolder + "innerTopLeft";
 			}			
 			//inner top right corner
 			else if(right < thresh && above < thresh && bottomRight >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "innerTopRight")) as GameObject;
+				assetPath = rootFolder + "innerTopRight";
 			}	
 			//place solo tile
 			else if(below >= thresh && above >= thresh && right >= thresh && left >= thresh){
-				tile = Instantiate (Resources.Load (rootFolder + "big")) as GameObject;
+				assetPath = rootFolder + "big";
+				
 			}
 			//center
 			else{
-				tile = Instantiate (Resources.Load (rootFolder + "center")) as GameObject;
+				assetPath = rootFolder + "center";
 			}
+			tile = Instantiate (Resources.Load (assetPath), new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0), Quaternion.identity) as GameObject;
 			
 			tile.transform.parent = transform;
 			//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
@@ -498,14 +505,18 @@ public class TerrainChunk : MonoBehaviour {
 			//tileObject.waterLevel = thresh;
 			tiles.Add (tileObject);
 			
-			
+			/*
 			float h = f  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
 			tileObject.geoHeight = center;//h;
 			//Color c = new Color (.7f + h*5f, .7f + h*5f,1f, 1f);
 			Color c = new Color (1,1,1,1);
-			tileObject.color = c;//
+			tileObject.color = c;
+			*/
+			
+			//
+			
 			//tileObject.GetComponent<SpriteRenderer> ().color = c;
-			tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, tile.transform.position.z);
+			//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, tile.transform.position.z);
 
 		} 	
 	}
