@@ -1,6 +1,31 @@
 fileFormatVersion: 2
 guid: 84792a49d0207bc4d9af03eda8076469
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: big_puddle
+    21300002: inner_top_left
+    21300004: inner_top_right
+    21300006: small_puddle
+    21300008: inner_bottom_left
+    21300010: inner_bottom_right
+    21300012: top_left
+    21300014: top
+    21300016: top_right
+    21300018: left
+    21300020: center
+    21300022: right
+    21300024: bottom_left
+    21300026: bottom
+    21300028: bottom_right
+    21300030: narrow_vertical
+    21300032: squeeze
+    21300034: doubleCorner
+    21300036: narrowEnd
+    21300038: narrowEntry
+    21300040: narrowTurn
+    21300042: tSplit
+    21300044: 4SplitGap
+    21300046: 4Split
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
@@ -54,6 +80,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: inner_top_left
       rect:
         serializedVersion: 2
@@ -63,6 +90,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: inner_top_right
       rect:
         serializedVersion: 2
@@ -72,6 +100,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: small_puddle
       rect:
         serializedVersion: 2
@@ -81,6 +110,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: inner_bottom_left
       rect:
         serializedVersion: 2
@@ -90,6 +120,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: inner_bottom_right
       rect:
         serializedVersion: 2
@@ -99,6 +130,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: top_left
       rect:
         serializedVersion: 2
@@ -108,6 +140,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: top
       rect:
         serializedVersion: 2
@@ -117,6 +150,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: top_right
       rect:
         serializedVersion: 2
@@ -126,6 +160,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: left
       rect:
         serializedVersion: 2
@@ -135,6 +170,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: center
       rect:
         serializedVersion: 2
@@ -144,6 +180,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: right
       rect:
         serializedVersion: 2
@@ -153,6 +190,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bottom_left
       rect:
         serializedVersion: 2
@@ -162,6 +200,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bottom
       rect:
         serializedVersion: 2
@@ -171,6 +210,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bottom_right
       rect:
         serializedVersion: 2
@@ -180,6 +220,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: narrow_vertical
       rect:
         serializedVersion: 2
@@ -189,6 +230,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: squeeze
       rect:
         serializedVersion: 2
@@ -198,6 +240,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: doubleCorner
       rect:
         serializedVersion: 2
@@ -207,6 +250,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: narrowEnd
       rect:
         serializedVersion: 2
@@ -216,6 +260,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: narrowEntry
       rect:
         serializedVersion: 2
@@ -225,6 +270,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: narrowTurn
       rect:
         serializedVersion: 2
@@ -234,6 +280,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: tSplit
       rect:
         serializedVersion: 2
@@ -243,6 +290,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: 4SplitGap
       rect:
         serializedVersion: 2
@@ -252,6 +300,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: 4Split
       rect:
         serializedVersion: 2
@@ -261,5 +310,6 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

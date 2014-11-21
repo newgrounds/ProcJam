@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class TerrainGenerator : MonoBehaviour {
 	public GameObject chunkPrefab;
@@ -40,14 +41,13 @@ public class TerrainGenerator : MonoBehaviour {
 		TerrainChunk firstChunk = spawnedChunk.GetComponent<TerrainChunk>();
 		//validChunkPosns.Add(spawnedChunk.transform.position);
 		spawnedChunks.Add(firstChunk);
+		
+		StartCoroutine(GenerateMissingChunksAsync());
 	}
 	
 	void Update() {
 		//randZ+=.001f;
 		globalTimer++;
-		CalculateValidChunkPosns();
-		
-		GenerateMissingChunks();
 	}
 	
 	void CalculateValidChunkPosns() {
@@ -155,5 +155,16 @@ public class TerrainGenerator : MonoBehaviour {
 			TerrainChunk firstChunk = spawnedChunk.GetComponent<TerrainChunk>();
 			spawnedChunks.Add(firstChunk);
 		}
+	}
+	
+	IEnumerator GenerateMissingChunksAsync() {
+		while (true) {
+			CalculateValidChunkPosns();
+			GenerateMissingChunks();
+			//yield return null;
+			yield return new WaitForSeconds(1f);
+		}
+		
+		yield return null;
 	}
 }
