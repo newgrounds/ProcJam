@@ -8,7 +8,7 @@ public class TerrainChunk : MonoBehaviour {
 	public List<Tile> tilesWithoutDecals = new List<Tile> ();
 	public List<Ruins> ruins = new List<Ruins> ();
 	public List<Sprite> sprites;
-	public static int mapWidth = 5;
+	public static int mapWidth = 20;
 	public static float tileSize = 0.5f;
 	private int ruinsToSpawn = 3;
 	Transform player;
@@ -28,7 +28,7 @@ public class TerrainChunk : MonoBehaviour {
 		);
 		
 		// first chunk
-		GenerateChunk();
+		StartCoroutine(GenerateChunk());
 	}
 	
 	void Update() {
@@ -49,7 +49,7 @@ public class TerrainChunk : MonoBehaviour {
 		trans.position.y >= (transform.position.y - (mapWidth * tileSize));
 	}
 	
-	void GenerateChunk() {
+	IEnumerator GenerateChunk() {
 		// random seed
 		//float randZ = Random.Range (0, 100000);
 		randZ = TerrainGenerator.randZ;
@@ -107,8 +107,8 @@ public class TerrainChunk : MonoBehaviour {
 					*/
 				
 				}
-				
 			}
+			yield return null;
 		}
 		
 		// generate ruins
@@ -248,7 +248,8 @@ public class TerrainChunk : MonoBehaviour {
 			if (t.GetDecal() == null) {
 				tilesWithoutDecals.Add(t);
 			}
-		}	
+		}
+		yield return null;
 	}
 	
 	void PrintValidTile(string type, float val, float thresh){
