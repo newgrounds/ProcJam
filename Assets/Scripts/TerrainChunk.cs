@@ -221,13 +221,13 @@ public class TerrainChunk : MonoBehaviour {
 		}
 		
 
-		/*
+		
 		foreach (Tile t in tiles) {
 			float height = t.height;
 			float height2 = t.height2;
 			float height3 = t.height3;
 			if (t.GetDecal () == null) {
-				if (height3 > .1f) {
+				if (height3 > .1f && t.geoHeight > thresh) {
 					string type = "Coin";
 					//if(Random.Range(0,10) > 9) type = "gem"; else type = "Coin";
 					GameObject coin = Instantiate (Resources.Load (type)) as GameObject;
@@ -241,7 +241,7 @@ public class TerrainChunk : MonoBehaviour {
 				} 
 			}
 		}
-		*/
+		
 		// get a list of tiles without decals
 		foreach (Tile t in tiles) {
 			if (t.GetDecal() == null) {
