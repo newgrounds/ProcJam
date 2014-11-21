@@ -47,8 +47,12 @@ public class Shopkeep : MonoBehaviour {
 	
 	void Respawn() {
 		TerrainChunk chunk = TerrainGenerator.spawnedChunks[Random.Range(0, TerrainGenerator.spawnedChunks.Count)];
-		Tile t = chunk.tilesWithoutDecals[Random.Range(0, chunk.tilesWithoutDecals.Count)];
-		transform.position = t.transform.position;
+		try {
+			Tile t = chunk.tilesWithoutDecals[Random.Range(0, chunk.tilesWithoutDecals.Count)];
+			transform.position = t.transform.position;
+		} catch(System.Exception e) {
+			
+		}
 	}
 	
 	void Purchase() {
