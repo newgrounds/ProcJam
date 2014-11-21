@@ -8,7 +8,7 @@ public class TerrainChunk : MonoBehaviour {
 	public List<Tile> tilesWithoutDecals = new List<Tile> ();
 	public List<Ruins> ruins = new List<Ruins> ();
 	public List<Sprite> sprites;
-	public static int mapWidth = 20;
+	public static int mapWidth = 10;
 	public static float tileSize = 0.5f;
 	private int ruinsToSpawn = 3;
 	Transform player;
@@ -70,18 +70,16 @@ public class TerrainChunk : MonoBehaviour {
 				
 				//string waterFolder = "Water/";
 	
-				//CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise);
-				//CreateTileLayer(x,y, .175f, -2f, "Sand/", TerrainGenerator.GetSandNoise);
+				CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise, -2);
+				CreateTileLayer(x,y, .175f, -2f, "Sand/", TerrainGenerator.GetSandNoise, -1);
 				//CreateTileLayer(x,y, .3f, -.3f, "Dirt/", TerrainGenerator.GetDirtNoise);
 				
 				//CreateTileLayer(x,y, .1f, "Water/");
-					
-				if (TerrainGenerator.GetLandNoise(offsetX - x,offsetY + y, TerrainGenerator.randZ) >= -2f) {
+				float h = TerrainGenerator.GetWaterNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
+				if (h >= -2f) {
 					GameObject tile;
 					tile = Instantiate (Resources.Load ("tile"), new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0), Quaternion.identity) as GameObject;
 					tile.transform.parent = transform;
-					//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
-					
 					
 					tile.GetComponent<SpriteRenderer> ().sortingOrder = tileOrder;
 					Tile tileObject = tile.GetComponent<Tile> ();
@@ -96,15 +94,14 @@ public class TerrainChunk : MonoBehaviour {
 					
 					tiles.Add (tileObject);
 				
-					/*
-					float h = TerrainGenerator.GetLandNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
+					
+					
 					tileObject.geoHeight = h;
 					//Color c = new Color ((200f/255f) + h, 1f - h/10f, 0, 1);
 					Color c = new Color((200f/255f),1,0,1);
 					tileObject.color = c;
 					tileObject.GetComponent<SpriteRenderer> ().color = c;
-					tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
-					*/
+					
 				
 				}
 			}
@@ -134,6 +131,7 @@ public class TerrainChunk : MonoBehaviour {
 		*/
 		
 		
+		
 		// tree generation
 		foreach (Tile t in tiles) {
 			float height = t.height;
@@ -141,7 +139,7 @@ public class TerrainChunk : MonoBehaviour {
 			float height3 = t.height3;
 			float geoHeight = t.geoHeight;
 			if (t.GetDecal () == null) {
-				if (geoHeight > .5f) {
+				if (geoHeight > thresh && height2 > .3f) {
 					float randomSize = Random.Range (-.5f, .5f);
 					float xOffset = 0;//Random.Range(-.5f, .5f) ;
 					
@@ -217,6 +215,7 @@ public class TerrainChunk : MonoBehaviour {
 					
 				}	
 				*/
+				
 			}
 			
 		}
@@ -256,7 +255,7 @@ public class TerrainChunk : MonoBehaviour {
 		Debug.Log(type + ": " + val + " / " + thresh + ", " + (val < thresh));		
 	}
 	
-	void CreateTileLayer(int x, int y, float thresh, float minThresh, string rootFolder, TerrainGenerator.GetGlobalNoise f){
+	void CreateTileLayer(int x, int y, float thresh, float minThresh, string rootFolder, TerrainGenerator.GetGlobalNoise f, int z){
 
 		GameObject tile;
 		int tileOrder = (y + (int)offsetY) + (10 * (int)offsetY);
@@ -490,7 +489,7 @@ public class TerrainChunk : MonoBehaviour {
 			else{
 				assetPath = rootFolder + "center";
 			}
-			tile = Instantiate (Resources.Load (assetPath), new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0), Quaternion.identity) as GameObject;
+			tile = Instantiate (Resources.Load (assetPath)) as GameObject;
 			
 			tile.transform.parent = transform;
 			//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f + height, 0);
@@ -506,18 +505,18 @@ public class TerrainChunk : MonoBehaviour {
 			//tileObject.waterLevel = thresh;
 			tiles.Add (tileObject);
 			
-			/*
+			
 			float h = f  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
 			tileObject.geoHeight = center;//h;
 			//Color c = new Color (.7f + h*5f, .7f + h*5f,1f, 1f);
 			Color c = new Color (1,1,1,1);
 			tileObject.color = c;
-			*/
+			
 			
 			//
 			
 			//tileObject.GetComponent<SpriteRenderer> ().color = c;
-			//tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, tile.transform.position.z);
+			tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, tile.transform.position.z);
 
 		} 	
 	}
