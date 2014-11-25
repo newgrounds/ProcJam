@@ -61,11 +61,11 @@ public class TerrainChunk : MonoBehaviour {
 		// loop to generate tiles
 		for (int x = 0; x < mapWidth; x++) {
 			for (int y = 0; y < mapWidth; y++) {
-
 				
 				float height = SimplexNoise.Noise.Generate ((offsetX - x) / 12f, (offsetY + y) / 12f, randZ) / 2f;
-				float height2 = SimplexNoise.Noise.Generate ((offsetX - x) + 1000 / 8f, (offsetY + y) + 1000 / 8f, randZ) / 2f;
+				float height2 = SimplexNoise.Noise.Generate ((offsetX - x) / 8f, (offsetY + y) / 8f, randZ-1) / 2f;
 				float height3 = SimplexNoise.Noise.Generate ((offsetX - x) / 15f, (offsetY + y) / 15f, randZ) / 2f;
+				float height4 = SimplexNoise.Noise.Generate ((offsetX - x) / 8f, (offsetY + y) / 8f, randZ-2) / 2f;
 				int tileOrder = (y + (int)offsetY) + (10 * (int)offsetY);
 				
 				//string waterFolder = "Water/";
@@ -89,20 +89,16 @@ public class TerrainChunk : MonoBehaviour {
 					tileObject.height = height;
 					tileObject.height2 = height2;
 					tileObject.height3 = height3;
+					tileObject.height4 = height4;
 					tileObject.origin = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0);
 					
-					
 					tiles.Add (tileObject);
-				
-					
 					
 					tileObject.geoHeight = h;
 					//Color c = new Color ((200f/255f) + h, 1f - h/10f, 0, 1);
 					Color c = new Color((200f/255f),1,0,1);
 					tileObject.color = c;
 					tileObject.GetComponent<SpriteRenderer> ().color = c;
-					
-				
 				}
 			}
 			yield return null;
@@ -130,13 +126,12 @@ public class TerrainChunk : MonoBehaviour {
 		}
 		*/
 		
-		
-		
 		// tree generation
 		foreach (Tile t in tiles) {
 			float height = t.height;
 			float height2 = t.height2;
 			float height3 = t.height3;
+			float height4 = t.height4;
 			float geoHeight = t.geoHeight;
 			if (t.GetDecal () == null) {
 				if (geoHeight > thresh && height2 > .3f) {
@@ -145,20 +140,19 @@ public class TerrainChunk : MonoBehaviour {
 					
 					GameObject tree;
 					
-					if(t.height3 > 0f){
-						tree = Instantiate (Resources.Load ("tempTree")) as GameObject;
+					if (height3 > 0f) {
+						tree = Instantiate(Resources.Load("tempTree")) as GameObject;
+					} else {
+						tree = Instantiate(Resources.Load("pine")) as GameObject;
 					}
-					else{
-						tree = Instantiate (Resources.Load ("pine")) as GameObject;
-					}
-					tree.transform.parent = transform;
-					tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
-					tree.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -2);
-					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 					
-					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
-					t.SetDecal (tree.GetComponent<Decal> ());
-				
+					tree.transform.parent = transform;
+					tree.transform.localScale = new Vector3(1f + randomSize, 1f + randomSize, 1f);
+					tree.transform.position = new Vector3(t.transform.position.x, t.transform.position.y, -2);
+					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 2;	
+					
+					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer>().color = new Color(1 + Random.Range(-.25f, 0), 1 + Random.Range(-.25f, 0), Random.Range(0f, .3f), 1);	
+					t.SetDecal(tree.GetComponent<Decal>());
 				} 
 				/*
 				if (height2 > .35f && geoHeight > thresh) {
@@ -186,7 +180,6 @@ public class TerrainChunk : MonoBehaviour {
 					if (Random.Range (0, 10) > 8) {
 						tree = Instantiate (Resources.Load ("deadTree")) as GameObject;
 					} else {
-
 						if(t.geoHeight > .1f){
 							tree = Instantiate (Resources.Load ("oldTree")) as GameObject;
 						}
@@ -195,7 +188,6 @@ public class TerrainChunk : MonoBehaviour {
 						}
 						
 						tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
-					
 					}
 					tree.transform.parent = transform;
 					float randomSize = Random.Range (-.5f, .5f);
@@ -204,50 +196,55 @@ public class TerrainChunk : MonoBehaviour {
 					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
 					tree.GetComponent<Decal>().child.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					t.SetDecal (tree.GetComponent<Decal> ());
-				
 				} else if (height > .2f && geoHeight > thresh) {
-					
 					GameObject grass = Instantiate (Resources.Load ("grass")) as GameObject;
 					grass.transform.parent = transform;
 					grass.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, -1);
 					grass.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);
 					grass.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 2;	
-					
-				}	
-				*/
-				
+				}*/
+			}
+			
+			// spawn coins
+			if (t.GetDecal() == null) {
+				if (height3 > .1f && geoHeight > thresh) {
+					string type = "Coin";
+					//if(Random.Range(0,10) > 9) type = "gem"; else type = "Coin";
+					GameObject coin = Instantiate (Resources.Load(type), new Vector3(t.transform.position.x, t.transform.position.y, 0), Quaternion.identity) as GameObject;
+					coin.transform.parent = transform;
+					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
+					coin.GetComponent<SpriteRenderer>().sortingOrder = t.sortingOrder + 3;
+					//tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
+					//t.SetDecal (coin.GetComponent<Decal> ());
+				} 
+			}
+			
+			// spawn food
+			if (t.GetDecal() == null) {
+				if (height4 > 0.1f && geoHeight > thresh) {
+					if (Random.Range(0, 10) > 8) {
+						if (height3 > 0.4f) {
+							GameObject food = Instantiate(Resources.Load("food/apple"), new Vector3(t.transform.position.x, t.transform.position.y, 0), Quaternion.identity) as GameObject;
+						} else if (height3 > 0.2f) {
+							GameObject food = Instantiate(Resources.Load("food/cherry"), new Vector3(t.transform.position.x, t.transform.position.y, 0), Quaternion.identity) as GameObject;
+						} else if (height3 > 0) {
+							GameObject food = Instantiate(Resources.Load("food/egg"), new Vector3(t.transform.position.x, t.transform.position.y, 0), Quaternion.identity) as GameObject;
+						} else if (height3 > -0.2f) {
+							GameObject food = Instantiate(Resources.Load("food/cheese"), new Vector3(t.transform.position.x, t.transform.position.y, 0), Quaternion.identity) as GameObject;
+						} else if (height3 > -0.4f) {
+							GameObject food = Instantiate(Resources.Load("food/bread"), new Vector3(t.transform.position.x, t.transform.position.y, 0), Quaternion.identity) as GameObject;
+						}
+					}
+				}
+			}
+			
+			// get a list of tiles without decals
+			if (t.GetDecal() == null) {
+				tilesWithoutDecals.Add(t);
 			}
 			
 		}
 		
-
-		
-		foreach (Tile t in tiles) {
-			float height = t.height;
-			float height2 = t.height2;
-			float height3 = t.height3;
-			if (t.GetDecal () == null) {
-				if (height3 > .1f && t.geoHeight > thresh) {
-					string type = "Coin";
-					//if(Random.Range(0,10) > 9) type = "gem"; else type = "Coin";
-					GameObject coin = Instantiate (Resources.Load (type)) as GameObject;
-					coin.transform.parent = transform;
-					//tree.transform.localScale = new Vector3 (1f + randomSize, 1f + randomSize, 1f);
-					coin.transform.position = new Vector3 (t.transform.position.x, t.transform.position.y, 0);
-					coin.GetComponent<SpriteRenderer> ().sortingOrder = t.sortingOrder + 3;
-					//tree.GetComponent<SpriteRenderer> ().color = new Color (1 + Random.Range (-.25f, 0), 1 + Random.Range (-.25f, 0), Random.Range (0f, .3f), 1);	
-					//t.SetDecal (coin.GetComponent<Decal> ());
-				
-				} 
-			}
-		}
-		
-		// get a list of tiles without decals
-		foreach (Tile t in tiles) {
-			if (t.GetDecal() == null) {
-				tilesWithoutDecals.Add(t);
-			}
-		}
 		yield return null;
 	}
 	

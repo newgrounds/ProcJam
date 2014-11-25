@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AIController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class AIController : MonoBehaviour
 	public float speedMod;
 	private bool waiting = false;
 	private int waitTimer = 0;
+	BehaviorTree tree;
 	
 	void Start ()
 	{
@@ -22,10 +24,36 @@ public class AIController : MonoBehaviour
 		float randTint = Random.Range (0, 230);
 		renderer.color = new Color ((255 - randTint + 70) / 255f, (255 - randTint + 35) / 255f, (255 - randTint) / 255f);
 		speedMod = 3f;
-	}
 		
-	private void Wander ()
-	{
+		tree = new BehaviorTree(
+			new Selector(new List<BehaviorComponent>() {
+				// flee if close to player
+				new BehaviorAction(() => {
+					if (Vector3.Distance(
+							transform.position,
+							GameObject.FindGameObjectsWithTag("Player")[0].transform.position
+						) < 1f) {
+						speed = Vector2.up * 0.05f;
+						return BehaviorState.SUCCESS;
+					} else {
+						return BehaviorState.FAILURE;
+					}
+				}),
+				// TODO: eat nearby food
+				// wander
+				new BehaviorAction(() => {
+					Wander();
+					return BehaviorState.SUCCESS;
+				})
+			})
+		);
+	}
+	
+	private void Flee() {
+		
+	}
+	
+	private void Wander() {
 		if (timer > decisionThreshold) {
 			if(!waiting && Random.Range(0,10) > 8){
 				waiting = true;
@@ -62,7 +90,8 @@ public class AIController : MonoBehaviour
 	void FixedUpdate ()
 	{		
 		timer++;
-		Wander ();
+		//Wander ();
+		tree.Behave();
 		AdjustDirection ();
 		if (speed.magnitude <= .01f) {
 			speed = Vector2.zero;
@@ -86,8 +115,4 @@ public class AIController : MonoBehaviour
 		//Debug.Log(speed.magnitude);
 		transform.Translate (new Vector3 (speed.x / speedMod, speed.y / speedMod, 0));
 	}
-
-		
 }
-	
-	
