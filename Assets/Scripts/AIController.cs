@@ -2,8 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class AIController : MonoBehaviour
-{
+public class AIController : MonoBehaviour {
 	private Animator animator;
 	private SpriteRenderer renderer;
 	private float direction = 0;
@@ -16,15 +15,17 @@ public class AIController : MonoBehaviour
 	private bool waiting = false;
 	private int waitTimer = 0;
 	BehaviorTree tree;
+	Vector3 foodTarget;
 	
-	void Start ()
-	{
-		animator = this.GetComponent<Animator> ();
-		renderer = this.GetComponent<SpriteRenderer> ();
+	void Start () {
+		foodTarget = Vector3.zero;
+		animator = this.GetComponent<Animator>();
+		renderer = this.GetComponent<SpriteRenderer>();
 		float randTint = Random.Range (0, 230);
 		renderer.color = new Color ((255 - randTint + 70) / 255f, (255 - randTint + 35) / 255f, (255 - randTint) / 255f);
 		speedMod = 3f;
 		
+		// create behavior tree
 		tree = new BehaviorTree(
 			new Selector(new List<BehaviorComponent>() {
 				// flee if close to player
@@ -39,7 +40,15 @@ public class AIController : MonoBehaviour
 						return BehaviorState.FAILURE;
 					}
 				}),
-				// TODO: eat nearby food
+				// eat nearby food
+				new BehaviorAction(() => {
+					if (foodTarget != Vector3.zero) {
+						TargetFood();
+						return BehaviorState.SUCCESS;
+					} else {
+						return BehaviorState.FAILURE;
+					}
+				}),
 				// wander
 				new BehaviorAction(() => {
 					Wander();
@@ -49,21 +58,26 @@ public class AIController : MonoBehaviour
 		);
 	}
 	
-	private void Flee() {
-		
+	private void TargetFood() {
+		Vector3 diff = foodTarget - transform.position;
+		diff.Normalize();
+		if (Vector3.Distance(transform.position, foodTarget) < 0.1f) {
+			speed = Vector2.zero;
+		} else {
+			speed = new Vector2(diff.x * .035f, diff.y * .035f);
+		}
 	}
 	
 	private void Wander() {
 		if (timer > decisionThreshold) {
-			if(!waiting && Random.Range(0,10) > 8){
+			if(!waiting && Random.Range(0,10) > 8) {
 				waiting = true;
 				waitTimer = Random.Range(0,100);
 			}
-			if(waiting && timer < decisionThreshold + waitTimer){
+			if(waiting && timer < decisionThreshold + waitTimer) {
 				speed = Vector2.zero;
 				animator.Play ("Idle");
-			}
-			else{
+			} else {
 				timer = 0;
 				decisionThreshold = Random.Range(0, 300);
 				speed = new Vector2 (Random.Range (-.035f, .035f), Random.Range (-.035f, .035f));
@@ -71,8 +85,7 @@ public class AIController : MonoBehaviour
 		}
 	}
 
-	private void AdjustDirection ()
-	{
+	private void AdjustDirection () {
 		if (speed.y > 0 && speed.y > Mathf.Abs(speed.x)){
 			direction = 2;
 		}
@@ -87,10 +100,8 @@ public class AIController : MonoBehaviour
 		}
 	}
 		
-	void FixedUpdate ()
-	{		
+	void FixedUpdate () {		
 		timer++;
-		//Wander ();
 		tree.Behave();
 		AdjustDirection ();
 		if (speed.magnitude <= .01f) {
@@ -114,5 +125,20 @@ public class AIController : MonoBehaviour
 		animator.SetFloat ("Speed", speed.magnitude * 100f);
 		//Debug.Log(speed.magnitude);
 		transform.Translate (new Vector3 (speed.x / speedMod, speed.y / speedMod, 0));
+	}
+	
+	void OnTriggerEnter2D(Collider2D col) {
+		if (col.CompareTag("Food") && foodTarget == Vector3.zero) {
+			foodTarget = col.transform.position;
+		}
+	}
+	
+	void OnTriggerStay2D(Collider2D col) {
+		if (col.CompareTag("Food") && foodTarget == col.transform.position) {
+			if (Vector3.Distance(foodTarget, transform.position) < 0.1f) {
+				Destroy(col.gameObject);
+				foodTarget = Vector3.zero;
+			}
+		}
 	}
 }
