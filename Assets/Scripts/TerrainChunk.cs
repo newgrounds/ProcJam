@@ -72,7 +72,9 @@ public class TerrainChunk : MonoBehaviour {
 	
 				CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise, -2);
 				CreateTileLayer(x,y, .175f, -2f, "Sand/", TerrainGenerator.GetSandNoise, -1);
-				//CreateTileLayer(x,y, .3f, -.3f, "Dirt/", TerrainGenerator.GetDirtNoise);
+				CreateTileLayer(x,y, -.3f, -2f, "Dirt/", TerrainGenerator.GetDirtNoise, -3);
+				CreateTileLayer(x,y, .5f, -2f, "Desert/", TerrainGenerator.GetDesertNoise, -4);
+				//CreateTileLayer(x,y, .5f, -2f, "Stone/", TerrainGenerator.GetStoneNoise, -5);
 				
 				//CreateTileLayer(x,y, .1f, "Water/");
 				float h = TerrainGenerator.GetWaterNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;

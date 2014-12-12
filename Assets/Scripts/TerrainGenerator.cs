@@ -18,8 +18,8 @@ public class TerrainGenerator : MonoBehaviour {
 	}
 		
 	public static float GetDirtNoise(float x, float y, float z){
-		return SimplexNoise.Noise.Generate (x/ 20f, y / 20f, z);// -
-			   //(SimplexNoise.Noise.Generate (x / 15f, y / 15f, z) / 5f);
+		return SimplexNoise.Noise.Generate (x/ 10f, y / 10f, z) +
+			    (SimplexNoise.Noise.Generate (x / 70f, y /70f, z/20f)*.8f);
 	}
 	
 	public static float GetSandNoise(float x, float y, float z){
@@ -27,6 +27,15 @@ public class TerrainGenerator : MonoBehaviour {
 			   (SimplexNoise.Noise.Generate (x / 40f, y /40f, z/40f)*.8f);
 	}	
 	
+	public static float GetDesertNoise(float x, float y, float z){
+		return SimplexNoise.Noise.Generate (x/ 20f, y / 20f, z-10) + 
+			   (SimplexNoise.Noise.Generate (x / 50f, y /50f, z/40f)*.8f);;
+	}	
+	
+	public static float GetStoneNoise(float x, float y, float z){
+		return SimplexNoise.Noise.Generate (x/ 10f, y / 10f, z-30) + 
+			   (SimplexNoise.Noise.Generate (x / 50f, y /50f, z/20f)*.8f);;
+	}	
 	public static float GetWaterNoise(float x, float y, float z){
 		return (SimplexNoise.Noise.Generate (x / 1f, y / 1f, z/1f)*.2f) + 
 			   (SimplexNoise.Noise.Generate (x / 40f, y /40f, z/40f)*.8f);
