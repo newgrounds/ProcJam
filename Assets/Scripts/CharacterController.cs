@@ -21,8 +21,12 @@ public class CharacterController : MonoBehaviour {
 	public float MAX_STAMINA = 100f;
 	public float health;
 	public float MAX_HEALTH = 100f;
+	public GameObject gui;
 	
 	void Start () {
+		Time.timeScale = 1f;
+		gui.active = false;
+		
 		stamina = MAX_STAMINA;
 		health = MAX_HEALTH;
 		animator = this.GetComponent<Animator> ();
@@ -159,14 +163,11 @@ public class CharacterController : MonoBehaviour {
 		health -= amount;
 		
 		// health below 0 = death
-		if (health < 0) {
+		if (health <= 0) {
 			health = 0;
-			// TODO: die
+			Time.timeScale = 0;
+			gui.active = true;
 		}
-	}
-	
-	void OnTriggerStay2D(Collider2D collider) {
-
 	}
 	
 	/*
@@ -260,5 +261,9 @@ public class CharacterController : MonoBehaviour {
 		GUI.Box(new Rect(Screen.width - 250, 25, 200, 75), "<size=40>Coins: " + numCoins + "</size>");
 		GUI.Box(new Rect(0, 10, 300, 70), "<size=40>Health: " + Mathf.Round(health) + "</size>");
 		GUI.Box(new Rect(0, 80, 300, 70), "<size=40>Stamina: " + Mathf.Round(stamina) + "</size>");
+	}
+	
+	public void RestartButtonClick() {
+		Application.LoadLevel(0);
 	}
 }

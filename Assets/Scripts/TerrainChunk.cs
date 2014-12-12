@@ -104,19 +104,24 @@ public class TerrainChunk : MonoBehaviour {
 			yield return null;
 		}
 		
-		// generate ruins
-		//for (int i = 0; i < ruinsToSpawn; i++) {
-		/*
-		ruins.Add (new Ruins (mapWidth, Random.Range (0, 0), this, 0));
-		
-		if(Random.Range(0,10) > 5){
+		// generate bunnies
+		if (Random.Range(0,10) > 5){
 			Vector3 bunnyPos = tiles[Random.Range(0,tiles.Count)].transform.position;
-			GameObject bunny = Instantiate (Resources.Load ("Animals/MisterBunny")) as GameObject;
-			bunny.transform.position = bunnyPos;
+			GameObject bunny = Instantiate(Resources.Load("Animals/MisterBunny"), bunnyPos, Quaternion.identity) as GameObject;
 			bunny.transform.parent = transform;
 		}
 		
-		//}
+		// generate wolves
+		if (Random.Range(0,10) > 7){
+			Vector3 wolfPos = tiles[Random.Range(0,tiles.Count)].transform.position;
+			GameObject wolf = Instantiate(Resources.Load("Animals/BigBadWolf"), wolfPos, Quaternion.identity) as GameObject;
+			wolf.transform.parent = transform;
+		}
+		
+		// generate ruins
+		/*for (int i = 0; i < ruinsToSpawn; i++) {
+			ruins.Add (new Ruins (mapWidth, Random.Range (0, 0), this, 0));
+		}
 		
 		// remove any empty ruins
 		for (int i = 0; i < ruins.Count; i++) {
@@ -222,7 +227,7 @@ public class TerrainChunk : MonoBehaviour {
 			// spawn food
 			if (t.GetDecal() == null) {
 				if (height4 > 0.1f && geoHeight > thresh) {
-					if (Random.Range(0, 10) > 8) {
+					if (Random.Range(0, 10) > 9) {
 						if (height3 > 0.4f) {
 							GameObject food = Instantiate(Resources.Load("food/apple"), new Vector3(t.transform.position.x, t.transform.position.y, 0), Quaternion.identity) as GameObject;
 						} else if (height3 > 0.2f) {

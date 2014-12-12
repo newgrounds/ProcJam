@@ -33,6 +33,8 @@ public class TerrainGenerator : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		spawnedChunks = new List<TerrainChunk>();
+		validChunkPosns = new List<Vector3>();
 		randZ = 27;//Random.Range (0, 100000);
 		float offset = -TerrainChunk.mapWidth * TerrainChunk.tileSize / 2f;
 		Vector3 firstChunkPos = new Vector3(offset, -offset, 0);

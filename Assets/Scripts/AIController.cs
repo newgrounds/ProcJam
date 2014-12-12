@@ -3,38 +3,61 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class AIController : MonoBehaviour {
-	private Animator animator;
-	private SpriteRenderer renderer;
-	private float direction = 0;
-	private Vector2 speed;
-	private Tile currentTile;
-	private float lastHeight = 0;
-	private int timer = 0;
-	private int decisionThreshold = 0;
+	protected Animator animator;
+	protected SpriteRenderer renderer;
+	protected float direction = 0;
+	protected Vector2 speed;
+	protected Tile currentTile;
+	protected float lastHeight = 0;
+	protected int timer = 0;
+	protected int decisionThreshold = 0;
 	public float speedMod;
-	private bool waiting = false;
-	private int waitTimer = 0;
-	BehaviorTree tree;
-	Vector3 foodTarget;
+	protected bool waiting = false;
+	protected int waitTimer = 0;
+	protected BehaviorTree tree;
+	protected Vector3 foodTarget;
+	protected float moveSpeed;
 	
-	void Start () {
+	public virtual void Start () {
 		foodTarget = Vector3.zero;
 		animator = this.GetComponent<Animator>();
 		renderer = this.GetComponent<SpriteRenderer>();
 		float randTint = Random.Range (0, 230);
 		renderer.color = new Color ((255 - randTint + 70) / 255f, (255 - randTint + 35) / 255f, (255 - randTint) / 255f);
 		speedMod = 3f;
+		moveSpeed = 0.035f;
 		
 		// create behavior tree
 		tree = new BehaviorTree(
 			new Selector(new List<BehaviorComponent>() {
-				// flee if close to player
+				// flee if close to player or wolf
 				new BehaviorAction(() => {
-					if (Vector3.Distance(
+					// determine if we are being hunted by a wolf
+					GameObject hunted = null;
+					GameObject[] wolves = GameObject.FindGameObjectsWithTag("Wolf");
+					foreach (GameObject wolf in wolves) {
+						if (Vector3.Distance(
+								transform.position,
+								wolf.transform.position
+							) < 1f) {
+							hunted = wolf;
+						}
+					}
+					// get player
+					GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
+					
+					// if we are being hunted
+					if (hunted != null) {
+						Vector3 target = TargetGameObject(hunted);
+						speed = -target * 0.05f;
+						return BehaviorState.SUCCESS;
+					}
+					// if the player is nearby
+					else if (Vector3.Distance(
 							transform.position,
-							GameObject.FindGameObjectsWithTag("Player")[0].transform.position
-						) < 1f) {
-						speed = Vector2.up * 0.05f;
+							player.transform.position) < 1f) {
+						Vector3 target = TargetGameObject(player);
+						speed = -target * 0.05f;
 						return BehaviorState.SUCCESS;
 					} else {
 						return BehaviorState.FAILURE;
@@ -58,17 +81,23 @@ public class AIController : MonoBehaviour {
 		);
 	}
 	
-	private void TargetFood() {
+	protected void TargetFood() {
 		Vector3 diff = foodTarget - transform.position;
 		diff.Normalize();
 		if (Vector3.Distance(transform.position, foodTarget) < 0.1f) {
 			speed = Vector2.zero;
 		} else {
-			speed = new Vector2(diff.x * .035f, diff.y * .035f);
+			speed = new Vector2(diff.x * moveSpeed, diff.y * moveSpeed);
 		}
 	}
 	
-	private void Wander() {
+	protected Vector3 TargetGameObject(GameObject target) {
+		Vector3 diff = target.transform.position - transform.position;
+		diff.Normalize();
+		return diff;
+	}
+	
+	protected void Wander() {
 		if (timer > decisionThreshold) {
 			if(!waiting && Random.Range(0,10) > 8) {
 				waiting = true;
@@ -80,12 +109,12 @@ public class AIController : MonoBehaviour {
 			} else {
 				timer = 0;
 				decisionThreshold = Random.Range(0, 300);
-				speed = new Vector2 (Random.Range (-.035f, .035f), Random.Range (-.035f, .035f));
+				speed = new Vector2 (Random.Range (-moveSpeed, moveSpeed), Random.Range (-moveSpeed, moveSpeed));
 			}
 		}
 	}
 
-	private void AdjustDirection () {
+	protected void AdjustDirection () {
 		if (speed.y > 0 && speed.y > Mathf.Abs(speed.x)){
 			direction = 2;
 		}
@@ -127,13 +156,13 @@ public class AIController : MonoBehaviour {
 		transform.Translate (new Vector3 (speed.x / speedMod, speed.y / speedMod, 0));
 	}
 	
-	void OnTriggerEnter2D(Collider2D col) {
+	public virtual void OnTriggerEnter2D(Collider2D col) {
 		if (col.CompareTag("Food") && foodTarget == Vector3.zero) {
 			foodTarget = col.transform.position;
 		}
 	}
 	
-	void OnTriggerStay2D(Collider2D col) {
+	public virtual void OnTriggerStay2D(Collider2D col) {
 		if (col.CompareTag("Food") && foodTarget == col.transform.position) {
 			if (Vector3.Distance(foodTarget, transform.position) < 0.1f) {
 				Destroy(col.gameObject);
@@ -141,4 +170,6 @@ public class AIController : MonoBehaviour {
 			}
 		}
 	}
+	
+	public virtual void OnCollisionEnter2D(Collision2D col) {}
 }
