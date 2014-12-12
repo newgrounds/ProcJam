@@ -70,15 +70,15 @@ public class TerrainChunk : MonoBehaviour {
 				
 				//string waterFolder = "Water/";
 	
-				CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise, -2);
-				CreateTileLayer(x,y, .175f, -2f, "Sand/", TerrainGenerator.GetSandNoise, -1);
-				CreateTileLayer(x,y, -.3f, -2f, "Dirt/", TerrainGenerator.GetDirtNoise, -3);
-				CreateTileLayer(x,y, .5f, -2f, "Desert/", TerrainGenerator.GetDesertNoise, -4);
+				bool isCenter = CreateTileLayer(x,y, .1f, -2f, "Water/", TerrainGenerator.GetWaterNoise, -2);
+				if (!isCenter) isCenter = CreateTileLayer(x,y, .175f, -2f, "Sand/", TerrainGenerator.GetSandNoise, -1);
+				if (!isCenter) isCenter = CreateTileLayer(x,y, -.3f, -2f, "Dirt/", TerrainGenerator.GetDirtNoise, -3);
+				if (!isCenter) isCenter = CreateTileLayer(x,y, .5f, -2f, "Desert/", TerrainGenerator.GetDesertNoise, -4);
 				//CreateTileLayer(x,y, .5f, -2f, "Stone/", TerrainGenerator.GetStoneNoise, -5);
 				
 				//CreateTileLayer(x,y, .1f, "Water/");
 				float h = TerrainGenerator.GetWaterNoise  ((offsetX - x) / 1f, (offsetY + y) / 1f, randZ) * 1f;
-				if (h >= -2f) {
+				if (h >= -2f && !isCenter) {
 					GameObject tile;
 					tile = Instantiate (Resources.Load ("tile"), new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, 0), Quaternion.identity) as GameObject;
 					tile.transform.parent = transform;
@@ -259,7 +259,7 @@ public class TerrainChunk : MonoBehaviour {
 		Debug.Log(type + ": " + val + " / " + thresh + ", " + (val < thresh));		
 	}
 	
-	void CreateTileLayer(int x, int y, float thresh, float minThresh, string rootFolder, TerrainGenerator.GetGlobalNoise f, int z){
+	bool CreateTileLayer(int x, int y, float thresh, float minThresh, string rootFolder, TerrainGenerator.GetGlobalNoise f, int z){
 
 		GameObject tile;
 		int tileOrder = (y + (int)offsetY) + (10 * (int)offsetY);
@@ -277,6 +277,7 @@ public class TerrainChunk : MonoBehaviour {
 		
 		string assetPath;
 
+		bool isCenter = false;
 		if ( center > minThresh && center < thresh) {
 			/*
 			PrintValidTile("center", center, thresh);
@@ -492,6 +493,7 @@ public class TerrainChunk : MonoBehaviour {
 			//center
 			else{
 				assetPath = rootFolder + "center";
+				isCenter = true;
 			}
 			tile = Instantiate (Resources.Load (assetPath)) as GameObject;
 			
@@ -522,6 +524,7 @@ public class TerrainChunk : MonoBehaviour {
 			//tileObject.GetComponent<SpriteRenderer> ().color = c;
 			tile.transform.position = new Vector3 (transform.position.x + x * .5f, transform.position.y - y * .5f, tile.transform.position.z);
 
-		} 	
+		}
+		return isCenter;
 	}
 }
