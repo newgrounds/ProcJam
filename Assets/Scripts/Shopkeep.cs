@@ -31,6 +31,30 @@ public class Shopkeep : MonoBehaviour {
 		controller = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<CharacterController>();
 	}
 	
+	void Update() {
+		bool respawn = true;
+		// see if the shopkeep is in any of the chunks
+		foreach (TerrainChunk c in TerrainGenerator.spawnedChunks) {
+			if (c.Contains(transform)) {
+				respawn = false;
+			}
+		}
+		
+		if (respawn) {
+			Respawn();
+		}
+	}
+	
+	void Respawn() {
+		TerrainChunk chunk = TerrainGenerator.spawnedChunks[Random.Range(0, TerrainGenerator.spawnedChunks.Count)];
+		try {
+			Tile t = chunk.tilesWithoutDecals[Random.Range(0, chunk.tilesWithoutDecals.Count)];
+			transform.position = t.transform.position;
+		} catch(System.Exception e) {
+			
+		}
+	}
+	
 	void Purchase() {
 		// charge player
 		controller.numCoins -= itemsForSale[numPurchased].cost;
@@ -47,9 +71,7 @@ public class Shopkeep : MonoBehaviour {
 		}
 		// spawn somewhere random
 		else {
-			TerrainChunk chunk = TerrainGenerator.spawnedChunks[Random.Range(0, TerrainGenerator.spawnedChunks.Count)];
-			Tile t = chunk.tilesWithoutDecals[Random.Range(0, chunk.tilesWithoutDecals.Count)];
-			transform.position = t.transform.position;
+			Respawn();
 		}
 	}
 	

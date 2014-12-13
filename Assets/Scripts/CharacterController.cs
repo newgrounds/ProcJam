@@ -16,8 +16,19 @@ public class CharacterController : MonoBehaviour {
 	public bool isAttacking = false;
 	public float speedMod;
 	public bool canAttack;
+	public bool underRoof = false;
+	public float stamina;
+	public float MAX_STAMINA = 100f;
+	public float health;
+	public float MAX_HEALTH = 100f;
+	public GameObject gui;
 	
 	void Start () {
+		Time.timeScale = 1f;
+		gui.active = false;
+		
+		stamina = MAX_STAMINA;
+		health = MAX_HEALTH;
 		animator = this.GetComponent<Animator> ();
 		renderer = this.GetComponent<SpriteRenderer> ();
 		float randTint = Random.Range(0,230);
@@ -114,10 +125,49 @@ public class CharacterController : MonoBehaviour {
 		
 		//pants.GetComponent<SpriteRenderer>().sortingOrder = this.GetComponent<SpriteRenderer>().sortingOrder + 1;
 		//Debug.Log(speed.magnitude);
+		
+		DecreaseStamina(Time.deltaTime / 2f);
 	}
 	
-	void OnTriggerStay2D(Collider2D collider) {
-
+	public void IncreaseStamina(float amount) {
+		stamina += amount;
+		
+		// stamina can't go above the max
+		if (stamina > MAX_STAMINA) {
+			stamina = MAX_STAMINA;
+		}
+	}
+	public void DecreaseStamina(float amount) {
+		stamina -= amount;
+		
+		// stamina can't go below 0
+		if (stamina < 0) {
+			stamina = 0;
+		}
+		
+		// decrease health if stamina is at 0
+		if (stamina == 0) {
+			DecreaseHealth(amount);
+		}
+	}
+	
+	public void IncreaseHealth(float amount) {
+		health += amount;
+		
+		// health can't go above the max
+		if (health > MAX_HEALTH) {
+			health = MAX_HEALTH;
+		}
+	}
+	public void DecreaseHealth(float amount) {
+		health -= amount;
+		
+		// health below 0 = death
+		if (health <= 0) {
+			health = 0;
+			Time.timeScale = 0;
+			gui.active = true;
+		}
 	}
 	
 	/*
@@ -200,9 +250,20 @@ public class CharacterController : MonoBehaviour {
 			canAttack = true;
 			GameObject.Destroy(collider.gameObject);
 		}
+		// collect the food
+		else if (collider.CompareTag("Food")) {
+			IncreaseStamina(10f);
+			GameObject.Destroy(collider.gameObject);
+		}
 	}
 	
 	void OnGUI() {
 		GUI.Box(new Rect(Screen.width - 250, 25, 200, 75), "<size=40>Coins: " + numCoins + "</size>");
+		GUI.Box(new Rect(0, 10, 300, 70), "<size=40>Health: " + Mathf.Round(health) + "</size>");
+		GUI.Box(new Rect(0, 80, 300, 70), "<size=40>Stamina: " + Mathf.Round(stamina) + "</size>");
+	}
+	
+	public void RestartButtonClick() {
+		Application.LoadLevel(0);
 	}
 }

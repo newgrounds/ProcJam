@@ -49,3 +49,5 @@ NetworkManager.asset
 ScriptMapper
 
 *.dwlt
+Assets/Assembly-CSharp.pidb
+Assets/Assembly-CSharp.pidb.meta

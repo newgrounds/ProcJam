@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423509a03528f304588314ce906feb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkPrefab: {fileID: 0}
+  chunkPrefab: {fileID: 100000, guid: 3600daec2ad1b40d08ee609d78e367bd, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
